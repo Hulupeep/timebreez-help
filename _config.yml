@@ -7,7 +7,7 @@ url: https://help.timebreez.com
 baseurl: ""
 
 # Theme configuration
-remote_theme: just-the-docs/just-the-docs@v0.10.0
+theme: just-the-docs
 color_scheme: timebreez
 
 # Search
@@ -80,3 +80,4 @@ mermaid:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-include-cache

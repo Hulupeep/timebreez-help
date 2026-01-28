@@ -9,6 +9,7 @@ gem "just-the-docs", "~> 0.10.0"
 # Plugins
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-include-cache", "~> 0.2"
 
 # GitHub Pages compatibility (optional, for local development parity)
 # gem "github-pages", group: :jekyll_plugins
