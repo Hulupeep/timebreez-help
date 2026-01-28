@@ -1,0 +1,78 @@
+# Timebreez Help Center - Jekyll Configuration
+# Theme: Just the Docs (https://just-the-docs.github.io/just-the-docs/)
+
+title: Timebreez Help
+description: Staff scheduling and leave management made simple
+url: https://help.timebreez.com
+baseurl: ""
+
+# Theme configuration
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+color_scheme: timebreez
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Navigation structure
+nav_sort: case_insensitive
+nav_external_links:
+  - title: Timebreez App
+    url: https://app.timebreez.com
+    hide_icon: false
+
+# Auxiliary links (top right)
+aux_links:
+  "Back to Timebreez":
+    - "https://timebreez.com"
+aux_links_new_tab: true
+
+# Footer
+footer_content: "Copyright &copy; 2024-2026 Timebreez. All rights reserved."
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections for organizing content
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: "default"
+      nav_order: 1
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - LICENSE
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
