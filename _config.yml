@@ -72,6 +72,10 @@ exclude:
   - README.md
   - LICENSE
 
+# Mermaid diagrams
+mermaid:
+  version: "10.6.0"
+
 # Plugins
 plugins:
   - jekyll-seo-tag

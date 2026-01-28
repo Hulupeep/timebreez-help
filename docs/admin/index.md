@@ -225,4 +225,5 @@ Ready to dive deeper?
 
 [Roster Management](/docs/admin/roster/){: .btn .btn-primary .mr-2 }
 [Leave Management](/docs/admin/leave/){: .btn .mr-2 }
+[Leave Workflow](/docs/admin/leave-workflow/){: .btn .mr-2 }
 [WhatsApp Setup](/docs/admin/whatsapp/){: .btn }
