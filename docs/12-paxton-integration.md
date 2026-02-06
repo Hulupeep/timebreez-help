@@ -1,393 +1,412 @@
-# Paxton Net2 Integration - Automatic Attendance Tracking
+# Entrance Security & Paxton Net2 - Automatic Attendance Tracking
 
 ## Who This Is For
-**Childcare Managers and IT Administrators** who need to set up and use Paxton Net2 badge readers for real-time staff attendance tracking.
+**Childcare Managers and IT Administrators** who need to set up and use Paxton Net2 badge readers for real-time staff attendance tracking, and understand how entrance security feeds into Timebreez.
 
 ## What You'll Learn
 - What Paxton Net2 is and how it connects to Timebreez
-- Mapping physical badge readers to rooms (site discovery)
-- Viewing real-time presence on the Reality Panel
-- Handling Shift End Nudge alerts (forgot to clock out)
-- Using the compliance audit trail
-- Troubleshooting badge events
+- How the on-premises connector bridges Paxton events into Timebreez
+- Setting up reader mappings (which reader controls which door)
+- Linking badge cards to employees
+- Monitoring connector health
+- Using the Live Entry Feed to spot mismatches and unknown badges
+- How Paxton works alongside NFC scanning
+- Resolving feed alerts as a manager
+- Troubleshooting common issues
 
 ## Prerequisites
 - Manager or Admin role in Timebreez
-- Paxton Net2 server installed on-site with network access
+- Paxton Net2 system installed on-site
 - Badge readers physically installed at entry/exit points
 - Employees issued Paxton key fobs or cards
-- IT administrator has Paxton Net2 server credentials
+- On-premises connector software installed (provided by Timebreez)
 
 ---
 
 ## Quick Start (TL;DR)
 
-1. Go to **Settings > Paxton Integration**
-2. Enter your Paxton Net2 **server address** and **API key**
-3. Click **"Discover Readers"** to detect all badge readers on the network
-4. **Map each reader** to a room (e.g., "Front Door Reader" -> "Baby Room entrance")
-5. Staff badge IN/OUT events flow to **Control Desk** in real-time
-6. View the **Reality Panel** for live presence across all rooms
-7. Respond to **Shift End Nudge** alerts when staff forget to badge OUT
+1. Install the **Timebreez connector** on a machine that can reach your Paxton Net2 server
+2. The connector sends badge events and heartbeats to Timebreez automatically
+3. Go to **Attendance > Reader Mappings** to map each reader to a role (building entry, room entry, etc.)
+4. Go to **Attendance > Card Mappings** to link each badge card number to an employee
+5. Badge events now flow to the **Live Entry Feed** on Control Desk in real-time
+6. The system automatically detects **mismatches** (wrong room), **unknown badges**, and **unscheduled** staff
+7. Managers resolve alerts directly from the Live Entry Feed panel
 
 ---
 
-## Understanding Paxton Net2
+## Understanding the Architecture
 
 ### What is Paxton Net2?
 
 **Paxton Net2** is a building access control system that uses badge readers (key fobs, cards, or PIN pads) to track who enters and exits your facility. Timebreez integrates with Paxton to:
 
 - **Automatically track attendance** - No manual clock-in needed
-- **Update room presence counts** - Control Desk shows real-time present counts
+- **Update room presence** - Control Desk shows who is where, right now
+- **Detect problems** - Wrong room, unknown badge, unscheduled staff flagged instantly
 - **Generate audit trails** - Compliance-ready logs of who was where and when
-- **Trigger alerts** - Shift End Nudge when staff forget to badge OUT
 
-**How it works:**
+### How Events Flow
 
-| Step | What Happens |
-|------|-------------|
-| 1. Badge IN | Staff taps key fob on reader at building entrance |
-| 2. Event sent | Paxton Net2 server records the event |
-| 3. Timebreez syncs | Timebreez polls Paxton for new events (every 30 seconds) |
-| 4. Presence updated | Control Desk "Present" count increases by 1 |
-| 5. Badge OUT | Staff taps key fob when leaving |
-| 6. Presence updated | Control Desk "Present" count decreases by 1 |
+| Step | What Happens | Where |
+|------|-------------|-------|
+| 1. Badge tap | Staff taps key fob on a reader | Physical reader |
+| 2. Paxton records | Net2 server logs the access event | On-premises |
+| 3. Connector syncs | Timebreez connector picks up the event and sends it | On-premises → Cloud |
+| 4. Raw event stored | Event saved to `paxton_events` with reader ID, card number, timestamp | Timebreez backend |
+| 5. Bridge resolves | System maps reader → role, card → employee, and creates an attendance event | Timebreez backend |
+| 6. Feed detects | Live Entry Feed compares the event against today's schedule | Timebreez backend |
+| 7. Manager sees | Event appears on Control Desk with status: OK, Mismatch, Unknown, or Unscheduled | Control Desk UI |
 
-### Reader Types
+### Paxton Event Types
 
-| Reader Location | Purpose | Mapping |
-|----------------|---------|---------|
-| **Front Door** | Building entry/exit | Maps to "On Site" status |
-| **Room Door** | Room entry/exit | Maps to specific room presence |
-| **Staff Area** | Break room, office | Maps to "On Break" status |
-| **External Gate** | Car park, garden | Maps to "Off Site" status |
+Not all badge events mean the same thing. Timebreez records five event types from Paxton:
+
+| Event Type | Meaning | What Timebreez Does |
+|-----------|---------|-------------------|
+| **Access Granted** | Badge accepted, door opened | Creates attendance event (clock in/out or room entry/exit) |
+| **Access Denied** | Badge rejected | Logged but no attendance event created |
+| **Door Forced** | Door opened without a badge | Logged as security alert |
+| **Door Held Open** | Door left open too long | Logged as security alert |
+| **Anti-Passback** | Badge used twice without exiting | Logged, may indicate tailgating |
+
+Only **Access Granted** events create attendance records. All others are stored for security auditing.
+
+### Reader Roles
+
+Each physical reader is assigned a **semantic role** that tells Timebreez what kind of event it represents:
+
+| Role | What It Means | Attendance Event Created |
+|------|-------------|------------------------|
+| **Building Entry** | Front door, main entrance | Clock In |
+| **Building Exit** | Front door (exit side), car park exit | Clock Out |
+| **Room Entry** | Door into Baby Room, Toddlers, etc. | Room Entry |
+| **Room Exit** | Door leaving a specific room | Room Exit |
+| **Zone Entry** | Garden gate, outdoor area | Logged only (no attendance event) |
+| **Zone Exit** | Leaving a zone area | Logged only (no attendance event) |
 
 ---
 
-## Step-by-Step Guides
+## Setting Up Paxton Integration
 
-### Scenario 1: Map Paxton Readers to Rooms
+### Step 1: Install the On-Premises Connector
 
-**When to use this:** Initial setup or when you install new badge readers
+The Timebreez connector is a lightweight service that runs on a Windows or Linux machine in your facility. It reads events from your Paxton Net2 server and sends them to Timebreez.
 
-**Gherkin Scenario:**
+**What the connector does:**
+- Polls your Paxton Net2 server for new events
+- Sends each event to Timebreez via secure HTTPS
+- Sends a heartbeat every 60 seconds so Timebreez knows the connector is alive
+- Works offline — queues events if internet drops, sends them when connectivity returns
+
+**After installation:**
+- The connector appears on the **Connector Status** panel in Timebreez
+- Status shows **Online** (green), **Degraded** (amber), or **Offline** (red)
+- You can see the connector version, total events synced, and last sync time
+
+---
+
+### Step 2: Map Readers to Roles
+
+**When to use this:** Initial setup, or when you install new badge readers.
+
 ```gherkin
-Given I have 4 Paxton readers installed in my facility
-When I go to Settings > Paxton Integration
-And I click "Discover Readers"
-Then I see all 4 readers listed with their hardware IDs
-When I map "Reader A" to "Baby Room"
-And I map "Reader B" to "Toddlers"
-And I save the mapping
-Then badge events from Reader A update Baby Room presence
-And badge events from Reader B update Toddlers presence
+Scenario: Map Paxton readers to rooms
+  Given I have 5 Paxton readers installed in my facility
+  When I go to Attendance > Reader Mappings
+  And I add reader "PAX-READER-001" with role "Building Entry"
+  And I add reader "PAX-READER-003" with role "Room Entry" for Baby Room
+  Then badge events from PAX-READER-001 create Clock In events
+  And badge events from PAX-READER-003 create Room Entry events for Baby Room
 ```
 
 **Steps:**
 
-1. **Navigate to Paxton Integration settings**
-   - **Click:** Settings > Paxton Integration in the sidebar
-   - **Expected:** Paxton configuration page loads
+1. **Navigate to Reader Mappings**
+   - **Click:** Attendance > Reader Mappings in the sidebar
+   - **Expected:** The Reader Mapping Manager loads with a table of existing mappings
 
-2. **Enter Paxton server details** (first time only)
-   - **Server Address:** Enter your Paxton Net2 server IP or hostname (e.g., `192.168.1.100`)
-   - **API Key:** Enter the API key from your Paxton Net2 configuration
-   - **Click:** "Test Connection"
-   - **Expected:** Green checkmark with "Connected to Paxton Net2 server"
+2. **Add a new reader**
+   - **Click:** the "Add Reader" button
+   - **Fill in the form:**
+     - **Reader ID:** The hardware identifier from your Paxton system (e.g., `PAX-READER-001`). This is shown in monospace font for clarity
+     - **Reader Name:** A friendly name (e.g., "Front Door In", "Baby Room Door")
+     - **Semantic Role:** Choose from the dropdown — Building Entry, Building Exit, Room Entry, Room Exit, Zone Entry, or Zone Exit
+     - **Room:** If you selected Room Entry or Room Exit, a room picker appears. Select the corresponding Timebreez room (e.g., Baby Room)
+   - **Click:** Submit
+   - **Expected:** The reader appears in the table with its role and room assignment
 
-3. **Click "Discover Readers"**
-   - **Click:** Blue "Discover Readers" button
-   - **Expected:** Loading spinner, then a list of detected readers appears
-   - **Example output:**
-     - Reader 1: "Front Door" (Hardware ID: PX-001)
-     - Reader 2: "Baby Room Door" (Hardware ID: PX-002)
-     - Reader 3: "Toddlers Door" (Hardware ID: PX-003)
-     - Reader 4: "Staff Room" (Hardware ID: PX-004)
+3. **Repeat for all readers**
+   - A typical facility has:
+     - 1-2 building entry/exit readers (front door)
+     - 1 reader per room (Baby Room, Toddlers, Preschool, etc.)
+     - Optional: break room, garden gate readers
 
-4. **Map each reader to a room**
-   - **For each reader row:**
-     - **Click:** Room dropdown next to the reader name
-     - **Select:** The corresponding Timebreez room
-     - **Example:** "Baby Room Door" -> "Baby Room"
-   - **Special mappings:**
-     - "Front Door" -> "Building Entry" (tracks on-site status)
-     - "Staff Room" -> "Break Area" (tracks break status)
-   - **Expected:** Each reader has a room assignment
+4. **Search and filter**
+   - Use the search box to find readers by ID, name, or role
+   - **Expected:** Table filters as you type
 
-5. **Save the mapping**
-   - **Click:** "Save Reader Mapping" button
-   - **Expected:** Success toast "Reader mapping saved successfully"
-
-6. **Verify events are flowing**
-   - **Ask a staff member** to badge IN at a mapped reader
-   - **Check Control Desk:** Present count should increase within 30 seconds
-   - **Expected:** Badge event reflected on Control Desk
-
-**Screenshots:** [Screenshot: Reader discovery and mapping interface]
+5. **Edit or delete a mapping**
+   - **Edit:** Click the edit button on any row to change the role or room
+   - **Delete:** Click delete, then confirm in the 2-step confirmation dialog
 
 **Common Issues:**
-- Problem: "Discover Readers" finds 0 readers
-  Solution: Verify Paxton Net2 server is running and the server address is correct. Check network connectivity between Timebreez and the Paxton server.
+- ❌ Problem: You don't know the reader IDs
+  ✅ Solution: Check your Paxton Net2 administration software. Reader IDs are listed under Doors > Properties. They match the hardware serial number.
 
-- Problem: "Connection refused" error
-  Solution: Verify the API key is correct. Check that the Paxton Net2 server has API access enabled. Confirm no firewall is blocking the connection.
+- ❌ Problem: Room picker doesn't appear
+  ✅ Solution: The room picker only shows for Room Entry and Room Exit roles. Building-level readers don't need a room assignment.
 
 ---
 
-### Scenario 2: View Live Presence on the Reality Panel
+### Step 3: Link Badge Cards to Employees
 
-**When to use this:** Monitor who is on-site and in which rooms right now
+**When to use this:** When issuing new key fobs, or onboarding new staff.
 
-**Gherkin Scenario:**
 ```gherkin
-Given Paxton readers are mapped to rooms
-And 8 staff have badged IN today
-When I view the Reality Panel on Control Desk
-Then I see 8 staff listed with their current location
-And each entry shows badge IN time, room assignment, and shift status
+Scenario: Link a badge card to an employee
+  Given Sandra has issued card number "CARD-1001" to Emma Murphy
+  When I go to Attendance > Card Mappings
+  And I add card "CARD-1001" mapped to Emma Murphy
+  Then badge events with card "CARD-1001" are attributed to Emma Murphy
 ```
 
 **Steps:**
 
-1. **Navigate to Control Desk**
-   - **Click:** "Control Desk" in the sidebar
-   - **Expected:** Room tiles and panels load
+1. **Navigate to Card Mappings**
+   - **Click:** Attendance > Card Mappings in the sidebar
+   - **Expected:** Card Mapping Manager loads with a table of linked cards
 
-2. **Find the Reality Panel**
-   - **Look for:** Panel labeled "Reality Panel" or "Live Presence"
-   - **Location:** Usually on the right side of Control Desk
-   - **Expected:** Panel visible with staff entries
+2. **Add a new card**
+   - **Click:** the "Add Card" button
+   - **Fill in the form:**
+     - **Card Number:** The number printed on or programmed into the key fob (e.g., `CARD-1001` or `12345678`)
+     - **Employee:** Select the employee from the dropdown
+   - **Click:** Submit
+   - **Expected:** The card appears in the table linked to the employee
 
-3. **Read the presence data**
-   - **Each row shows:**
-     - **Employee Name:** Emma Murphy
-     - **Current Location:** Baby Room
-     - **Badge IN Time:** 08:58
-     - **Shift Hours:** 09:00 - 17:00
-     - **Status Indicator:**
-       - Green dot: On-site, in assigned room
-       - Blue dot: On-site, in different room (dispatched)
-       - Orange dot: On break (in break area)
-       - Gray dot: Badge OUT recorded
-   - **Expected:** All badged-in staff visible
+3. **Deactivate a card** (lost fob, staff leaving)
+   - **Click:** the toggle button on the card's row
+   - **Expected:** Status changes from Active to Inactive
+   - The card is not deleted — its history is preserved for audit purposes, but new events from this card will appear as "unknown badge" on the Live Entry Feed
 
-4. **Filter by status** (if available)
-   - **Look for:** Filter buttons: "All", "Present", "On Break", "Left"
-   - **Click:** Filter to narrow the list
-   - **Expected:** List updates to show filtered staff only
-
-5. **Check the summary counts**
-   - **Look for:** Summary bar at top of panel
-   - **Example:** "8 on site | 6 in rooms | 1 on break | 1 in transit"
-   - **Expected:** Counts match the detail list
-
-**Screenshots:** [Screenshot: Reality Panel showing live presence data]
+4. **Delete a card** (if added in error)
+   - **Click:** Delete, then confirm
+   - **Expected:** Card removed permanently
 
 **Common Issues:**
-- Problem: Reality Panel shows stale data
-  Solution: Click the Refresh button on the panel. Verify Paxton sync is running (check Settings > Paxton Integration for last sync timestamp).
+- ❌ Problem: Badge events show "Unknown Badge" even after linking
+  ✅ Solution: Verify the card number matches exactly. Card numbers are case-sensitive. Check for leading zeros.
 
-- Problem: Staff shows "Unknown Location"
-  Solution: The badge reader they used is not mapped to a room. Go to Settings > Paxton Integration and map the unassigned reader.
+- ❌ Problem: Same card number linked to two employees
+  ✅ Solution: Each card number must be unique per organization. Deactivate the old mapping before creating a new one.
 
 ---
 
-### Scenario 3: Handle Shift End Nudge
+### Step 4: Monitor Connector Health
 
-**When to use this:** Staff forgot to badge OUT at end of shift
+**When to use this:** Daily check, or when badge events stop appearing.
 
-**Gherkin Scenario:**
-```gherkin
-Given Emma Murphy's shift ends at 17:00
-And it is now 17:15
-And Emma has not badged OUT
-When the system detects this
-Then a "Shift End Nudge" alert appears on Control Desk
-And the alert shows "Emma Murphy - shift ended 15 min ago, no badge OUT"
-When I click "Resolve" on the alert
-Then I can mark her as "Left at shift end" or "Still on site"
-```
+The **Connector Status Panel** shows the health of your on-premises connector.
 
-**Steps:**
+**What you'll see for each connector:**
 
-1. **Identify Shift End Nudge alerts**
-   - **Look for:** Alert banner or badge on Control Desk
-   - **Label:** "Shift End Nudge" or "Overdue Badge OUT"
-   - **Color:** Orange or amber alert
-   - **Expected:** Alert appears 15 minutes after shift end time if no badge OUT
+| Field | Meaning |
+|-------|---------|
+| **Connector ID** | Unique identifier for the connector instance |
+| **Status** | Online (green with animated dot), Offline (red), or Degraded (amber) |
+| **Version** | Software version of the connector |
+| **Last Heartbeat** | How long ago the connector last checked in (e.g., "2 minutes ago") |
+| **Events Synced** | Total number of events sent to Timebreez (e.g., "1,247") |
+| **Last Sync** | When the last batch of events was sent |
 
-2. **View the alert details**
-   - **Click:** The alert to expand details
-   - **Expected:** You see:
-     - **Employee Name:** Emma Murphy
-     - **Shift End:** 17:00
-     - **Current Time:** 17:15
-     - **Last Badge Event:** Badge IN at 08:58 (no OUT recorded)
-     - **Overdue By:** 15 minutes
+**The panel auto-refreshes every 60 seconds.**
 
-3. **Resolve the alert**
-   - **Option A - "Left at shift end":**
-     - Staff actually left but forgot to badge OUT
-     - **Action:** Click "Left at Shift End"
-     - **Result:** System records badge OUT at 17:00 (shift end time)
-   - **Option B - "Still on site":**
-     - Staff is still working (overtime or delayed departure)
-     - **Action:** Click "Still On Site"
-     - **Result:** Alert is snoozed for 30 minutes, then re-alerts
-   - **Option C - "Custom time":**
-     - You know when they left
-     - **Action:** Enter the actual departure time (e.g., 17:10)
-     - **Result:** System records badge OUT at entered time
-
-4. **Verify resolution**
-   - **Check Reality Panel:** Employee should show correct status
-   - **Check attendance log:** Badge OUT event recorded with resolution method
-   - **Expected:** Alert clears, attendance data is accurate
-
-**Screenshots:** [Screenshot: Shift End Nudge alert with resolution options]
-
-**Common Issues:**
-- Problem: Nudge alerts appear for staff who are still working
-  Solution: Click "Still On Site" to snooze. If this happens often, consider adjusting the nudge delay in Settings > Paxton Integration > Alert Timing (default: 15 minutes after shift end).
-
-- Problem: Too many nudge alerts every day
-  Solution: Common with staff who use external exits without readers. Map all exit points to readers, or increase the nudge delay to 30 minutes.
+**When to worry:**
+- **Last Heartbeat > 5 minutes:** The connector may have stopped. Check the machine it runs on.
+- **Status: Degraded:** The connector is running but experiencing errors (e.g., Paxton server not responding).
+- **Status: Offline:** No heartbeat received. The connector process has likely stopped.
 
 ---
 
-### Scenario 4: Check the Compliance Audit Trail
+## Using the Live Entry Feed
 
-**When to use this:** Preparing for a Tusla inspection or reviewing attendance records
+The **Live Entry Feed** is the right-hand panel on the Control Desk. It shows every badge event as it happens, with automatic mismatch detection.
 
-**Gherkin Scenario:**
+### Feed Status Colours
+
+Every event in the feed gets one of four statuses:
+
+| Status | Colour | Meaning | Example |
+|--------|--------|---------|---------|
+| **OK** | Green | Employee badged in at expected location | Emma badged into Baby Room, she's scheduled there today |
+| **Mismatch** | Amber | Employee badged into a room they're NOT scheduled for | Mary badged into Toddlers but she's rostered for Baby Room |
+| **Unknown Badge** | Red | Badge card has no employee linked | Card "CARD-9999" tapped — no one is mapped to it |
+| **Unscheduled** | Yellow | Employee badged in but has no shift today | Sarah badged in at the building entrance on her day off |
+
+### Resolving Feed Alerts
+
+As a manager, you can take action on any non-OK event directly from the feed.
+
 ```gherkin
-Given I need to prove staffing ratios were maintained on January 15th
-When I go to Reports > Attendance Audit Trail
-And I filter by date "2026-01-15"
-Then I see a timeline of all badge events for every staff member
-And I see room presence periods (who was in which room, when)
-And I can export the report as PDF for Tusla
+Scenario: Resolve a room mismatch
+  Given Mary is scheduled for Baby Room today
+  And Mary badges into Toddlers at 10:30
+  When I see the mismatch alert on the Live Entry Feed
+  And I click "Assign to Room" and select Toddlers
+  Then the event is marked as resolved
+  And the reason is recorded for compliance
 ```
 
-**Steps:**
+**Available resolution actions by status:**
 
-1. **Navigate to Attendance Audit Trail**
-   - **Click:** Reports > Attendance Audit Trail (or Settings > Paxton Integration > Audit Log)
-   - **Expected:** Audit trail page loads with date filter
+| Feed Status | Available Actions |
+|-------------|------------------|
+| **Mismatch** | Assign to Room (update their schedule), Ignore (with reason) |
+| **Unknown Badge** | Mark as Visitor, Link Badge to Staff, Ignore (with reason) |
+| **Unscheduled** | Assign to Room (give them a shift), Note as Overtime, Ignore (with reason) |
 
-2. **Select the date range**
-   - **Date From:** Select start date (e.g., 2026-01-15)
-   - **Date To:** Select end date (e.g., 2026-01-15 for single day)
-   - **Click:** "Search" or "Filter"
-   - **Expected:** Timeline of events loads
+**Steps to resolve:**
 
-3. **Review the audit timeline**
-   - **Format:** Chronological list of badge events
-   - **Each entry shows:**
-     - **Timestamp:** 08:58:23
-     - **Employee:** Emma Murphy
-     - **Event:** Badge IN
-     - **Reader:** "Front Door" (PX-001)
-     - **Room Mapped:** Building Entry
-     - **Source:** Paxton Net2 (automatic)
-   - **Expected:** Complete timeline for selected date
+1. **Find the alert** in the Live Entry Feed (amber/red/yellow rows stand out)
+2. **Click** the event row to expand it
+3. **Choose** a resolution action from the buttons
+4. **Enter a reason** if required (mandatory for "Ignore" actions)
+5. **Expected:** The event shows "Resolved" with your name and timestamp
 
-4. **Check room presence periods**
-   - **Look for:** "Room Presence" tab or section
-   - **Format:** Per-employee timeline showing room assignments:
-     - Emma Murphy: Baby Room 09:00 - 12:00, Break 12:00 - 12:30, Baby Room 12:30 - 17:00
-   - **Expected:** Continuous timeline with no gaps (or gaps flagged)
+### Feed Filters
 
-5. **Export for compliance**
-   - **Click:** "Export PDF" or "Export CSV" button
-   - **Expected:** File downloads with full audit trail
-   - **Use for:** Tusla inspections, internal audits, payroll verification
+- **Time window:** Show events from the last 15, 30, 60, or 120 minutes
+- **Alerts only:** Toggle to hide OK events and show only problems
+- **Paxton status indicator:** WiFi icon shows whether the connector is connected (last event < 5 minutes ago) or disconnected
 
-6. **Verify ratio compliance** (optional)
-   - **Look for:** "Ratio Check" column or section
-   - **Shows:** Whether required ratio was met at each point in time
-   - **GREEN entries:** Ratio maintained
-   - **RED entries:** Ratio breach detected (with duration)
-   - **Expected:** Compliance status for each room at each time interval
+---
 
-**Screenshots:** [Screenshot: Attendance audit trail with timeline view]
+## Paxton + NFC: Working Together
 
-**Common Issues:**
-- Problem: Gaps in the audit trail (missing badge events)
-  Solution: Check if the Paxton server had downtime during the gap. Missing events cannot be recovered from Paxton after 24 hours. Use manual attendance entries to fill gaps.
+Timebreez supports **multiple attendance sources** that work together. Paxton and NFC scanning serve different purposes:
 
-- Problem: Export PDF is blank or incomplete
-  Solution: Ensure the date range is correct and events exist. Large date ranges (over 30 days) may time out. Export in smaller chunks.
+| Feature | Paxton Net2 | NFC Scanning |
+|---------|------------|-------------|
+| **How it works** | Badge readers at doors (automatic) | Staff taps phone on NFC tag (manual) |
+| **Best for** | Building entry/exit, room tracking | Break rooms, outdoor areas, mobile check-in |
+| **Infrastructure** | Requires Paxton hardware + on-prem connector | Requires NFC tags (stickers) + staff smartphones |
+| **Data source** | `paxton` in attendance events | `nfc` in attendance events |
+| **Priority** | Highest (overrides NFC and manual entries) | Medium (overrides manual, but not Paxton) |
+
+**Priority resolution:** If both Paxton and NFC record an event for the same employee at the same time, Paxton wins. The NFC event is marked as "superseded" to avoid double-counting. The priority order is:
+
+1. **Paxton** (highest — automatic, hardware-backed)
+2. **NFC** (medium — staff-initiated, phone-based)
+3. **Manual** (lowest — manager override)
+
+This means you can use NFC tags in areas without Paxton readers (garden, break room) and the data merges seamlessly in the attendance log.
+
+---
+
+## Understanding the Control Desk Integration
+
+Paxton events flow directly into the Control Desk, powering several features:
+
+### Room Tiles
+Each room tile on the Control Desk shows a **present count** — the number of staff currently in that room based on badge events. When a staff member badges into a room, the count updates in real-time via Supabase Realtime subscriptions (no polling delay).
+
+### Alert Summary Bar
+The header bar shows colour-coded counts:
+- **RED** count: Rooms with staffing breaches or unknown badges
+- **AMBER** count: Rooms with mismatches or warnings
+- **GREEN** count: Rooms with correct staffing
+
+Click any count to filter the room grid to only rooms with that status.
+
+### Dispatch + Paxton
+When you dispatch a cover staff member to a room, the system tracks whether they actually arrive by watching for their badge event at the room reader. The Dispatch Status Tracker shows a live countdown, and the status updates from "Sent" to "Acknowledged" to "Arrived" when the badge event confirms they entered the room.
+
+### Who's In
+The **Who's In** panel shows all staff currently on site (based on building entry events without a matching exit). Each entry shows the employee name, how long they've been on site, and their entry location.
 
 ---
 
 ## Troubleshooting
 
-### Issue: Paxton connection lost
-**Symptoms:** Control Desk present counts stop updating, "Paxton Offline" indicator appears
-**Cause:** Network issue between Timebreez and Paxton Net2 server
+### Issue: Connector shows Offline
+**Symptoms:** Connector Status Panel shows red "Offline" badge, last heartbeat was more than 5 minutes ago.
+**Cause:** The connector process has stopped, or the machine has lost internet connectivity.
 **Solution:**
-1. Check Paxton Net2 server is running (ping the server address)
-2. Verify network connectivity (firewall rules, VPN, etc.)
-3. Go to Settings > Paxton Integration and click "Test Connection"
-4. If connection fails, contact your IT administrator
-5. Badge events will backfill once connection is restored
+1. Check the machine running the connector — is it powered on?
+2. Verify internet connectivity from that machine
+3. Restart the connector service
+4. Check the connector logs for error messages
+5. Events will backfill automatically once the connector reconnects
 
 ---
 
-### Issue: Badge events delayed by more than 2 minutes
-**Symptoms:** Staff badges IN but present count updates slowly
-**Cause:** Polling interval too long, or Paxton server under load
+### Issue: Badge events show "Unknown Badge"
+**Symptoms:** Events appear in the Live Entry Feed with red "Unknown Badge" status.
+**Cause:** The card number in the event has no mapping to an employee.
 **Solution:**
-1. Check Settings > Paxton Integration > Sync Interval (default: 30 seconds)
-2. Reduce interval to 15 seconds if needed (increases server load)
-3. Check Paxton Net2 server performance (CPU, memory)
-4. If delays persist, contact Paxton support
+1. Note the card number from the feed event details
+2. Go to **Attendance > Card Mappings**
+3. Add a new mapping: enter the card number and select the employee
+4. Future events from that card will now be attributed correctly
+5. Alternatively, use the "Link Badge to Staff" resolution action directly from the feed
 
 ---
 
 ### Issue: Wrong room assigned to badge event
-**Symptoms:** Staff badges IN at Baby Room door but appears in Toddlers
-**Cause:** Reader-to-room mapping is incorrect
+**Symptoms:** Staff badges in at Baby Room door but the event shows them in Toddlers.
+**Cause:** The reader-to-room mapping is incorrect.
 **Solution:**
-1. Go to Settings > Paxton Integration > Reader Mapping
-2. Verify which hardware ID corresponds to which physical reader
-3. Correct the room mapping
-4. Save and test with a fresh badge event
+1. Go to **Attendance > Reader Mappings**
+2. Search for the reader ID shown in the event details
+3. Click Edit and correct the room assignment
+4. Save and verify with a fresh badge event
+
+---
+
+### Issue: Events appear with long delay
+**Symptoms:** Staff badges in but the event doesn't appear on Control Desk for several minutes.
+**Cause:** Connector sync delay, or the connector is in degraded state.
+**Solution:**
+1. Check the Connector Status Panel — is the status "Degraded"?
+2. Check the "Last Sync" timestamp — if it's old, the connector may be struggling
+3. Verify the Paxton Net2 server is responsive
+4. The Control Desk uses Supabase Realtime, so once events reach the database, they appear instantly. The delay is between Paxton and the connector.
 
 ---
 
 ### Issue: Staff shows as present after leaving
-**Symptoms:** Employee badged OUT but still appears in Reality Panel
-**Cause:** Badge OUT event not received, or reader malfunction
+**Symptoms:** Employee left the building but still shows in the "Who's In" panel.
+**Cause:** They used an exit without a badge reader, or the exit reader isn't mapped.
 **Solution:**
-1. Check if the exit reader is mapped (unrecognized readers are ignored)
-2. Verify badge OUT event exists in Paxton Net2 logs
-3. If event missing in Paxton, the reader may have a hardware issue
-4. Manually resolve via Shift End Nudge or Daily Reconciliation
+1. Check if the exit point has a reader — if not, staff must badge out at the main entrance
+2. Verify the exit reader is mapped with role "Building Exit"
+3. Use the Daily Reconciliation to manually record the clock-out time
+4. Consider adding readers to all exit points used by staff
 
 ---
 
-### Issue: Shift End Nudge not appearing
-**Symptoms:** Staff overdue but no nudge alert
-**Cause:** Nudge feature disabled, or alert timing misconfigured
+### Issue: Mismatch alerts for legitimately moved staff
+**Symptoms:** Feed shows "Mismatch" for a staff member who was asked to help in another room.
+**Cause:** Their schedule shows them in Room A, but they badged into Room B.
 **Solution:**
-1. Go to Settings > Paxton Integration > Alert Timing
-2. Verify "Shift End Nudge" is enabled
-3. Check the delay setting (default: 15 minutes after shift end)
-4. Ensure staff has an active shift for today (no shift = no nudge)
+1. Click the mismatch event in the Live Entry Feed
+2. Click **"Assign to Room"** and select the room they're actually in
+3. This updates the record and clears the alert
+4. For recurring moves, consider updating the roster to reflect the change
 
 ---
 
 ## Related Guides
-- [Control Desk Operations](./05-control-desk-operations.md)
-- [Daily Reconciliation](./04-daily-reconciliation.md)
-- [Cover Staff Dispatch](./03-cover-staff-dispatch.md)
-- [Troubleshooting Guide](./08-troubleshooting.md)
+- [Control Desk Operations](./05-control-desk-operations.md) - Full guide to the room grid, alert filters, and kiosk mode
+- [Attendance & Presence](./09-attendance-presence.md) - Multi-source attendance tracking (Paxton + NFC + manual)
+- [Daily Reconciliation](./04-daily-reconciliation.md) - Resolving attendance discrepancies at end of day
+- [Cover Staff Dispatch](./03-cover-staff-dispatch.md) - Dispatching staff to cover gaps detected by the feed
+- [Compliance Trail & Audit](./11-compliance-trail-audit.md) - Using attendance data for Tusla compliance
+- [Troubleshooting Guide](./08-troubleshooting.md) - General troubleshooting
 
 ## Need More Help?
 - **Timebreez Support:** support@timebreez.com
 - **Paxton Net2 Support:** www.paxton-access.com/support
-- **Demo mode:** www.timebreez.com/login (see simulated Paxton events in demo org)
-- **Book a call:** Schedule a 15-min walkthrough of Paxton integration setup
+- **Demo mode:** www.timebreez.com/login (the demo org includes simulated Paxton events so you can explore the full flow)
+- **Book a call:** Schedule a 15-minute walkthrough of your Paxton integration setup
