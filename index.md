@@ -65,6 +65,8 @@ You want to know when you're working and how much leave you have left, without h
 - [Getting started - Initial setup](/docs/admin/#getting-started)
 - [Building rosters](/docs/admin/roster/)
 - [Managing leave requests](/docs/admin/leave/)
+- [Importing from Timetastic](/docs/20-timetastic-import/)
+- [Importing staff from a CSV](/docs/21-staff-csv-import/)
 - [WhatsApp setup](/docs/admin/whatsapp/)
 
 ### For Staff Members

@@ -157,6 +157,17 @@ Send "balance" or "what's my balance"
 **Via the web:**
 Log in and go to **My Leave**
 
+### Why does my leave balance show 0 after we imported from Timetastic?
+
+Almost always one of these, in order of likelihood:
+
+1. **The import has not actually run.** An import sitting at **"Analyzed"** has been read but not executed. Nothing has been written yet.
+2. **The balance adjustments were never approved.** This is the most common cause of "the import worked but nobody has a balance". Importing records what Timetastic said, but it does not change balances until an admin approves each adjustment after execution.
+3. **The import finished as "Partial"** - some rows failed. Check the reconciliation report.
+4. **There genuinely is no leave history** for that person in the export, in which case 0 is correct.
+
+Admins: see [Why Balances Still Show 0](/docs/20-timetastic-import/#why-balances-still-show-0-after-an-import) for the full walkthrough.
+
 ### How long does leave approval take?
 
 Most requests are processed within 1-2 business days. For urgent requests, contact your manager directly.
