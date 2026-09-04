@@ -88,13 +88,18 @@ Setting accurate allowances is essential for automatic balance tracking. Take ti
 
 #### Step 5: Import Existing Data (Optional)
 
-If you have existing leave balances or staff data:
+There are two importers, depending on what you are bringing across:
 
-1. Go to **Settings > Import Data**
-2. Download our template spreadsheet
-3. Fill in your existing data
-4. Upload the completed spreadsheet
-5. Review and confirm the import
+**Moving from Timetastic?** Use the **Timetastic import** at **Admin > Timetastic import**. It brings across staff, leave history and opening balances.
+
+- Full guide: [Timetastic Import](../20-timetastic-import.md)
+- Two things to know before you start: an import sitting at **"Analyzed"** has **not** run yet, and balances stay at **0** until you approve the balance adjustments after execution. Both are covered in the guide.
+
+**Just need to add people from a spreadsheet?** Use the **staff CSV import** at `/admin/import-staff`.
+
+- Full guide: [Staff CSV Import](../21-staff-csv-import.md)
+- Required columns are `full_name` and `email`. People are matched by email, so re-uploading a corrected file updates the same people instead of duplicating them.
+- This page is not currently linked from the menu - type the address directly.
 
 ---
 

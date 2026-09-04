@@ -454,6 +454,57 @@ v_zone_singular := v_vocab->>'zone_singular'; -- JSON access
 
 ---
 
+## 📥 Import Issues
+
+### Issue: Import finished but everyone's leave balance is 0
+
+**Symptoms:**
+- Staff imported successfully
+- Leave balance cards show 0 days for every employee
+
+**This is usually expected behaviour, not a fault.** Check in order:
+
+1. **Is the import still at "Analyzed"?**
+   "Analyzed" means the file has been read but the import has **not run**. Confirm the organisation and press **Execute**.
+
+2. **Did you approve the balance adjustments?**
+   This is the most common cause. Importing stores what Timetastic said as a *snapshot* - the import page states *"Source snapshots are evidence, not balance changes."* Balances only move when an admin presses **Approve after execution** on each adjustment.
+
+3. **Did the import finish as "Partial"?**
+   Some rows failed. Open **Reconcile** and the **Gaps queue**.
+
+4. **Are some snapshots marked "reconciliation-only"?**
+   Those cannot create balance ledger rows at all - they exist for comparison only.
+
+5. **Does the employee genuinely have no history in the export?**
+   Then 0 is correct.
+
+**Full guide:** [Timetastic Import - Why Balances Still Show 0](./20-timetastic-import.md#why-balances-still-show-0-after-an-import)
+
+---
+
+### Issue: An import is stuck and won't progress
+
+**Symptoms:**
+- Import sits at "Analyzed", "Uploaded" or "Blocked"
+- Nobody remembers who started it
+
+**Fix - re-upload the same file.** Timebreez recognises it and continues the existing import rather than creating a second one. No duplicate staff, no duplicate leave. Completed and in-progress imports are protected and will not be reset.
+
+**⚠️ Only if the file is unchanged.** If you have re-exported or edited the spreadsheet, it counts as a *different* file and will start a **second** import alongside the stuck one. Running both adds the same leave twice, and balances come out wrong. **Cancel the stale run first** from **Admin > Timetastic import > Runs**.
+
+---
+
+### Issue: "Import draft is not saved."
+
+**Symptoms:**
+- That message appears on the import page
+- Mapping choices are lost after reloading or navigating away
+
+**Known limitation.** Drafts can currently be lost on navigation or reload. Complete the mapping panels in one sitting where possible, and check for this message before relying on your work being kept.
+
+---
+
 ## 🌐 Browser & Connectivity Issues
 
 ### Issue: Page won't load / infinite loading spinner
