@@ -43,7 +43,7 @@ Press **Deny** and type the reason. The person sees it with the request.
 | Your account is not linked to an employee record | Your login has no staff record, so the approval cannot be put in your name | Ask an admin to link your login to your staff record |
 | No calculation to review | The cost could not be worked out yet | Check the person's work pattern and the calculation rules in [Settings]({{ site.baseurl }}/docs/app/settings/) |
 
-| Days not calculated | Timebreez could not work out what this request costs. The **Why** line says what is missing | Follow the **Fix** line, usually confirming the person's working pattern on [Employees]({{ site.baseurl }}/docs/app/employees/) |
+| Days not calculated | Timebreez could not work out what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
 | Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
 
 A refusal stays on screen until you close it, so you can read it.
