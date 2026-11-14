@@ -14,6 +14,10 @@ permalink: /docs/app/leave-requests/
 
 Lists every time-off request for your organisation. You check what each request costs, then approve or deny it. Approving takes the time off the person's balance.
 
+## Finding requests
+
+The filters under **Show leave for** narrow the list (and the downloads below) to the people, dates and status you pick.
+
 ## Approving a request
 
 Each request is a card. Approval is two steps on purpose: first you look at the calculation, then you approve.
@@ -39,7 +43,19 @@ Press **Deny** and type the reason. The person sees it with the request.
 | Your account is not linked to an employee record | Your login has no staff record, so the approval cannot be put in your name | Ask an admin to link your login to your staff record |
 | No calculation to review | The cost could not be worked out yet | Check the person's work pattern and the calculation rules in [Settings]({{ site.baseurl }}/docs/app/settings/) |
 
+| Days not calculated | Timebreez could not work out what this request costs. The **Why** line says what is missing | Follow the **Fix** line, usually confirming the person's working pattern on [Employees]({{ site.baseurl }}/docs/app/employees/) |
+| Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
+
 A refusal stays on screen until you close it, so you can read it.
+
+## Downloads
+
+Under **Download a spreadsheet (CSV)**:
+
+- **Download leave list (n)**: the requests the filters show, one row each.
+- **Download balances**: each person's balance.
+
+Neither is the payroll file. For pay, use [Payroll]({{ site.baseurl }}/docs/app/payroll/).
 
 ## Common questions
 
