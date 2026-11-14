@@ -185,8 +185,8 @@ A proper web dashboard on a computer is the right tool for this job.
 
 Ready to simplify your scheduling and leave management?
 
-[Admin Setup Guide](/docs/admin/){: .btn .btn-primary .mr-2 }
-[Staff Guide](/docs/staff/){: .btn }
+[Admin Setup Guide]({{ site.baseurl }}/docs/admin/){: .btn .btn-primary .mr-2 }
+[Staff Guide]({{ site.baseurl }}/docs/staff/){: .btn }
 
 ---
 

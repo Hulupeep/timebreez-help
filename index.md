@@ -12,8 +12,8 @@ permalink: /
 Staff scheduling and leave management made simple for childcare centers.
 {: .fs-6 .fw-300 }
 
-[Get Started for Admins](/docs/admin/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Staff Guide](/docs/staff/){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Get Started for Admins]({{ site.baseurl }}/docs/admin/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Staff Guide]({{ site.baseurl }}/docs/staff/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -62,26 +62,27 @@ You want to know when you're working and how much leave you have left, without h
 ### For Administrators
 {: .text-purple-000 }
 
-- [Getting started - Initial setup](/docs/admin/#getting-started)
-- [Building rosters](/docs/admin/roster/)
-- [Managing leave requests](/docs/admin/leave/)
-- [Importing from Timetastic](/docs/20-timetastic-import/)
-- [Importing staff from a CSV](/docs/21-staff-csv-import/)
-- [WhatsApp setup](/docs/admin/whatsapp/)
+- [Getting started - Initial setup]({{ site.baseurl }}/docs/admin/#getting-started)
+- [Building rosters]({{ site.baseurl }}/docs/admin/roster/)
+- [Managing leave requests]({{ site.baseurl }}/docs/admin/leave/)
+- [Importing from Timetastic, batch by batch]({{ site.baseurl }}/docs/app/timetastic-import/)
+- [Timetastic import: statuses and recovery]({{ site.baseurl }}/docs/20-timetastic-import/)
+- [Importing staff from a CSV]({{ site.baseurl }}/docs/21-staff-csv-import/)
+- [WhatsApp setup]({{ site.baseurl }}/docs/admin/whatsapp/)
 
 ### For Staff Members
 {: .text-blue-000 }
 
-- [Viewing your schedule](/docs/staff/#my-schedule)
-- [Requesting time off](/docs/staff/leave/)
-- [Understanding WhatsApp notifications](/docs/staff/#whatsapp-notifications)
+- [Viewing your schedule]({{ site.baseurl }}/docs/staff/#my-schedule)
+- [Requesting time off]({{ site.baseurl }}/docs/staff/leave/)
+- [Understanding WhatsApp notifications]({{ site.baseurl }}/docs/staff/#whatsapp-notifications)
 
 ### Common Questions
 {: .text-green-000 }
 
-- [Frequently Asked Questions](/docs/faq/)
-- [Troubleshooting common issues](/docs/faq/#troubleshooting)
-- [Contact support](/docs/faq/#contact-support)
+- [Frequently Asked Questions]({{ site.baseurl }}/docs/faq/)
+- [Troubleshooting common issues]({{ site.baseurl }}/docs/faq/#troubleshooting)
+- [Contact support]({{ site.baseurl }}/docs/faq/#contact-support)
 
 </div>
 

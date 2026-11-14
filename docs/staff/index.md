@@ -247,11 +247,11 @@ Currently, shift swaps need to go through your manager:
 ## Getting Help
 
 - **For schedule questions**: Contact your manager directly
-- **For leave questions**: [See the Leave Request Guide](/docs/staff/leave/)
+- **For leave questions**: [See the Leave Request Guide]({{ site.baseurl }}/docs/staff/leave/)
 - **For technical issues**: Contact support@timebreez.com
 
 ---
 
 ## Next Steps
 
-[How to Request Leave](/docs/staff/leave/){: .btn .btn-primary }
+[How to Request Leave]({{ site.baseurl }}/docs/staff/leave/){: .btn .btn-primary }

@@ -147,7 +147,7 @@ Send a message like "I need December 15-16 off"
 2. Click **Request Leave**
 3. Select dates and submit
 
-[Full guide: How to Request Leave](/docs/staff/leave/)
+[Full guide: How to Request Leave]({{ site.baseurl }}/docs/staff/leave/)
 
 ### How do I check my leave balance?
 
@@ -166,7 +166,7 @@ Almost always one of these, in order of likelihood:
 3. **The import finished as "Partial"** - some rows failed. Check the reconciliation report.
 4. **There genuinely is no leave history** for that person in the export, in which case 0 is correct.
 
-Admins: see [Why Balances Still Show 0](/docs/20-timetastic-import/#why-balances-still-show-0-after-an-import) for the full walkthrough.
+Admins: see [Why Balances Still Show 0]({{ site.baseurl }}/docs/20-timetastic-import/#why-balances-still-show-0-after-an-import) for the full walkthrough.
 
 ### How long does leave approval take?
 
@@ -299,7 +299,7 @@ Contact your manager immediately. There may be a clock-in issue or a roster mism
 4. Set their leave allowances
 5. They'll receive an invitation email
 
-[Full guide: Admin Setup](/docs/admin/)
+[Full guide: Admin Setup]({{ site.baseurl }}/docs/admin/)
 
 ### How do I change someone's leave allowance?
 
@@ -311,7 +311,7 @@ Contact your manager immediately. There may be a clock-in issue or a roster mism
 
 ### How do I set up WhatsApp for my centre?
 
-[See the WhatsApp Setup Guide](/docs/admin/whatsapp/)
+[See the WhatsApp Setup Guide]({{ site.baseurl }}/docs/admin/whatsapp/)
 
 ### Can I have multiple administrators?
 
@@ -373,7 +373,7 @@ For urgent issues affecting today's operations, include "URGENT" in your email s
 If you can't find the answer you're looking for:
 
 1. Use the search bar at the top of this page
-2. Browse the [Admin Guide](/docs/admin/) or [Staff Guide](/docs/staff/)
+2. Browse the [Admin Guide]({{ site.baseurl }}/docs/admin/) or [Staff Guide]({{ site.baseurl }}/docs/staff/)
 3. Contact support at support@timebreez.com
 
 We're here to help!

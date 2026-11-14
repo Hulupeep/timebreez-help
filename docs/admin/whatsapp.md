@@ -375,5 +375,5 @@ For new centres, Timebreez support can walk you through the entire WhatsApp setu
 
 ## Next Steps
 
-[Back to Admin Guide](/docs/admin/){: .btn .btn-primary .mr-2 }
-[Roster Management](/docs/admin/roster/){: .btn }
+[Back to Admin Guide]({{ site.baseurl }}/docs/admin/){: .btn .btn-primary .mr-2 }
+[Roster Management]({{ site.baseurl }}/docs/admin/roster/){: .btn }

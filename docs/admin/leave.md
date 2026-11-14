@@ -398,5 +398,5 @@ Shows current balances for all staff:
 
 ## Next Steps
 
-[Roster Management](/docs/admin/roster/){: .btn .btn-primary .mr-2 }
-[WhatsApp Setup](/docs/admin/whatsapp/){: .btn }
+[Roster Management]({{ site.baseurl }}/docs/admin/roster/){: .btn .btn-primary .mr-2 }
+[WhatsApp Setup]({{ site.baseurl }}/docs/admin/whatsapp/){: .btn }
