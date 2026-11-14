@@ -305,5 +305,5 @@ Make sure the roster is **Published**, not still in Draft mode.
 
 ## Next Steps
 
-[Leave Management](/docs/admin/leave/){: .btn .btn-primary .mr-2 }
-[WhatsApp Setup](/docs/admin/whatsapp/){: .btn }
+[Leave Management]({{ site.baseurl }}/docs/admin/leave/){: .btn .btn-primary .mr-2 }
+[WhatsApp Setup]({{ site.baseurl }}/docs/admin/whatsapp/){: .btn }

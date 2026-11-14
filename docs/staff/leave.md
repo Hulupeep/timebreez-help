@@ -319,4 +319,4 @@ Always let someone know if you can't come in. A quick "SICK" reply takes 2 secon
 
 ## Back to Staff Guide
 
-[Staff Guide Home](/docs/staff/){: .btn .btn-primary }
+[Staff Guide Home]({{ site.baseurl }}/docs/staff/){: .btn .btn-primary }

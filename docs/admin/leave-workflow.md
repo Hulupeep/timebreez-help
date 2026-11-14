@@ -294,7 +294,7 @@ When approving leave that would breach minimum staffing:
 
 ## See Also
 
-- [Leave Management](/docs/admin/leave/) - Admin guide for managing leave
-- [Requesting Leave](/docs/staff/leave/) - Staff guide for requesting leave
-- [WhatsApp Setup](/docs/admin/whatsapp/) - Configure WhatsApp notifications
+- [Leave Management]({{ site.baseurl }}/docs/admin/leave/) - Admin guide for managing leave
+- [Requesting Leave]({{ site.baseurl }}/docs/staff/leave/) - Staff guide for requesting leave
+- [WhatsApp Setup]({{ site.baseurl }}/docs/admin/whatsapp/) - Configure WhatsApp notifications
 

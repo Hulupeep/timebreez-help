@@ -92,7 +92,8 @@ There are two importers, depending on what you are bringing across:
 
 **Moving from Timetastic?** Use the **Timetastic import** at **Admin > Timetastic import**. It brings across staff, leave history and opening balances.
 
-- Full guide: [Timetastic Import](../20-timetastic-import.md)
+- Step by step: [Timetastic Import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- Statuses and recovery: [Timetastic import: statuses and recovery]({{ site.baseurl }}/docs/20-timetastic-import/)
 - Two things to know before you start: an import sitting at **"Analyzed"** has **not** run yet, and balances stay at **0** until you approve the balance adjustments after execution. Both are covered in the guide.
 
 **Just need to add people from a spreadsheet?** Use the **staff CSV import** at `/admin/import-staff`.
@@ -146,7 +147,7 @@ Where you build and manage weekly schedules:
 - Drag-and-drop staff assignment
 - See conflicts and gaps highlighted
 
-[Learn more about Roster Management](/docs/admin/roster/)
+[Learn more about Roster Management]({{ site.baseurl }}/docs/admin/roster/)
 
 ### Staff
 
@@ -165,7 +166,7 @@ Handle time-off requests:
 - See leave impact on schedule
 - View team leave calendar (wallchart)
 
-[Learn more about Leave Management](/docs/admin/leave/)
+[Learn more about Leave Management]({{ site.baseurl }}/docs/admin/leave/)
 
 ### Payroll
 
@@ -185,7 +186,7 @@ Configure your centre:
 - WhatsApp configuration
 - User access and permissions
 
-[Learn more about WhatsApp Setup](/docs/admin/whatsapp/)
+[Learn more about WhatsApp Setup]({{ site.baseurl }}/docs/admin/whatsapp/)
 
 ---
 
@@ -228,7 +229,7 @@ For urgent issues affecting today's operations, email with "URGENT" in the subje
 
 Ready to dive deeper?
 
-[Roster Management](/docs/admin/roster/){: .btn .btn-primary .mr-2 }
-[Leave Management](/docs/admin/leave/){: .btn .mr-2 }
-[Leave Workflow](/docs/admin/leave-workflow/){: .btn .mr-2 }
-[WhatsApp Setup](/docs/admin/whatsapp/){: .btn }
+[Roster Management]({{ site.baseurl }}/docs/admin/roster/){: .btn .btn-primary .mr-2 }
+[Leave Management]({{ site.baseurl }}/docs/admin/leave/){: .btn .mr-2 }
+[Leave Workflow]({{ site.baseurl }}/docs/admin/leave-workflow/){: .btn .mr-2 }
+[WhatsApp Setup]({{ site.baseurl }}/docs/admin/whatsapp/){: .btn }
