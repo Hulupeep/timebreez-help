@@ -57,7 +57,7 @@ You want to know when you're working and how much leave you have left, without h
 
 ## Quick Links
 
-<div class="quick-links">
+<div class="quick-links" markdown="1">
 
 ### For Administrators
 {: .text-purple-000 }
