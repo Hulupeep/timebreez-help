@@ -2,11 +2,15 @@
 layout: default
 title: Billing
 parent: Page by page
-nav_order: 20
+nav_order: 35
 permalink: /docs/app/billing/
 ---
 
 # Billing Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

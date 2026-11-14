@@ -2,64 +2,40 @@
 layout: default
 title: Roster
 parent: Page by page
-nav_order: 5
+nav_order: 7
 permalink: /docs/app/roster/
 ---
 
-# Roster Help
+# Roster
 
-## What It Does
+**Who uses it:** admins and managers. In the menu: **Roster**.
 
-Build and manage work schedules - assign people to shifts, rooms, and time slots.
+## The views
 
-## Why It Matters
+| View | Shows |
+|---|---|
+| **By Staff** | One row per person, one column per day of the week |
+| **By Room** | One row per room, so you can see each room's cover |
+| **Timeline** | One room on one day, hour by hour. Pick the room and the date |
 
-The right people in the right place at the right time. Good scheduling means smooth operations and happy staff.
+Move between weeks with the arrows, or press **This Week**.
 
-## How To Use It
+## Building the week
 
-1. Select the **week** you want to schedule
-2. Click on an **empty slot** to add a shift
-3. Select the **employee** from available staff
-4. Set the **start and end time**
-5. Choose which **room** they'll work in
-6. **Save** the shift
-7. When complete, click **"Publish"** to notify staff
+- **Add a shift:** in **By Staff**, click the add button in a person's day. In **Create Shift**, pick the person, the room, the date, the **Start Time** and **End Time**.
+- **Change or remove a shift:** click it. Removing asks you to confirm.
+- **Move a shift:** drag it to another cell. You see "Shift moved successfully".
+- **Copy last week:** press **Fill from Last Week**. If this week already has shifts you choose **Add to existing shifts** or **Replace all existing shifts**. Copying never overwrites unless you choose Replace.
+- **Autofill:** the button shows how many gaps the week has. Pressing it opens a preview of proposed assignments for understaffed rooms; nothing changes until you apply them.
 
-## Visual Diagram
+## Availability
 
-```mermaid
-flowchart TD
-    A[Open Roster] --> B[Select Week]
-    B --> C[Click on empty slot]
-    C --> D[Pick employee]
-    D --> E[Set start/end time]
-    E --> F[Choose room]
-    F --> G[Save shift]
+The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**.
 
-    G --> H{Need more shifts?}
-    H -->|Yes| C
-    H -->|No| I[Publish roster]
+## Coverage warnings
 
-    I --> J[Staff notified]
-```
+If a room falls below the staff it needs, a warning shows on the roster. Fix it before the day, or the same warning appears when someone's leave is approved.
 
-## Common Questions
+## Sharing
 
-### What happens when I publish the roster?
-
-Staff will be notified about their shifts via WhatsApp and email. They can then see their schedule in the app.
-
-### Can I change a shift after publishing?
-
-Yes, but affected staff will be notified of the change. Try to finalize schedules before publishing.
-
-### Why can't I schedule someone?
-
-They might not be assigned to that room, or they may have approved leave on that day. Check their profile and the wallchart.
-
-## Tips
-
-- Build rosters at least a week in advance
-- Check approved leave before scheduling
-- Use "Find Cover" when someone calls in sick
+**Share to WhatsApp** sends the week's roster to your team.

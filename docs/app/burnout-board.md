@@ -2,11 +2,15 @@
 layout: default
 title: Burnout Board
 parent: Page by page
-nav_order: 8
+nav_order: 32
 permalink: /docs/app/burnout-board/
 ---
 
 # Burnout Board Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

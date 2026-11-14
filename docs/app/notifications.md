@@ -2,11 +2,15 @@
 layout: default
 title: Notifications
 parent: Page by page
-nav_order: 14
+nav_order: 18
 permalink: /docs/app/notifications/
 ---
 
 # Notifications Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

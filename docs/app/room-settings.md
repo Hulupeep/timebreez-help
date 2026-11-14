@@ -2,11 +2,15 @@
 layout: default
 title: Room Settings
 parent: Page by page
-nav_order: 17
+nav_order: 34
 permalink: /docs/app/room-settings/
 ---
 
 # Room Settings Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

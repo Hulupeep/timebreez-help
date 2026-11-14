@@ -2,11 +2,15 @@
 layout: default
 title: Time in Lieu (TOIL)
 parent: Page by page
-nav_order: 12
+nav_order: 14
 permalink: /docs/app/toil/
 ---
 
 # Time in Lieu (TOIL) Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 
