@@ -2,11 +2,15 @@
 layout: default
 title: Rooms
 parent: Page by page
-nav_order: 16
+nav_order: 33
 permalink: /docs/app/rooms/
 ---
 
 # Rooms Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

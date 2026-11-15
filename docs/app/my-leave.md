@@ -2,11 +2,15 @@
 layout: default
 title: My Leave
 parent: Page by page
-nav_order: 11
+nav_order: 13
 permalink: /docs/app/my-leave/
 ---
 
 # My Leave Help
+
+{: .note }
+This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+
 
 ## What It Does
 

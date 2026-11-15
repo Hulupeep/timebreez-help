@@ -2,53 +2,43 @@
 layout: default
 title: Payroll
 parent: Page by page
-nav_order: 18
+nav_order: 8
 permalink: /docs/app/payroll/
 ---
 
-# Payroll Help
+# Payroll
 
-## What It Does
+**Who uses it:** admins. In the menu: **Payroll**.
 
-Export attendance and time-off data ready for your payroll system.
+## What it does
 
-## Why It Matters
+Shows, for one pay period, each person's hours, leave and gross pay, lists the exceptions to resolve, and lets you download the figures.
 
-Accurate payroll data means people get paid correctly, on time, every time. No manual calculations needed.
+## Every period is a draft for now
 
-## How To Use It
+An amber banner at the top says why the period is a draft. You will see one of these:
 
-1. Select the **pay period** (dates)
-2. **Review** the summary of hours and absences
-3. Check for any **exceptions or flags**
-4. **Resolve** any discrepancies
-5. Click **"Export"** to download the CSV file
-6. Import the file into your **payroll system**
+| Banner | What it means |
+|---|---|
+| Draft, not for payroll: this organisation has no pay basis set. | Timebreez does not know whether pay follows the roster or a clock |
+| Draft, not for payroll: N hours have no complete clock-in and clock-out record. | Some shifts are missing a clock-in or clock-out |
+| Draft, not for payroll: these are rostered hours, not hours anyone measured, and leave comes from leave requests, not the leave ledger. | Pay follows the roster. Check every line |
+| Draft, not for payroll: leave comes from leave requests, not the leave ledger. | Hours are measured, but check every leave line |
 
-## Visual Diagram
+While a period is a draft, **Certify & Export** is switched off. Use **Download draft CSV** to get the figures and check them against your payroll system.
 
-```mermaid
-flowchart TD
-    A[Select pay period] --> B[Review data]
-    B --> C{All correct?}
-    C -->|Yes| D[Export CSV]
-    C -->|No| E[Fix exceptions]
-    E --> B
-    D --> F[Import to payroll system]
-```
+## How to use it
 
-## Common Questions
+1. Pick the pay period with the arrows.
+2. Read the banner.
+3. Check the **Payroll Table** line by line: scheduled hours, actual hours, leave and gross pay.
+4. Resolve anything listed under **Reconciliation Gate**.
+5. Press **Download draft CSV**.
 
-### What format is the export?
+## Common questions
 
-We export CSV files that work with most payroll systems including Collsoft. Contact us if you need a specific format.
+**Can I import the CSV straight into my payroll system?**
+Not yet. It is a draft for checking. A file in your payroll system's own format is a separate piece of work and is not available yet.
 
-### What are exceptions?
-
-These are items that need manual review - like missing clock-ins, overlapping shifts, or unusual hours.
-
-## Tips
-
-- Export payroll a day or two before the deadline
-- Review exceptions before exporting
-- Keep exported files for your records
+**Why does it say "Not measured"?**
+Pay follows the roster, so nothing was measured by a clock.

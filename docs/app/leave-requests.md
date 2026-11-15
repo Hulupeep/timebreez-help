@@ -2,84 +2,68 @@
 layout: default
 title: Leave Requests
 parent: Page by page
-nav_order: 9
+nav_order: 6
 permalink: /docs/app/leave-requests/
 ---
 
-# Leave Requests Help
+# Leave Requests
 
-## What It Does
+**Who uses it:** admins and managers approve here. Staff request leave on [My Leave]({{ site.baseurl }}/docs/app/my-leave/), on the [staff app]({{ site.baseurl }}/docs/app/staff-app/) or on [Telegram]({{ site.baseurl }}/docs/app/my-settings/).
 
-The place where time-off requests are made, reviewed, and decided. Staff submit requests here, and managers approve or deny them.
+## What it does
 
-## Why It Matters
+Lists every time-off request for your organisation. You check what each request costs, then approve or deny it. Approving takes the time off the person's balance.
 
-Fair, transparent leave management keeps everyone happy and ensures the schedule stays covered. No more sticky notes or forgotten requests.
+## Finding requests
 
-## How To Use It
+The filters under **Show leave for** narrow the list (and the downloads below) to the people, dates and status you pick.
 
-### For Staff - Requesting Leave
+## Approving a request
 
-1. Click **"Request Leave"** to submit a new request
-2. Select the **dates** you need off
-3. Choose the **leave type** (Annual, Sick, etc.)
-4. Add a **note** explaining why (optional but helpful)
-5. **Submit** and wait for your manager's decision
+Each request is a card. Approval is two steps on purpose: first you look at the calculation, then you approve.
 
-### For Managers - Approving Leave
+1. Press **Open the calculation to review**. The card shows how the cost was worked out: the days, the hours the person was scheduled, and any public holidays or closure days inside the booking.
+2. Read it, then press **Review calculation**. The button changes to **Calculation reviewed**.
+3. Press **Approve**.
 
-1. See the list of **pending requests**
-2. **Check the dates** requested
-3. **Review who else is off** (use wallchart)
-4. **Check room coverage**
-5. **Approve or Deny** with a reason
+If approving would leave a room short of staff, the button reads **Review & Approve** and is amber or red. You are shown which days are short. To go ahead you press **Approve Anyway** and give a reason. The reason is kept in the audit log.
 
-## Visual Diagrams
+**Example.** Mary Murphy books Monday to Wednesday. She is rostered 8h 15m (495 minutes) each day. The calculation shows 3 days, 1,485 minutes. You review it, approve it, and her balance drops by 1,485 minutes.
 
-### Staff Request Flow
+## Denying a request
 
-```mermaid
-flowchart TD
-    A[Want time off?] --> B[Click Request Leave]
-    B --> C[Pick your dates]
-    C --> D[Choose leave type]
-    D --> E[Add a note if needed]
-    E --> F[Submit]
-    F --> G[Wait for approval]
-    G --> H{Decision}
-    H -->|Approved| I[Shows on calendar]
-    H -->|Denied| J[See reason why]
-```
+Press **Deny** and type the reason. The person sees it with the request.
 
-### Manager Approval Flow
+## Messages you may see
 
-```mermaid
-flowchart TD
-    A[See pending request] --> B[Check the dates]
-    B --> C[See who else is off]
-    C --> D[Check room coverage]
-    D --> E{Enough staff?}
-    E -->|Yes| F[Approve]
-    E -->|No| G[Deny with reason]
-    E -->|Maybe| H[Use Find Cover first]
-```
+| Message | What it means | What to do |
+|---|---|---|
+| Calculation reviewed. You can now approve this request. | Your review is recorded | Press Approve |
+| A refusal saying the calculation changed since you reviewed it | Something the cost depends on changed (dates, roster, a rule) | The review button resets. Open the new calculation and review it again |
+| Your account is not linked to an employee record | Your login has no staff record, so the approval cannot be put in your name | Ask an admin to link your login to your staff record |
+| No calculation to review | The cost could not be worked out yet | Check the person's work pattern and the calculation rules in [Settings]({{ site.baseurl }}/docs/app/settings/) |
 
-## Common Questions
+| Days not calculated | Timebreez could not work out what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
+| Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
 
-### How long does approval take?
+A refusal stays on screen until you close it, so you can read it.
 
-Managers are notified immediately when you submit a request. Approval time depends on your manager, but most are processed within 24-48 hours.
+## Downloads
 
-### Can I cancel a leave request?
+Under **Download a spreadsheet (CSV)**:
 
-You can cancel pending requests before they're approved. Once approved, you'll need to contact your manager to cancel.
+- **Download leave list (n)**: the requests the filters show, one row each.
+- **Download balances**: each person's balance.
 
-### What if my request is denied?
+Neither is the payroll file. For pay, use [Payroll]({{ site.baseurl }}/docs/app/payroll/).
 
-Your manager must provide a reason. You can submit a new request for different dates or discuss alternatives with your manager.
+## Common questions
 
-## Tips
+**Why can't I approve straight away?**
+Because leave is pay. Timebreez shows you the figure it will deduct and records that you looked at it before you approve.
 
-- Request leave as early as possible for better chances of approval
-- Check the wallchart first to see who else is off on your dates
-- Managers: Always provide a reason when denying requests
+**Can I cancel leave that is already approved?**
+Yes. The days go back on the person's balance.
+
+**Where do I import balances from a spreadsheet?**
+Use the [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/) instead. It checks every balance against Timetastic before you sign it off.

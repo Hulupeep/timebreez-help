@@ -71,6 +71,20 @@ From you. Timetastic's export holds the organisation's carry-over cap, not what 
 
 Two half days rounded up to 248 minutes cost 496 minutes, one more than a 495-minute day. That follows from the half-day rule you chose.
 
+The person's card says so. Each half-day booking carries a note such as "rounded up from 247.5 min by your half-day rule", and the card adds a summary such as "1 minute below zero from half days rounded up". That explains the difference from Timetastic, so you do not need to adjust anything.
+
+**Example.** Mary Murphy has 495 minutes left in Timetastic and books two half days. Timebreez charges 248 + 248 = 496 minutes, so her balance shows 1 minute below zero, with both notes on her card.
+
+### Can I import the same people again later (a top-up)?
+
+Yes. Upload a newer export and answer **A top-up of people already imported** to the first question in Help. Re-running is safe. Each booking is matched by its Timetastic Booking Id:
+
+- a booking that has not changed is skipped;
+- a new booking is added;
+- a booking that changed in Timetastic, for example one that was cancelled, is updated and its charge reversed.
+
+**Example.** You re-run the same file: 0 created, 0 updated, every booking unchanged. If one 495-minute booking was cancelled in Timetastic since the first import, the re-run shows 1 updated and the person's balance goes up by 495 minutes.
+
 ### I uploaded the file again and it says Live organization. Is that right?
 
 Check it. A re-upload can default to Live organization. For practice batches choose **Existing rehearsal** and pick the rehearsal you made for your first batch.
