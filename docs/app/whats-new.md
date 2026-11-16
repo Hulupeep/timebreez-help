@@ -10,8 +10,17 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 16 November 2026
+
+- **Staff app:** cancelling a pending request now takes its hours off "awaiting approval" on your balance card straight away. [Staff App]({{ site.baseurl }}/docs/app/staff-app/)
+
 ## 15 November 2026
 
+- **Staff app:** there is now a **?** button at the top that opens help for the page you are on. [Staff App]({{ site.baseurl }}/docs/app/staff-app/)
+- **Help:** every main page's **?** now opens help for that page, including Leave Admin, Rule Book, My Settings (Telegram) and Time in Lieu. [Leave Admin]({{ site.baseurl }}/docs/app/leave-admin/)
+- **Leave Admin:** shows one menu and one **?**, not two. [Leave Admin]({{ site.baseurl }}/docs/app/leave-admin/)
+- **Leave Requests:** the page explains its filters and downloads, and a request with no figure reads "Days not calculated" with the reason. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
+- **Leave Requests:** the **Import Balances** button is gone. Load balances with the Timetastic import instead. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 - **Time in Lieu:** changing **Date Earned** no longer stops Add TOIL or Bulk Add from saving. [Time in Lieu (TOIL)]({{ site.baseurl }}/docs/app/toil/)
 
 ## 14 November 2026
