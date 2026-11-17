@@ -31,7 +31,7 @@ Know exactly when and where you need to be. No more checking the noticeboard or 
 
 ### Why don't I see my shifts?
 
-Your manager may not have published the roster yet, or you might not be scheduled for this period. Contact your manager if unsure.
+The page shows "No shifts scheduled" when you have no shifts on the roster for that period. Ask your manager to check the roster. Before 17 November 2026 this message also showed for staff who did have shifts. That is fixed.
 
 ### Can I request a shift change?
 

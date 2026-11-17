@@ -5,7 +5,7 @@ nav_order: 20
 permalink: /docs/20-timetastic-import/
 ---
 
-> **Start here instead for the step-by-step batch flow:** [Timetastic Import](../app/timetastic-import/). It covers the current way to import: the full export for every batch, "Pick the next 5", the rules sheet, and the full-time day and half-day rule. This page covers run statuses, reconciliation reports and rollback.
+> **Start here instead for the step-by-step batch flow:** [Timetastic Import](../app/timetastic-import/). It covers the current way to import: the full export for every batch, choosing who is in each batch, the rules sheet, and the full-time day and half-day rule. This page covers run statuses, reconciliation reports and rollback.
 
 # Timetastic Import - Moving Your Leave History Into Timebreez
 

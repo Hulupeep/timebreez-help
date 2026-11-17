@@ -10,6 +10,8 @@ permalink: /docs/app/staff-app/
 
 **Who uses it:** staff, on their phone. Address: `/staff`. The bar at the bottom has **Home**, **Schedule**, **Leave** and **Team**.
 
+Press the **?** at the top of the screen to open help for the page you are on.
+
 ## Home (Today)
 
 Shows your shift today, or "No shift scheduled today", your leave balance, and quick actions: **View Schedule**, **Request Leave** and **View Team**.
@@ -26,7 +28,7 @@ Your leave balance, a form to request time off, and your requests.
 2. Pick the **Start Date** and **End Date**, then the **Leave Type**.
 3. Add a note if you like, and press **Submit Request**. You see "Request submitted for approval".
 
-You can cancel a pending request with **Cancel Request**. Cancelling leave that is already approved puts the time back on your balance: "Approved leave cancelled — balance credited back".
+Each balance card shows how much is **awaiting approval**. You can cancel a pending request with **Cancel Request**, and its hours come off "awaiting approval" on the card straight away. Cancelling leave that is already approved puts the time back on your balance: "Approved leave cancelled — balance credited back".
 
 Prefer your phone's chat app? [Link Telegram]({{ site.baseurl }}/docs/app/my-settings/) and send `/off` with a date.
 
