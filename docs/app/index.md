@@ -18,7 +18,7 @@ These are the pages you use to go live. Each was written from the app as it is n
 
 | Page | Who | What you do there |
 |---|---|---|
-| [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/) | Admin | Bring staff, allowances and leave across, five people at a time |
+| [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/) | Admin | Bring staff, allowances and leave across in batches you choose |
 | [Rule book]({{ site.baseurl }}/docs/app/rule-book/) | Admin | Read your rules and confirm, query or correct each one |
 | [Settings]({{ site.baseurl }}/docs/app/settings/) | Admin | Leave defaults and the calculation rules (full-time day, half days, holidays) |
 | [Employees]({{ site.baseurl }}/docs/app/employees/) | Admin, manager | Working patterns, balances and corrections |
