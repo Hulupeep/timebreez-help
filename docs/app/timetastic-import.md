@@ -19,7 +19,7 @@ Balances are pay. Each batch goes through three stages (people, opening balances
 ## Before you start
 
 1. In **Settings, Leave setup**, set the **Full-time working day**. For example, 8 hours 15 minutes is 495 minutes.
-2. In the same place, set **What a half day costs**. Half of a 495-minute day is 247.5 minutes, which is not a whole minute. The rule says whether that becomes 247 (round down) or 248 (round up). Without it, those half days cannot be posted and the batch cannot be signed off.
+2. In the same place, set **What a half day costs**. Half of a 495-minute day is 247.5 minutes, which is not a whole minute. The rule says whether that becomes 247 (round down) or 248 (round up). Without it, those half days cannot be posted and the batch cannot be signed off. Set its **Effective from** on or before your earliest half-day booking, usually the start of the leave year. A half day is judged by the rule in force on the booking's date, so a rule that starts today does not cover a half day in August.
 
 ## How To Use It
 
@@ -58,6 +58,12 @@ flowchart TD
 ### Do I need to cut the Excel file down to a few people?
 
 No. Upload the full export every time and press **Pick the next 5**. A trimmed or renamed copy makes its own rehearsal, and later batches from the full file cannot join it.
+
+### A half day was not charged. What do I do?
+
+The booking and the person's card say which date the Half day rule must cover. Open **Settings, Leave setup, Leave calculation rules**, set the Half day rule (round up or round down to the minute) with **Effective from** on or before that date, then press **Run the leave import again**. The re-run picks up half days an earlier run left out and charges them.
+
+**Example.** Mary Murphy has a half day on 11 August. The Half day rule was saved with Effective from 16 November, so her card says it needs a rule in force on 11 August. Change Effective from to 1 January, run the leave import again, and the half day is charged.
 
 ### Why does the rules sheet refuse a name?
 

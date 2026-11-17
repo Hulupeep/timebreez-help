@@ -10,8 +10,15 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 17 November 2026
+
+- **My Schedule:** your shifts now show when you sign in. Before, every signed-in staff member saw "No shifts scheduled". [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/)
+
 ## 16 November 2026
 
+- **Timetastic import:** a half day that was not charged now says which booking date the Half day rule must cover, and to press **Run the leave import again** after setting it. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Timetastic import:** setting the Half day rule after an import, then running the leave import again, now charges the half days the earlier run left out. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Timetastic import:** answering the full-time day on the rules sheet no longer fails with "SETTING_NOT_AUTHORISED" when you admin more than one organisation. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 - **Staff app:** cancelling a pending request now takes its hours off "awaiting approval" on your balance card straight away. [Staff App]({{ site.baseurl }}/docs/app/staff-app/)
 
 ## 15 November 2026
