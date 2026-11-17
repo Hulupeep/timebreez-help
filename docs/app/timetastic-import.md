@@ -10,7 +10,7 @@ permalink: /docs/app/timetastic-import/
 
 ## What It Does
 
-Brings your staff, their allowances and their leave across from Timetastic, five people at a time, and checks every balance against Timetastic before you sign it off.
+Brings your staff, their allowances and their leave across from Timetastic in batches of people you choose, and checks every balance against Timetastic before you sign it off.
 
 ## Why It Matters
 
@@ -30,11 +30,11 @@ Balances are pay. Each batch goes through three stages (people, opening balances
 5. **Staff gaps**: decide anyone who needs it, for example someone who already has a Timebreez login.
 6. **Leave types**: map each Timetastic leave type. Use **Save exact** so the mapping carries to your next batch.
 7. **Import plan**: answer the **import rules sheet** (leave year, full-time day, part-time day lengths, carry-over, service and discretionary days). Write names exactly as Timetastic has them.
-8. Press **Pick the next 5**, then run the three stages:
+8. Choose who is in this batch. **Pick the next 5** ticks the next five people not yet imported. You can also tick people one by one, as many as you like, or press **Tick everyone not yet imported**. Then run the three stages:
    - **Stage 1, people**: check the names, choose "I have reviewed this list", and import them.
    - **Stage 2, opening balances**: press "Load from the rules sheet", then check and confirm each person's card.
    - **Stage 3, leave**: run the leave import. Open every row that differs from Timetastic and explain it.
-9. **Sign off** the batch. For the next five, upload the same full file again, choose the same organisation, and press **Pick the next 5**.
+9. **Sign off** the batch. For the next batch, upload the same full file again, choose the same organisation, and tick the next people. People already imported are shown and start unticked.
 
 ```mermaid
 flowchart TD
@@ -42,7 +42,7 @@ flowchart TD
     U --> O[Choose rehearsal or live]
     O --> M[Map leave types, Save exact]
     M --> R[Answer the rules sheet]
-    R --> P[Pick the next 5]
+    R --> P[Choose who is in this batch]
     P --> S1[Stage 1: people]
     S1 --> S2[Stage 2: opening balances]
     S2 --> S3[Stage 3: leave]
@@ -57,7 +57,13 @@ flowchart TD
 
 ### Do I need to cut the Excel file down to a few people?
 
-No. Upload the full export every time and press **Pick the next 5**. A trimmed or renamed copy makes its own rehearsal, and later batches from the full file cannot join it.
+No. Upload the full export every time and tick the people for this batch. A trimmed or renamed copy makes its own rehearsal, and later batches from the full file cannot join it.
+
+### How many people should go in a batch?
+
+You choose. Five is only the size of the **Pick the next 5** shortcut, not a limit. The trade-off: the batch is signed off as a whole, so one person with an unexplained difference holds up sign-off for everyone in it. Small batches keep a problem contained. We suggest 5 to 10 people at a time.
+
+**Example.** You tick 8 people. Seven reconcile cleanly, but Mary Murphy has a row that differs from Timetastic. You cannot sign off the batch until her row is explained, even though the other seven are fine.
 
 ### A half day was not charged. What do I do?
 

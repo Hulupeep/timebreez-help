@@ -12,6 +12,7 @@ Changes to the app that you will notice, newest first.
 
 ## 17 November 2026
 
+- **Help, Timetastic import:** batch size is your choice. **Pick the next 5** is a shortcut, and you can tick any number of people or everyone not yet imported. We suggest 5 to 10. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 - **My Schedule:** your shifts now show when you sign in. Before, every signed-in staff member saw "No shifts scheduled". [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/)
 
 ## 16 November 2026
