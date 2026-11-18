@@ -10,8 +10,15 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 18 November 2026
+
+- **Staff app:** shifts show on the right day. On a phone or computer set to a time zone behind UTC (for example North America), every shift showed one day early. [Staff App]({{ site.baseurl }}/docs/app/staff-app/)
+
 ## 17 November 2026
 
+- **Timetastic import:** on a row blocked by an unanswered question, **Explain** is now greyed out, with a line saying why. The refusal code shows once, not twice. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Timetastic import:** a row that needs a day length now lists the bookings that need it and says when the opening balance was confirmed in hours. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Timetastic import:** a top-up that ticks only some people no longer blocks the people left unticked. They keep their figures. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 - **Help, Timetastic import:** batch size is your choice. **Pick the next 5** is a shortcut, and you can tick any number of people or everyone not yet imported. We suggest 5 to 10. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 - **My Schedule:** your shifts now show when you sign in. Before, every signed-in staff member saw "No shifts scheduled". [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/)
 
