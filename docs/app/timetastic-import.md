@@ -28,7 +28,7 @@ Balances are pay. Each batch goes through three stages (people, opening balances
 3. **Analyze**: check what was found. Exact duplicate bookings are collapsed for you.
 4. **Organization**: choose **New rehearsal** for your first practice batch and **Existing rehearsal** for every practice batch after it. Choose **Live organization** only for the real import.
 5. **Staff gaps**: decide anyone who needs it, for example someone who already has a Timebreez login.
-6. **Leave types**: map each Timetastic leave type. Use **Save exact** so the mapping carries to your next batch.
+6. **Leave types**: map each Timetastic leave type. Use **Save exact** so the mapping carries to your next batch. **Create exact** makes a new leave type that is **unpaid** until you confirm paid or unpaid on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
 7. **Import plan**: answer the **import rules sheet** (leave year, full-time day, part-time day lengths, carry-over, service and discretionary days). Write names exactly as Timetastic has them.
 8. Choose who is in this batch. **Pick the next 5** ticks the next five people not yet imported. You can also tick people one by one, as many as you like, or press **Tick everyone not yet imported**. Then run the three stages:
    - **Stage 1, people**: check the names, choose "I have reviewed this list", and import them.

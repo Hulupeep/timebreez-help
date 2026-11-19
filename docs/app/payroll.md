@@ -35,10 +35,21 @@ While a period is a draft, **Certify & Export** is switched off. Use **Download 
 4. Resolve anything listed under **Reconciliation Gate**.
 5. Press **Download draft CSV**.
 
+## What is in the CSV
+
+- The first two columns are **Works No.** (the person's payroll ID) and **Name**. These are the two fields Collsoft needs to match each person.
+- Then the hours, rate, gross pay, period dates and leave totals, in the same order as before.
+- Last, one **"&lt;leave type&gt; hours"** column for each leave type on your [Leave Types]({{ site.baseurl }}/docs/app/leave-types/) list (archived types left out), in that list's order. For example **Annual Leave hours** and **Sick Leave hours**. If someone has leave of a type that is not on the list, its column is added at the end, so no hours are dropped.
+- In Collsoft's import wizard, map each column once (for example Annual Leave hours to annual leave). Collsoft only imports the columns you map.
+- A name that starts with = + - or @ gets a ' in front, so a spreadsheet shows it as text.
+
 ## Common questions
 
-**Can I import the CSV straight into my payroll system?**
-Not yet. It is a draft for checking. A file in your payroll system's own format is a separate piece of work and is not available yet.
+**Can I import the CSV into Collsoft?**
+The file is laid out for Collsoft's wage data import wizard, but while the period is a draft it is for checking, not for paying anyone. See [What is in the CSV](#what-is-in-the-csv).
+
+**Why is there a column for a leave type nobody took this period?**
+The file always has one column for every leave type you use, so the layout is the same every week and Collsoft's column mapping keeps working.
 
 **Why does it say "Not measured"?**
 Pay follows the roster, so nothing was measured by a clock.

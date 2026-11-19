@@ -10,6 +10,12 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 19 November 2026
+
+- **Payroll:** the CSV now starts with Collsoft's own column names, **Works No.** and **Name**, and ends with one hours column for each leave type, the same every week. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Timetastic import:** a leave type made with **Create exact** is now unpaid until a person confirms it. Before, every new type was counted as paid. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Leave Types:** a type nobody has confirmed shows "Nobody has confirmed whether this leave is paid" with **Paid** and **Unpaid** buttons. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/)
+
 ## 18 November 2026
 
 - **Staff app:** shifts show on the right day. On a phone or computer set to a time zone behind UTC (for example North America), every shift showed one day early. [Staff App]({{ site.baseurl }}/docs/app/staff-app/)
