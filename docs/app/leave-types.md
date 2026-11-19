@@ -29,6 +29,17 @@ Different leave types can have different rules. Track them separately for accura
 5. Configure if it **deducts from entitlement**
 6. **Save** the leave type
 
+## Paid or unpaid: confirm each type
+
+A leave type the [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/) creates is **unpaid** until a person says otherwise, and nobody has confirmed it yet. In the list it shows an amber line: "Nobody has confirmed whether this leave is paid", with **Paid** and **Unpaid** buttons.
+
+1. Press **Paid** or **Unpaid** for each amber line.
+2. The line changes to, for example, "Unpaid, confirmed by an admin on 19 Nov 2026".
+
+Changing the **Paid leave** switch when you edit a type also confirms it. A type you create yourself here is confirmed when you save it.
+
+This matters for payroll: paid and unpaid leave hours go to different columns in the payroll CSV.
+
 ## Common Questions
 
 ### What's the difference between paid and unpaid leave?

@@ -28,7 +28,7 @@ Balances are pay. Each batch goes through three stages (people, opening balances
 3. **Analyze**: check what was found. Exact duplicate bookings are collapsed for you.
 4. **Organization**: choose **New rehearsal** for your first practice batch and **Existing rehearsal** for every practice batch after it. Choose **Live organization** only for the real import.
 5. **Staff gaps**: decide anyone who needs it, for example someone who already has a Timebreez login.
-6. **Leave types**: map each Timetastic leave type. Use **Save exact** so the mapping carries to your next batch.
+6. **Leave types**: map each Timetastic leave type. Use **Save exact** so the mapping carries to your next batch. **Create exact** makes a new leave type that is **unpaid** until you confirm paid or unpaid on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
 7. **Import plan**: answer the **import rules sheet** (leave year, full-time day, part-time day lengths, carry-over, service and discretionary days). Write names exactly as Timetastic has them.
 8. Choose who is in this batch. **Pick the next 5** ticks the next five people not yet imported. You can also tick people one by one, as many as you like, or press **Tick everyone not yet imported**. Then run the three stages:
    - **Stage 1, people**: check the names, choose "I have reviewed this list", and import them.
@@ -96,6 +96,14 @@ Yes. Upload a newer export and answer **A top-up of people already imported** to
 - a booking that changed in Timetastic, for example one that was cancelled, is updated and its charge reversed.
 
 **Example.** You re-run the same file: 0 created, 0 updated, every booking unchanged. If one 495-minute booking was cancelled in Timetastic since the first import, the re-run shows 1 updated and the person's balance goes up by 495 minutes.
+
+You can tick only some of a batch you imported earlier. The people you leave unticked keep their figures and are not blocked at the leave stage.
+
+### Why is Explain greyed out on a row?
+
+The row is blocked by a question nobody has answered yet, so there is nothing to explain until it is answered. The row says which question it is and what answers it, and the screen says the figure cannot be explained while that stands.
+
+**Day length.** If the row needs a day length, it lists each booking stated in days that needs one, with its date and figure. If the person's opening balance was confirmed in hours, it says so: an hours balance records no day length. Check those figures in Timetastic first. A booking cannot deduct more days than it spans, so a figure like that is not in days. Adding a day length to a confirmed opening balance is not built yet, so this row blocks sign-off until it is.
 
 ### I uploaded the file again and it says Live organization. Is that right?
 
