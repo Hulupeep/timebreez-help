@@ -10,6 +10,21 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 20 November 2026
+
+- **Payroll:** every day of approved leave now has a leave line, even with no shift that day, and imported leave counts. Press **Why** to see where each day's hours came from. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Payroll:** export (and the draft CSV) is stopped while a leave type used in the period is not confirmed as paid or unpaid, a leave day has no hours, or an imported booking differs from Timetastic. A red box says which. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Leave Types, Timetastic import:** imported leave types no longer come off the allowance until an admin confirms each one. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/)
+- **Timetastic import:** each person's card on the opening balances stage starts with its next step, and shows how days were turned into minutes. A new **Working weeks** step confirms each person's working days from Timetastic. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Timetastic import:** for someone whose allowance is in hours, bookings are read in hours. A booking across the leave-year end is split between the two years once next year is open. [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+- **Leave Requests:** for someone with no confirmed working week, a manager can press **Enter hours** and type each day's hours from the rota, with where they came from. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
+- **Employees, Staff app:** balances say which leave year they are for. Once next year is open, its balance shows on a separate line. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Employees:** invites are not emailed. Copy the invite link and send it yourself. The invite page sends a sign-in link, can send it again, change the email, or use Google. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Roster:** Fill from Last Week brings back shifts cancelled by last week's leave, skips people on leave this week, closed days and public holidays, and lists what it left out. A shift on someone's leave day needs a tick to save. [Roster]({{ site.baseurl }}/docs/app/roster/)
+- **Settings:** new rule, **Leave earned from hours worked**, used by the Hours staff page (from Leave Admin). [Settings]({{ site.baseurl }}/docs/app/settings/)
+- **Telegram:** staff can cancel leave with `/cancel`; `/help` lists the commands; hours staff see hours in `/bal`. Admins with Telegram linked are told about new requests and cancellations. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/)
+- **Wallchart:** staff now see their own leave under **My Leave**; before, it was always empty. Picking a month no longer jumps to the wrong month when the view starts on the 29th to 31st. [Wallchart]({{ site.baseurl }}/docs/app/wallchart/)
+
 ## 19 November 2026
 
 - **Payroll:** the CSV now starts with Collsoft's own column names, **Works No.** and **Name**, and ends with one hours column for each leave type, the same every week. [Payroll]({{ site.baseurl }}/docs/app/payroll/)

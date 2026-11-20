@@ -30,6 +30,18 @@ If approving would leave a room short of staff, the button reads **Review & Appr
 
 **Example.** Mary Murphy books Monday to Wednesday. She is rostered 8h 15m (495 minutes) each day. The calculation shows 3 days, 1,485 minutes. You review it, approve it, and her balance drops by 1,485 minutes.
 
+## Someone with no working week: enter the hours
+
+If the person has no confirmed working week for the dates, Timebreez cannot work out what the leave costs. The card says so and shows **Enter hours**.
+
+1. Press **Enter hours**.
+2. Type the hours for each day from their rota, for example `7.5` or `7:30`.
+3. Under **Where these hours come from**, say where you got them, for example "Rota for week of 7 Dec" (at least 10 characters).
+4. Press **Save hours**. The typed hours become the calculation.
+5. Review the calculation again, then approve as usual.
+
+**Example.** Mary Murphy has no working week yet and asks for Thursday off. Her rota has her on 6 hours. You enter `6`, write "Rota for week of 7 Dec", save, review, and approve. 360 minutes come off her balance.
+
 ## Denying a request
 
 Press **Deny** and type the reason. The person sees it with the request.

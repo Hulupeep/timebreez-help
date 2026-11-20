@@ -22,11 +22,15 @@ See the big picture at a glance. Spot coverage gaps before they become problems 
 
 ## How To Use It
 
-1. Use the **date picker** to navigate to different weeks or months
+1. Use the **date picker** to navigate to different weeks or months. Picking a month or year opens that month from its 1st.
 2. Each **row** shows one team member
 3. **Colored blocks** show leave or shifts
 4. **Click on any block** to see details
 5. Use **filters** to show specific rooms or leave types
+
+## What staff see
+
+Staff do not see everyone's leave. They see **Team Coverage** for two weeks at a time (use the arrows to move two weeks back or forward) and a **My Leave** list with their own leave in those two weeks. If they have none, it says "No leave booked for this period".
 
 ## Visual Diagram
 
