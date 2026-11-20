@@ -12,6 +12,7 @@ Changes to the app that you will notice, newest first.
 
 ## 20 November 2026
 
+- **Carry-over:** staff can ask to carry unused leave into next year, on My Leave or with `/carry` on Telegram. An admin approves all, part or declines with a reason on Leave Requests, against the organisation's limit. Days not carried with approval expire at the year end. [Carry-over]({{ site.baseurl }}/docs/app/carry-over/)
 - **Payroll:** every day of approved leave now has a leave line, even with no shift that day, and imported leave counts. Press **Why** to see where each day's hours came from. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
 - **Payroll:** export (and the draft CSV) is stopped while a leave type used in the period is not confirmed as paid or unpaid, a leave day has no hours, or an imported booking differs from Timetastic. A red box says which. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
 - **Leave Types, Timetastic import:** imported leave types no longer come off the allowance until an admin confirms each one. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/)

@@ -105,7 +105,7 @@ Your leave year might run:
 Check with your manager if you're unsure when your leave year resets.
 
 {: .important }
-At the end of your leave year, unused days may expire or carry over depending on your centre's policy. Check with your manager.
+Unused days expire at the end of your leave year unless you ask to carry them and your manager approves. See [Carry-over]({{ site.baseurl }}/docs/app/carry-over/).
 
 ### Sick Leave
 
@@ -272,7 +272,7 @@ Contact your manager. Some centres will convert the sick days so you don't lose 
 
 ### "Can I carry over unused leave?"
 
-This depends on your centre's policy. Check with your manager before your leave year ends.
+Use the **Carry days into next year** card on My Leave, or send `/carry` on Telegram, before your leave year ends. See [Carry-over]({{ site.baseurl }}/docs/app/carry-over/).
 
 ### "Why was my request denied?"
 

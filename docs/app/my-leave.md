@@ -54,7 +54,7 @@ Leave balances typically reset at the start of the leave year, which your organi
 
 ### Can I carry over unused leave?
 
-This depends on your organization's policy. Check with your manager or HR about carryover rules.
+If your organisation has set a carry-over rule, the **Carry days into next year** card lets you ask before the year ends. Days not carried with approval expire. See [Carry-over]({{ site.baseurl }}/docs/app/carry-over/).
 
 ## Tips
 

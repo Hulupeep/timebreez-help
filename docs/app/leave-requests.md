@@ -69,6 +69,10 @@ Under **Download a spreadsheet (CSV)**:
 
 Neither is the payroll file. For pay, use [Payroll]({{ site.baseurl }}/docs/app/payroll/).
 
+## Carry-over requests
+
+Above the list, **Carry-over requests** shows the organisation's rule, requests waiting for a decision, and recent decisions. See [Carry-over]({{ site.baseurl }}/docs/app/carry-over/).
+
 ## Common questions
 
 **Why can't I approve straight away?**
