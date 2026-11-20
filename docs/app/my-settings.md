@@ -36,6 +36,7 @@ Message the bot directly, not in a group.
 | `/bal` | Your balances. Shown in hours if your allowance is in hours, otherwise in days |
 | `/status` | Your requests and whether they are waiting for a decision, approved, declined or cancelled. A declined request shows the reason |
 | `/cancel` | Lists leave you can cancel. Pick one, then **Yes, cancel it** or **Keep it**. The bot says how much went back and what you now have left |
+| `/carry` | Your unused days, the carry-over limit and any request. `/carry 2` asks to carry 2, `/carry withdraw` takes back a waiting request. [Carry-over]({{ site.baseurl }}/docs/app/carry-over/) |
 | `/whosout` | Managers only: who is off today. `/whosout week` shows the next 7 days |
 | `/help` | Lists what you can send |
 | `/stop` | Unlinks Telegram |
