@@ -32,8 +32,8 @@ Balances are pay. Each batch goes through three stages (people, opening balances
 7. **Import plan**: answer the **import rules sheet** (leave year, full-time day, part-time day lengths, carry-over, service and discretionary days). Write names exactly as Timetastic has them.
 8. Choose who is in this batch. **Pick the next 5** ticks the next five people not yet imported. You can also tick people one by one, as many as you like, or press **Tick everyone not yet imported**. Then run the three stages:
    - **Stage 1, people**: check the names, choose "I have reviewed this list", and import them.
-   - **Stage 2, opening balances**: press "Load from the rules sheet", then check and confirm each person's card.
-   - **Stage 3, leave**: run the leave import. Open every row that differs from Timetastic and explain it.
+   - **Stage 2, opening balances**: press "Load from the rules sheet", then check and confirm each person's card. Each card starts with its next step: **1 thing to do** and the figure to confirm, or **Before you can confirm** and what is missing. Below the cards, **Working weeks** lists each person's working days from Timetastic's Work Schedules; press **Confirm N working weeks** so they can book leave. Hours staff are not proposed, because Timetastic does not say how many hours they work each day.
+   - **Stage 3, leave**: run the leave import. Open every row that differs from Timetastic and explain it. Then, under **Which leave comes off the allowance**, confirm each imported leave type (see below).
 9. **Sign off** the batch. For the next batch, upload the same full file again, choose the same organisation, and tick the next people. People already imported are shown and start unticked.
 
 ```mermaid
@@ -70,6 +70,26 @@ You choose. Five is only the size of the **Pick the next 5** shortcut, not a lim
 The booking and the person's card say which date the Half day rule must cover. Open **Settings, Leave setup, Leave calculation rules**, set the Half day rule (round up or round down to the minute) with **Effective from** on or before that date, then press **Run the leave import again**. The re-run picks up half days an earlier run left out and charges them.
 
 **Example.** Mary Murphy has a half day on 11 August. The Half day rule was saved with Effective from 16 November, so her card says it needs a rule in force on 11 August. Change Effective from to 1 January, run the leave import again, and the half day is charged.
+
+### How is an allowance in days turned into minutes?
+
+Days times the person's day length. If that is not a whole minute, your Half day rule rounds it, and the card shows both figures.
+
+**Example.** Mary Murphy has 13.5 days and an 8h 15m day: 13.5 × 495 = 6,682.5 minutes, rounded up to 6,683 minutes by your Half day rule.
+
+### Which leave types come off the allowance?
+
+A leave type the import creates does not come off anyone's allowance until you confirm it. **Which leave comes off the allowance** (at the leave stage) shows each type with what Timetastic did with your own bookings of it, as a suggestion. Tick or untick **Comes off the allowance** and confirm each one, or press **Confirm all N as shown**. Do this after every import, the live one too. You can also confirm on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
+
+**Example.** Compassionate leave never came off the allowance in Timetastic, so it is suggested as not coming off. You confirm it, and a compassionate request is no longer checked against the person's balance.
+
+### Someone's allowance is in hours. Are their bookings in days?
+
+No. For someone whose Timetastic balance is in hours, each booking's Total Deducted is read in hours.
+
+### What happens to a booking across the end of the leave year?
+
+Once next leave year is open, a booking that crosses it is split. The part in each year comes off that year's allowance. The later part is dated from the first day of the new year. If the person has no confirmed working week, the charge is shared by working days Monday to Friday, less public holidays.
 
 ### Why does the rules sheet refuse a name?
 

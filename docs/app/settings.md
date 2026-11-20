@@ -35,8 +35,11 @@ How Timebreez works out what a booking costs. Each rule applies **from a date yo
 | Public holidays inside a booking | Does a public holiday inside a booking come off the allowance? | No, it costs nothing. Or yes, it costs the hours they were scheduled |
 | Closure days inside a booking | Does a day you are closed come off the allowance? | Same two answers |
 | Who may take a balance below zero | When a booking would take someone below zero, who may allow it? | Admins only, any admin or manager, only the people you choose, or nobody |
+| Leave earned from hours worked | For staff who earn leave as they work, what share of their hours becomes leave, is it capped, and do paid leave hours count as hours worked? | A percent of hours worked, an optional cap in working weeks of the person's hours, and a tick for whether paid leave hours count |
 
 A rule shown as "Not decided yet" stops any booking that needs it until you set it.
+
+There is no built-in rate for leave earned from hours. Until you set it, people on the **Hours staff** page earn nothing and recording their hours is refused.
 
 **Example.** Your full-time day is 495 minutes and half days round up. A half day costs 248 minutes, so two half days cost 496 minutes: one minute more than a full day. The booking's calculation shows that minute and why.
 

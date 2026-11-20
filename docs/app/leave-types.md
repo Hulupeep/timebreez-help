@@ -40,6 +40,12 @@ Changing the **Paid leave** switch when you edit a type also confirms it. A type
 
 This matters for payroll: paid and unpaid leave hours go to different columns in the payroll CSV.
 
+## Comes off the allowance: confirm each type
+
+A leave type the Timetastic import creates does **not** come off anyone's allowance until a person confirms it. Types imported before this change are also marked as not confirmed. The list shows a line: "Nobody has confirmed whether this leave comes off the allowance", with **Comes off the allowance** and **Does not** buttons. The line also says what happens until you confirm.
+
+Requests of a type that comes off the allowance are checked against the person's balance. Other types are not. The import screen has the same step, with what Timetastic did as a suggestion: see [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/).
+
 ## Common Questions
 
 ### What's the difference between paid and unpaid leave?

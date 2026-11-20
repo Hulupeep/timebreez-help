@@ -16,6 +16,33 @@ Filter by **Active**, **Inactive**, **Historical imports** or **All**. Historica
 
 Open a person's card to see their **Employment Terms**: status, hours per week, and their working pattern. Choose the **Allowance unit** (days, hours or minutes), enter the scheduled minutes for each weekday, and press **Confirm working pattern**. Leave costs are worked out from this pattern, so confirm it before approving their leave.
 
+The card's balance says which leave year it is for, for example "in 2026". Once next leave year is open, a second line shows it on its own, for example "Annual Leave 2027: 20 days left". Leave booked in next year comes off next year's allowance, never this year's. Carry-over is added at year end.
+
+## Inviting someone
+
+Timebreez does not email invites yet. You send the link yourself.
+
+1. Press **Invite Employee**, enter their email address and role, and create the invite.
+2. A link appears with **Copy link**. Copy it and send it to them, for example by text or WhatsApp.
+3. You can copy the link again later from **Pending Invitations**, next to their invite.
+
+If the email already has a pending invite, you are told to copy its link from Pending Invitations instead.
+
+### What the person sees
+
+The link opens **Join your team on Timebreez**.
+
+- They enter the email address you invited and press **Send me a sign-in link**. They open that email and it brings them back to finish joining.
+- If the email does not arrive, they can press **Send the link again** (only the newest email works), **Use a different email**, or **Continue with Google** if that address is a Google account.
+- If they are already signed in, it asks "Join with this account?" with **Join** or **Use a different account**.
+
+| Message they may see | What to do |
+|---|---|
+| This invite link does not work any more | It expired, was used or was revoked. Send a new invite |
+| That is not the email address this invite was sent to | They enter the address you invited, or you send a new invite |
+| ... is already a member of this organisation | They are signed in with an account that is already in. **Open your dashboard**, or **Use a different account** and sign in with the invited email |
+| The person this invite is for has already joined Timebreez with a different account | They sign in with that account, or you check the staff list |
+
 ## A person's page
 
 Click a name to open their page. Tabs: **Schedule**, **Leave**, **Compliance**, and for admins **Payroll** and **History**.

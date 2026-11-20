@@ -14,7 +14,7 @@ permalink: /docs/app/payroll/
 
 Shows, for one pay period, each person's hours, leave and gross pay, lists the exceptions to resolve, and lets you download the figures.
 
-## Every period is a draft for now
+## When a period is a draft
 
 An amber banner at the top says why the period is a draft. You will see one of these:
 
@@ -22,10 +22,36 @@ An amber banner at the top says why the period is a draft. You will see one of t
 |---|---|
 | Draft, not for payroll: this organisation has no pay basis set. | Timebreez does not know whether pay follows the roster or a clock |
 | Draft, not for payroll: N hours have no complete clock-in and clock-out record. | Some shifts are missing a clock-in or clock-out |
-| Draft, not for payroll: these are rostered hours, not hours anyone measured, and leave comes from leave requests, not the leave ledger. | Pay follows the roster. Check every line |
-| Draft, not for payroll: leave comes from leave requests, not the leave ledger. | Hours are measured, but check every leave line |
+| Draft, not for payroll: these are rostered hours, not hours anyone measured. | Pay follows the roster. Check every line |
+| Draft, not for payroll: N leave days are priced from the working week, not a recorded calculation. | Hours are measured, but some leave days have no recorded calculation. Check those leave lines |
 
-While a period is a draft, **Certify & Export** is switched off. Use **Download draft CSV** to get the figures and check them against your payroll system.
+While a period is a draft, **Certify & Export** is switched off. Use **Download draft CSV** to get the figures and check them against your payroll system. A clock-based period where every leave day has a recorded calculation is not a draft.
+
+## Leave lines
+
+Every day of approved leave in the period gets a leave line, even when the person had no shift that day. Leave imported from Timetastic counts too. On a day with a shift, the leave hours come off the shift and the rest is paid as worked. A whole-day booking takes the whole shift; a half day takes only its hours.
+
+Press **Why** under a person's leave to see each day: the date, the leave type, the hours, and where the hours came from:
+
+- **from the leave calculation**: the cost recorded when the leave was booked;
+- **hours booked in Timetastic**: a one-day booking made in hours in Timetastic;
+- **from the confirmed working week**: no recorded calculation, so the person's working week was used.
+
+A Timetastic booking imported twice is paid once.
+
+**Example.** Mary Murphy is rostered 8 hours on Thursday and has a half day of annual leave that costs 4 hours. Her line shows 4 hours worked and 4 hours of Annual Leave, and **Why** says "from the leave calculation".
+
+## When export is stopped
+
+These stop **Certify & Export** and **Download draft CSV** until they are fixed. A red box says which:
+
+| Message | What to do |
+|---|---|
+| Payroll can't be exported until these are confirmed: Confirm whether ... is paid | Someone took that leave this period and nobody has said whether it is paid. Press **Paid** or **Unpaid** on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/) |
+| Payroll can't be exported: N leave days have no hours yet | Confirm the person's working week on [Employees]({{ site.baseurl }}/docs/app/employees/), or type the hours on the booking in [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/) |
+| Payroll can't be exported: these imported bookings differ from what Timetastic ... | Timetastic's figure and the working week disagree. Check the person's working week, or type the hours on the booking |
+
+The export from the quick actions on Employees is stopped the same way.
 
 ## How to use it
 
