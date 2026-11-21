@@ -1,0 +1,282 @@
+---
+layout: null
+sitemap: false
+nav_exclude: true
+search_exclude: true
+---
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Payroll Week for Collsoft</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one pay week per page. Status first, then three tabs: the file, what needs Mella, balances against Collsoft. */
+:root{
+  --bg:#f6f8fb; --surface:#ffffff; --fg:#0b1220; --muted:#5b6678; --line:#e1e7ef;
+  --accent:#2563eb; --accent-soft:#e8efff; --ok:#15803d; --ok-soft:#e7f6ec;
+  --warn:#b45309; --warn-soft:#fdf1e2; --bad:#c2410c; --bad-soft:#fde8df;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1220; --surface:#111a2b; --fg:#e8edf5; --muted:#97a3b6; --line:#243149;
+  --accent:#5b8cff; --accent-soft:#1a2747; --ok:#4ade80; --ok-soft:#12291b;
+  --warn:#fbbf24; --warn-soft:#2c2210; --bad:#fb923c; --bad-soft:#2f1a10; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1220; --surface:#111a2b; --fg:#e8edf5; --muted:#97a3b6; --line:#243149;
+  --accent:#5b8cff; --accent-soft:#1a2747; --ok:#4ade80; --ok-soft:#12291b;
+  --warn:#fbbf24; --warn-soft:#2c2210; --bad:#fb923c; --bad-soft:#2f1a10; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:14px;line-height:1.5;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.mock{background:var(--warn-soft);color:var(--warn);border-radius:8px;padding:8px 12px;font-size:13px}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:700;color:var(--accent);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+h1{margin:2px 0 0;font-size:22px;text-wrap:balance}
+.weeknav{display:flex;align-items:center;gap:8px}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:7px 12px}
+button:hover{border-color:var(--accent)}
+button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+button.primary:disabled{opacity:.45;cursor:not-allowed}
+.weeklabel{font-variant-numeric:tabular-nums;min-width:13ch;text-align:center;font-weight:600}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 12px;font-weight:600;font-size:13px}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.warn{background:var(--warn-soft);color:var(--warn)}
+.stat{display:flex;flex-direction:column} .stat b{font-size:18px;font-variant-numeric:tabular-nums} .stat span{color:var(--muted);font-size:12px}
+.status .grow{flex:1}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;padding:10px 14px;color:var(--muted);font-weight:600;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.count{display:inline-block;margin-left:6px;background:var(--bad-soft);color:var(--bad);border-radius:999px;padding:0 7px;font-size:12px}
+.count.zero{background:var(--ok-soft);color:var(--ok)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.panel p.lead{margin:0 0 12px;color:var(--muted);max-width:70ch}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+th:nth-child(-n+3),td:nth-child(-n+3){text-align:left}
+tbody tr{cursor:pointer} tbody tr:hover{background:var(--accent-soft)}
+tfoot td{font-weight:700;border-bottom:0}
+.zero{color:var(--muted)}
+.tag{font-size:12px;border-radius:6px;padding:1px 7px;background:var(--accent-soft);color:var(--accent)}
+.tag.sal{background:var(--line);color:var(--muted)}
+.flag{color:var(--bad);font-weight:600}
+.mono{font-family:var(--mono);font-size:12.5px}
+.foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:14px}
+.foot small{color:var(--muted)}
+.issues{display:flex;flex-direction:column;gap:10px}
+.issue{display:grid;grid-template-columns:6px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--surface)}
+.issue .bar{align-self:stretch;border-radius:3px;background:var(--bad)}
+.issue.warn .bar{background:var(--warn)}
+.issue.done{opacity:.55} .issue.done .bar{background:var(--ok)}
+.issue h3{margin:0;font-size:14px} .issue p{margin:2px 0 0;color:var(--muted);font-size:13px;max-width:70ch}
+.issue>div{min-width:0}
+.diff-ok{color:var(--ok);font-weight:600} .diff-bad{color:var(--bad);font-weight:600}
+.drawer{position:fixed;inset:0;background:rgba(5,10,20,.45);display:flex;justify-content:flex-end;z-index:20}
+.drawer[hidden]{display:none}
+.drawer .sheet{background:var(--surface);color:var(--fg);width:min(440px,100%);height:100%;overflow-y:auto;
+  padding:20px max(20px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) 20px;padding-top:calc(20px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:12px}
+.sheet h2{margin:0;font-size:18px}
+.sheet dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:0;font-variant-numeric:tabular-nums}
+.sheet dt{color:var(--muted)} .sheet dd{margin:0;text-align:right;font-weight:600}
+.sheet ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--fg)}
+pre.csv{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px;overflow-x:auto;margin:0}
+.upload{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--accent-soft);border-radius:10px;padding:10px 12px;margin-bottom:12px}
+@media (max-width:600px){.status .grow{display:none} h1{font-size:19px}}
+@media (prefers-reduced-motion:no-preference){.issue{transition:opacity .2s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="mock" role="note"><b>Mockup for Mella.</b> Names, Works No. and hours are made up. Click a person, a tab or a "Fix" button to see how it works.</div>
+
+  <header>
+    <div>
+      <div class="brand">Timebreez · Payroll</div>
+      <h1 id="title">Week 45 for Collsoft</h1>
+    </div>
+    <div class="weeknav" aria-label="Pay week">
+      <button id="prev" aria-label="Previous week">‹</button>
+      <span class="weeklabel" id="weeklabel"></span>
+      <button id="next" aria-label="Next week">›</button>
+    </div>
+  </header>
+
+  <section class="status" aria-live="polite">
+    <span class="pill" id="statuspill"></span>
+    <div class="stat"><b id="s-period"></b><span>Hours worked</span></div>
+    <div class="stat"><b id="s-people"></b><span>People in the file</span></div>
+    <div class="stat"><b id="s-hours"></b><span>Total hours</span></div>
+    <div class="stat"><b id="s-leave"></b><span>Leave hours</span></div>
+    <span class="grow"></span>
+    <button class="primary" id="dl">Download for Collsoft</button>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-file" aria-selected="true">This week's file</button>
+    <button class="tab" role="tab" id="t-needs" aria-selected="false">Needs you<span class="count" id="needcount"></span></button>
+    <button class="tab" role="tab" id="t-bal" aria-selected="false">Balances vs Collsoft</button>
+  </nav>
+
+  <section class="panel" id="p-file">
+    <p class="lead">One row per person, hours only. Collsoft applies its own rates. Columns map once in Collsoft's import: STD, Training, Bank Holiday and Compassionate to the Pay tab, Annual leave to Hols, Sick to SSP.</p>
+    <div class="scroll"><table id="filetable"></table></div>
+    <div class="foot"><small>Click a person to see where each number comes from.</small><small id="filecheck"></small></div>
+  </section>
+
+  <section class="panel" id="p-needs" hidden>
+    <p class="lead">Things to sort before the file goes to Collsoft. The download unlocks when this list is clear.</p>
+    <div class="issues" id="issues"></div>
+  </section>
+
+  <section class="panel" id="p-bal" hidden>
+    <div class="upload">
+      <span><b>Collsoft balances:</b> <span id="uploadname">Holiday report uploaded Fri 6 Nov, 09:12</span></span>
+      <button id="reupload">Upload a newer report</button>
+    </div>
+    <p class="lead">Leave left in Timebreez next to leave left in Collsoft. A difference is fine when it's explained, for example leave already booked but not yet taken.</p>
+    <div class="scroll"><table id="baltable"></table></div>
+  </section>
+</div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="dtitle">
+    <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+      <h2 id="dtitle"></h2><button id="dclose" aria-label="Close">Close</button>
+    </div>
+    <div id="dbody"></div>
+  </div>
+</div>
+
+<script>
+const WEEKS=[
+ {n:44,ending:'30/10/2026',worked:'19–23 Oct',bh:0},
+ {n:45,ending:'06/11/2026',worked:'26–30 Oct',bh:1},
+ {n:46,ending:'13/11/2026',worked:'2–6 Nov',bh:0}
+];
+const PEOPLE=[
+ {wn:'EMP0101',name:'Aoife Brennan',type:'hourly',day:8.25},
+ {wn:'EMP0102',name:'Ciara Doyle',type:'hourly',day:8.25},
+ {wn:'EMP0103',name:'Deirdre Walsh',type:'hourly',day:5},
+ {wn:'EMP0104',name:'Eimear Quinn',type:'hourly',day:8.25},
+ {wn:'EMP0105',name:'Fiona Ryan',type:'hourly',day:4.5},
+ {wn:'',name:'Gráinne Kelly',type:'hourly',day:8.25},
+ {wn:'EMP0107',name:'Hannah Byrne',type:'hourly',day:8.25},
+ {wn:'EMP0108',name:'Laura Murphy',type:'salaried',day:8.25},
+];
+// per week: std, al, sick, bh, train, unpaid, comp
+const HOURS={
+ 44:[[41.25,0,0,0,0,0,0],[33,8.25,0,0,0,0,0],[25,0,0,0,0,0,0],[41.25,0,0,0,0,0,0],[13.5,0,4.5,0,0,0,0],[41.25,0,0,0,0,0,0],[37.25,0,0,0,4,0,0],[0,0,0,0,0,0,0]],
+ 45:[[33,0,0,8.25,0,0,0],[24.75,8.25,0,8.25,0,0,0],[20,0,0,5,0,0,0],[16.5,16.5,0,8.25,0,0,0],[9,0,0,0,0,4.5,0],[33,0,0,8.25,0,0,0],[24.75,0,0,8.25,0,0,8.25],[0,0,0,0,0,0,0]],
+ 46:[[41.25,0,0,0,0,0,0],[41.25,0,0,0,0,0,0],[20,0,5,0,0,0,0],[41.25,0,0,0,0,0,0],[18,0,0,0,0,0,0],[41.25,0,0,0,0,0,0],[33,8.25,0,0,0,0,0],[0,0,0,0,0,0,0]]
+};
+const COLS=['STD hours','Annual leave','Sick','Bank holiday','Training','Unpaid','Compassionate'];
+const ISSUES={
+ 44:[],
+ 45:[
+  {id:'wn',sev:'bad',t:'Gráinne Kelly has no Works No.',d:'Collsoft can\'t match her row. Add her Works No. from the employee register.',fix:'Add Works No.'},
+  {id:'paid',sev:'bad',t:'Nobody has said whether "Unpaid Hourly Leave" is paid',d:'Fiona Ryan has 4.5 h of it this week. It goes in the Unpaid column only once you confirm it\'s unpaid.',fix:'Confirm unpaid'},
+  {id:'late',sev:'warn',t:'Leave approved after the cut-off',d:'Eimear Quinn\'s 2 days (29–30 Oct) were approved on Mon 2 Nov at 10:40, after last week\'s file went out. They are in this file.',fix:'Got it'},
+  {id:'chg',sev:'warn',t:'Hours changed since you last downloaded',d:'Hannah Byrne: Thu 29 Oct changed from 8.25 h worked to Compassionate leave by Sandra on Fri 30 Oct.',fix:'Got it'}
+ ],
+ 46:[{id:'leaver',sev:'warn',t:'Deirdre Walsh leaves on Fri 6 Nov',d:'Holiday owed on leaving: 12.5 h (2.5 days on her 5 h day). It is added to this file as Annual leave.',fix:'Got it'}]
+};
+const BAL=[
+ {name:'Aoife Brennan',unit:'days',tb:6,cs:6,why:''},
+ {name:'Ciara Doyle',unit:'days',tb:0,cs:5,why:'5 days booked for Christmas in Timebreez, not yet taken in Collsoft.'},
+ {name:'Deirdre Walsh',unit:'days',tb:2.5,cs:2.5,why:''},
+ {name:'Eimear Quinn',unit:'days',tb:3,cs:3,why:''},
+ {name:'Fiona Ryan',unit:'hours',tb:13.76,cs:13.76,why:'Hours staff: both earn 8% of hours worked each week.'},
+ {name:'Gráinne Kelly',unit:'days',tb:4,cs:5,why:''},
+ {name:'Hannah Byrne',unit:'days',tb:1.5,cs:1.5,why:''},
+ {name:'Laura Murphy',unit:'days',tb:9,cs:9,why:''},
+];
+let wi=1, tab='file', resolved={};
+const $=id=>document.getElementById(id);
+const fmt=v=>v===0?'<span class="zero">0</span>':v.toFixed(2);
+function open(issues){return issues.filter(i=>!resolved[WEEKS[wi].n+i.id])}
+function render(){
+ const w=WEEKS[wi], H=HOURS[w.n], iss=ISSUES[w.n], left=open(iss);
+ $('title').textContent=`Week ${w.n} for Collsoft`;
+ $('weeklabel').textContent=`Ending ${w.ending}`;
+ $('prev').disabled=wi===0; $('next').disabled=wi===WEEKS.length-1;
+ $('s-period').textContent=w.worked;
+ $('s-people').textContent=PEOPLE.length;
+ const tot=H.reduce((a,r)=>a+r.reduce((x,y)=>x+y,0),0), leave=H.reduce((a,r)=>a+r.slice(1).reduce((x,y)=>x+y,0),0);
+ $('s-hours').textContent=tot.toFixed(2); $('s-leave').textContent=leave.toFixed(2);
+ const sp=$('statuspill');
+ if(left.length){sp.className='pill warn';sp.textContent=`${left.length} to check before sending`}
+ else{sp.className='pill ok';sp.textContent='Ready to send'}
+ $('dl').disabled=left.length>0; $('dl').title=left.length?'Clear "Needs you" first':'';
+ const nc=$('needcount'); nc.textContent=left.length; nc.className='count'+(left.length?'':' zero');
+ // file
+ let h='<thead><tr><th>Works No.</th><th>Name</th><th>Pay</th>'+COLS.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>';
+ PEOPLE.forEach((p,i)=>{
+  const wnMissing=!p.wn&&!resolved[w.n+'wn'];
+  h+=`<tr tabindex="0" data-i="${i}"><td class="mono">${wnMissing?'<span class="flag">missing</span>':(p.wn||'EMP0106')}</td><td>${p.name}</td><td><span class="tag ${p.type==='salaried'?'sal':''}">${p.type}</span></td>`+
+   H[i].map(v=>`<td>${fmt(v)}</td>`).join('')+'</tr>';
+ });
+ const sums=COLS.map((_,c)=>H.reduce((a,r)=>a+r[c],0));
+ h+=`</tbody><tfoot><tr><td></td><td>Total</td><td></td>${sums.map(s=>`<td>${s.toFixed(2)}</td>`).join('')}</tr></tfoot>`;
+ $('filetable').innerHTML=h;
+ $('filecheck').textContent=`Check line: ${PEOPLE.length} rows, ${tot.toFixed(2)} hours`;
+ // needs
+ $('issues').innerHTML=iss.length?iss.map(i=>{const done=resolved[w.n+i.id];return `<div class="issue ${i.sev==='warn'?'warn':''} ${done?'done':''}"><span class="bar"></span><div><h3>${i.t}</h3><p>${i.d}</p></div><button data-fix="${i.id}" ${done?'disabled':''}>${done?'Done':i.fix}</button></div>`}).join(''):'<p class="lead">Nothing needs you this week.</p>';
+ // balances
+ let b='<thead><tr><th>Name</th><th>Unit</th><th></th><th>Timebreez left</th><th>Collsoft left</th><th>Difference</th><th style="text-align:left">Why</th></tr></thead><tbody>';
+ BAL.forEach((r,i)=>{const d=+(r.tb-r.cs).toFixed(2);const cls=d===0||r.why?'diff-ok':'diff-bad';
+  b+=`<tr tabindex="0" data-b="${i}"><td>${r.name}</td><td>${r.unit}</td><td></td><td>${r.tb}</td><td>${r.cs}</td><td class="${cls}">${d===0?'Agrees':(d>0?'+':'')+d}</td><td style="text-align:left;white-space:normal;min-width:22ch">${r.why||(d===0?'':'<span class="flag">Not explained yet. Click to look.</span>')}</td></tr>`});
+ const agree=BAL.filter(r=>r.tb===r.cs||r.why).length;
+ b+=`</tbody><tfoot><tr><td colspan="7" style="text-align:left">${agree} of ${BAL.length} agree or are explained</td></tr></tfoot>`;
+ $('baltable').innerHTML=b;
+ ['file','needs','bal'].forEach(k=>{$('p-'+k).hidden=k!==tab;$('t-'+k).setAttribute('aria-selected',k===tab)});
+}
+function drawer(title,html){$('dtitle').textContent=title;$('dbody').innerHTML=html;$('drawer').hidden=false;$('dclose').focus()}
+$('dclose').onclick=()=>$('drawer').hidden=true;
+$('drawer').onclick=e=>{if(e.target.id==='drawer')$('drawer').hidden=true};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('drawer').hidden=true});
+$('prev').onclick=()=>{wi--;render()}; $('next').onclick=()=>{wi++;render()};
+['file','needs','bal'].forEach(k=>$('t-'+k).onclick=()=>{tab=k;render()});
+$('issues').onclick=e=>{const id=e.target.dataset.fix;if(id){resolved[WEEKS[wi].n+id]=true;render()}};
+function person(i){
+ const p=PEOPLE[i],w=WEEKS[wi],r=HOURS[w.n][i];
+ const lines=[];
+ if(p.type==='salaried')lines.push('Salaried: no hours go to Collsoft. Leave is still recorded for the balance.');
+ else{
+  lines.push(`STD hours ${r[0].toFixed(2)}: rostered shifts confirmed by the manager, lunch taken off (unpaid, 45 min).`);
+  if(r[3])lines.push(`Bank holiday ${r[3].toFixed(2)}: Mon 26 Oct, paid at one normal day (${p.day} h).`);
+  if(r[1])lines.push(`Annual leave ${r[1].toFixed(2)}: approved leave, priced from the working week (${p.day} h a day).`);
+  if(r[2])lines.push(`Sick ${r[2].toFixed(2)}: sick leave on rostered days.`);
+  if(r[4])lines.push(`Training ${r[4].toFixed(2)}: shift marked as training.`);
+  if(r[5])lines.push(`Unpaid ${r[5].toFixed(2)}: unpaid leave, not paid.`);
+  if(r[6])lines.push(`Compassionate ${r[6].toFixed(2)}: approved by Sandra.`);
+ }
+ drawer(p.name,`<dl><dt>Works No.</dt><dd class="mono">${p.wn||'missing'}</dd><dt>Pay</dt><dd>${p.type}</dd><dt>Day length</dt><dd>${p.day} h</dd><dt>Week</dt><dd>${w.n} (${w.worked})</dd></dl><h3 style="margin:8px 0 0;font-size:14px">Where each number comes from</h3><ol>${lines.map(l=>`<li>${l}</li>`).join('')}</ol>`);
+}
+$('filetable').onclick=e=>{const tr=e.target.closest('tr[data-i]');if(tr)person(+tr.dataset.i)};
+$('filetable').onkeydown=e=>{const tr=e.target.closest('tr[data-i]');if(tr&&e.key==='Enter')person(+tr.dataset.i)};
+function bal(i){const r=BAL[i];
+ drawer(r.name,`<dl><dt>Timebreez left</dt><dd>${r.tb} ${r.unit}</dd><dt>Collsoft left</dt><dd>${r.cs} ${r.unit}</dd></dl>
+ <h3 style="margin:8px 0 0;font-size:14px">Timebreez balance, step by step</h3>
+ <ol><li>2026 allowance: 20 days base${r.name==='Ciara Doyle'?' + 1 long service (since 2019)':''}</li><li>Carry-over from 2025: 0 (Sandra, 27 Oct)</li><li>Taken to date and booked ahead are listed by date in the person's leave record.</li></ol>
+ ${r.why?`<p><b>Why they differ:</b> ${r.why}</p>`:(r.tb===r.cs?'<p class="diff-ok">Both systems agree.</p>':'<p class="flag">1 day apart and not explained yet. Check whether a day was taken in Collsoft but not booked in Timebreez.</p><button class="primary" id="markexp">Mark as checked</button>')}`);
+ const m=$('markexp');if(m)m.onclick=()=>{BAL[i].why='Checked by Mella: 1 day taken before Timebreez went live.';$('drawer').hidden=true;render()};
+}
+$('baltable').onclick=e=>{const tr=e.target.closest('tr[data-b]');if(tr)bal(+tr.dataset.b)};
+$('baltable').onkeydown=e=>{const tr=e.target.closest('tr[data-b]');if(tr&&e.key==='Enter')bal(+tr.dataset.b)};
+$('reupload').onclick=()=>{$('uploadname').textContent='Holiday report uploaded just now';};
+$('dl').onclick=()=>{const w=WEEKS[wi],H=HOURS[w.n];
+ const head='Works No.,Name,'+COLS.join(',');
+ const rows=PEOPLE.filter(p=>p.type!=='salaried').map((p,i)=>[p.wn||'EMP0106',p.name,...H[PEOPLE.indexOf(p)].map(v=>v.toFixed(2))].join(','));
+ drawer(`Week ${w.n} file`,`<p>In the real app this downloads a .csv that Collsoft's import reads. Salaried staff are left out. Preview:</p><pre class="csv mono">${[head,...rows].join('\n')}</pre>`)};
+render();
+</script>
+</body>
+</html>
