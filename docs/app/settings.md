@@ -37,7 +37,13 @@ How Timebreez works out what a booking costs. Each rule applies **from a date yo
 | Who may take a balance below zero | When a booking would take someone below zero, who may allow it? | Admins only, any admin or manager, only the people you choose, or nobody |
 | Leave earned from hours worked | For staff who earn leave as they work, what share of their hours becomes leave, is it capped, and do paid leave hours count as hours worked? | A percent of hours worked, an optional cap in working weeks of the person's hours, and a tick for whether paid leave hours count |
 
-A rule shown as "Not decided yet" stops any booking that needs it until you set it.
+| Gross pay in the payroll file | Should the payroll file work out gross pay (paid hours x rate), or carry hours only so your payroll system applies its own rates? | No, hours only. Or yes, paid hours x rate, for hourly staff only |
+| Breaks in paid hours | How long is the break on a shift of a given length, and is it paid? | One or more bands, for example "worked longer than 360 minutes: 45 minute break", and a tick if the break is paid |
+| Public holidays in the payroll file | When a public holiday falls in a pay period, how many hours go in the file's bank holiday column? | None, your payroll system works it out. Or each person's weekly contracted hours divided by a number you choose, for example 5 |
+
+A rule shown as "Not decided yet" stops any booking that needs it until you set it. The three payroll rules work differently: until you set them, the payroll file has hours only (no gross pay), takes no break off, and has no bank holiday hours. The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page says so.
+
+For breaks, the longest band a day's worked time is over decides the break. On a part day of leave, only the worked part counts. There is no built-in break length.
 
 There is no built-in rate for leave earned from hours. Until you set it, people on the **Hours staff** page earn nothing and recording their hours is refused.
 

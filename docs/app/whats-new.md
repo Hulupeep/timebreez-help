@@ -10,6 +10,16 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 21 November 2026
+
+- **Employees:** a person's Payroll tab records how they are paid (hourly or salaried, rate, how often) from a date, keeping every earlier record. The payroll file uses the one in force for the period. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Employees:** admins can record a PPS number. It shows masked, and every full view needs a reason and is logged. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Employees:** admins see which login is on a person's record, and can disconnect it if the wrong account joined. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Invites:** the invite page says who the invite is for. A different signed-in account gets no Join button, and the page explains when only an admin can fix it. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Settings, Payroll:** three new rules: gross pay in the file (off until you choose), breaks in paid hours, and bank holiday hours for public holidays. The payroll page says which apply. [Settings]({{ site.baseurl }}/docs/app/settings/), [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Payroll:** the CSV adds pay type, pay frequency, bank holiday hours and unpaid break hours at the end of the existing columns. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Roster:** Edit Shift and Add Cover now say when the leave check failed, instead of looking like no leave. [Roster]({{ site.baseurl }}/docs/app/roster/)
+
 ## 20 November 2026
 
 - **Carry-over:** staff can ask to carry unused leave into next year, on My Leave or with `/carry` on Telegram. An admin approves all, part or declines with a reason on Leave Requests, against the organisation's limit. Days not carried with approval expire at the year end. [Carry-over]({{ site.baseurl }}/docs/app/carry-over/)
