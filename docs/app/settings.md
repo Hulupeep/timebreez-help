@@ -43,6 +43,14 @@ How Timebreez works out what a booking costs. Each rule applies **from a date yo
 
 A rule shown as "Not decided yet" stops any booking that needs it until you set it. The three payroll rules work differently: until you set them, the payroll file has hours only (no gross pay), takes no break off, and has no bank holiday hours. The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page says so.
 
+**Why the three payroll rules start off:**
+
+- **Gross pay in the payroll file** is off so Timebreez never sends a money figure your payroll system did not work out. Your payroll system applies its own rates until you choose otherwise.
+- **Breaks in paid hours** is off because break rules differ from place to place (some pay lunch, some do not). Nothing is taken off until you say how long the break is and whether it is paid.
+- **Public holidays in the payroll file** is off because your payroll system usually works out bank holiday pay itself. Putting hours in the file as well could pay the day twice.
+
+Each rule is your organisation's own, so two organisations can answer differently.
+
 For breaks, the longest band a day's worked time is over decides the break. On a part day of leave, only the worked part counts. There is no built-in break length.
 
 There is no built-in rate for leave earned from hours. Until you set it, people on the **Hours staff** page earn nothing and recording their hours is refused.

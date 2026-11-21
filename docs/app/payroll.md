@@ -72,6 +72,16 @@ The export from the quick actions on Employees is stopped the same way.
 4. Resolve anything listed under **Reconciliation Gate**.
 5. Press **Download draft CSV**.
 
+## Works No. check before you download
+
+Above the figures, an amber box lists:
+
+- people with hours in this period and **no Works No.** Collsoft won't import their hours. Each name opens their record so you can add it;
+- any **Works No. on more than one person**, with both names. Collsoft would put one person's hours on the other;
+- other active people with no Works No. who have no hours this period.
+
+It does not stop the download, but fix it before you send the file. See [Works No.]({{ site.baseurl }}/docs/app/employees/#works-no).
+
 ## What is in the CSV
 
 - The first two columns are **Works No.** (the person's payroll ID) and **Name**. These are the two fields Collsoft needs to match each person.
