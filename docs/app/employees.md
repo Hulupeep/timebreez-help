@@ -18,6 +18,17 @@ Open a person's card to see their **Employment Terms**: status, hours per week, 
 
 The card's balance says which leave year it is for, for example "in 2026". Once next leave year is open, a second line shows it on its own, for example "Annual Leave 2027: 20 days left". Leave booked in next year comes off next year's allowance, never this year's. Carry-over is added at year end.
 
+### Works No.
+
+The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft. Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
+
+**Why it matters:** Collsoft matches each line of the [payroll file]({{ site.baseurl }}/docs/app/payroll/) to a person by Works No. If it is blank, that person's hours are not imported. If two people have the same one, one person's hours land on the other.
+
+- An active person without one shows an amber **No Works No.** badge on their card. The **No Works No. (5)** button above the list shows only them; the number is how many there are.
+- Saving a Works No. that another active person already has is refused, naming them, for example "EMPID0000028 is already Mary Murphy's Works No.". Capitals and spaces do not make it different. A leaver's old number can be reused.
+- Clearing the field leaves the person with no Works No.
+- The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page lists anyone missing one before you download the file.
+
 ## Inviting someone
 
 Timebreez does not email invites yet. You send the link yourself.
@@ -69,7 +80,11 @@ To change it, an admin presses **Change from a date** (or **Record pay** if ther
 
 With no pay record yet, the payroll file uses the older rate on the staff profile, if there is one.
 
+**Why pay is recorded from a date:** a past payroll must come out the same every time you look at it. A pay rise is a new record from the date it starts, never an edit of the old one, so October's figures still use October's rate after the rise. Your payroll system (for example Collsoft) stays the master for rates; this record is so Timebreez's file and its explanations agree with it.
+
 **PPS number** (or **Tax number** outside Ireland) is optional: payroll matches people by Works No. Only admins can see it. It shows masked. To see the full number, write why you need it and press **Show full number**; every full view is logged. Press **Record** or **Change** to enter it, with a reason.
+
+**Why PPS is kept, and why it is optional:** it gives the payroll person one place to find it. The payroll file never needs it, because the Works No. does the matching. It is a sensitive personal number, so managers cannot see it, it is masked even for admins, and each full view is logged with who looked and why.
 
 **Example.** Mary Murphy moves from €14.00 to €14.80 an hour from 1 January. You press **Change from a date**, enter 14.80, applies from 1 January, why "new rate per the payroll register". Her December payroll still uses €14.00; January's uses €14.80.
 

@@ -14,6 +14,8 @@ permalink: /docs/app/carry-over/
 
 Unused leave does not move into next year on its own. A person asks to carry some of it, and an admin approves all of it, part of it, or declines, always with a reason. Days not carried with approval expire at the end of the leave year.
 
+**Why it needs approval:** whether unused leave expires or moves on is a decision under the person's contract and your policy, not something software should assume. So the person asks, someone with authority decides, and the reason is on record. Decide within the deadline your rule sets (**Days after year end to still decide**): anything not carried by then expires.
+
 ## The rule
 
 Your organisation sets the rule once, on **Leave Requests**, under **Carry-over requests**. Press **Change the carry-over rule**.
