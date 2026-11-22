@@ -23,6 +23,9 @@ A box above the table says how breaks and public holidays are paid this period, 
 - If a public holiday falls in the period, it is named, with how it is paid. With no rule set, this line is amber and the file has no bank holiday hours.
 - Anyone with no confirmed working week is named, with no bank holiday hours: their weekly hours are unknown, so nothing is guessed.
 
+- Each public holiday uses the person's employment terms in force on that day. Someone who started after the holiday gets no bank holiday hours for it.
+- Someone whose pay record says **Salaried** is not paid by the hour. Their hours-worked and bank holiday columns are 0, and their worked and bank holiday hours go in **salaried_hours** for information. The page names them: "Salaried, so no hours are paid by the hour". To change it, change the person's pay record on [Employees]({{ site.baseurl }}/docs/app/employees/#payroll-tab).
+
 **Example.** The rule is weekly contracted hours divided by 5. Mary Murphy is contracted 30 hours a week, so a public holiday in the period puts 6 bank holiday hours on her line, paid.
 
 ## When a period is a draft
@@ -58,7 +61,7 @@ These stop **Certify & Export** and **Download draft CSV** until they are fixed.
 
 | Message | What to do |
 |---|---|
-| Payroll can't be exported until these are confirmed: Confirm whether ... is paid | Someone took that leave this period and nobody has said whether it is paid. Press **Paid** or **Unpaid** on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/) |
+| Payroll can't be exported until these are confirmed: ... | Someone took that leave this period and nobody has said whether it is paid. Each type is listed with its hours this period, any days with no hours yet, and whether those hours count as paid, unpaid or neither for now, for example "Training: 7.5 hours this period, counted as unpaid for now". Press **Paid** or **Unpaid** on [Leave Types]({{ site.baseurl }}/docs/app/leave-types/) |
 | Payroll can't be exported: N leave days have no hours yet | Confirm the person's working week on [Employees]({{ site.baseurl }}/docs/app/employees/), or type the hours on the booking in [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/) |
 | Payroll can't be exported: these imported bookings differ from what Timetastic ... | Timetastic's figure and the working week disagree. Check the person's working week, or type the hours on the booking |
 
@@ -86,7 +89,7 @@ It does not stop the download, but fix it before you send the file. See [Works N
 
 - The first two columns are **Works No.** (the person's payroll ID) and **Name**. These are the two fields Collsoft needs to match each person.
 - Then the hours, rate, gross pay, period dates and leave totals, in the same order as before. Gross pay is blank unless you chose to include it.
-- Then **pay_type** and **pay_frequency** from the person's pay record on [Employees]({{ site.baseurl }}/docs/app/employees/) (blank if none), **bank_holiday_hours** and **unpaid_break_hours** (blank when no rule puts any in the file). Hours worked already have the unpaid break taken off.
+- Then **pay_type** and **pay_frequency** from the person's pay record on [Employees]({{ site.baseurl }}/docs/app/employees/) (blank if none), **bank_holiday_hours** and **unpaid_break_hours** (blank when no rule puts any in the file). Then **salaried_hours**, filled only for salaried staff. Hours worked already have the unpaid break taken off.
 - Last, one **"&lt;leave type&gt; hours"** column for each leave type on your [Leave Types]({{ site.baseurl }}/docs/app/leave-types/) list (archived types left out), in that list's order. For example **Annual Leave hours** and **Sick Leave hours**. If someone has leave of a type that is not on the list, its column is added at the end, so no hours are dropped.
 - In Collsoft's import wizard, map each column once (for example Annual Leave hours to annual leave). Collsoft only imports the columns you map.
 - A name that starts with = + - or @ gets a ' in front, so a spreadsheet shows it as text.

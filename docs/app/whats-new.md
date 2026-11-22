@@ -10,6 +10,16 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 22 November 2026
+
+- **Leave Types:** a type can now come out of another type's balance (or none), and you choose who can book it. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/)
+- **Leave Requests:** the leave list loads every booking, not just the newest 1,000. The balances download adds hours, the leave year, its allowance and what has been used. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
+- **Payroll:** a leave type not yet confirmed as paid now shows its hours this period and how they count for now. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Payroll:** salaried staff are not paid by the hour; their hours go in a new **salaried_hours** column. A public holiday before someone started gives them no bank holiday hours. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Employees:** a person's pay history is listed, and a pay record that has not started can be withdrawn. A PPS number can be removed with a reason, and its view log is shown. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Invites:** only the invited email address can accept an invite, and it must be confirmed. [Employees]({{ site.baseurl }}/docs/app/employees/)
+- **Leave Admin:** new link, **Open next leave year**. [Leave Admin]({{ site.baseurl }}/docs/app/leave-admin/)
+
 ## 21 November 2026
 
 - **Employees:** a person's Payroll tab records how they are paid (hourly or salaried, rate, how often) from a date, keeping every earlier record. The payroll file uses the one in force for the period. [Employees]({{ site.baseurl }}/docs/app/employees/)

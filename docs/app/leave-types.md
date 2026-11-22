@@ -46,6 +46,22 @@ A leave type the Timetastic import creates does **not** come off anyone's allowa
 
 Requests of a type that comes off the allowance are checked against the person's balance. Other types are not. The import screen has the same step, with what Timetastic did as a suggestion: see [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/).
 
+## Comes out of: which balance it uses
+
+When you add or edit a type, **Comes out of** says which balance a booking uses:
+
+- **Its own balance**: it comes off this type's own allowance.
+- **Another type**, for example Annual Leave: it comes off the person's Annual Leave balance. The booking keeps its own type, so it still shows under its own name on the wallchart and in payroll.
+- **No balance (nothing is taken off)**.
+
+A type that other types come out of keeps its own balance. When someone books it, the booking form says, for example, "Comes out of your Annual Leave balance". The balance history names both types. Cancelling puts the time back on the balance it came off.
+
+**Example.** You add "Moving day" and set it to come out of Annual Leave. Mary Murphy books one Moving day: her Annual Leave balance goes down by one day, and the wallchart shows "Moving day".
+
+## Who can book it
+
+**Who can book it** is **Everyone**, **Managers and admins** or **Admins only**. Others can't pick it in the app, in the staff app or on Telegram. An admin can still book it for anyone.
+
 ## Common Questions
 
 ### What's the difference between paid and unpaid leave?

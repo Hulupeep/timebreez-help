@@ -64,8 +64,10 @@ A refusal stays on screen until you close it, so you can read it.
 
 Under **Download a spreadsheet (CSV)**:
 
-- **Download leave list (n)**: the requests the filters show, one row each.
-- **Download balances**: each person's balance.
+- **Download leave list (n)**: the requests the filters show, one row each. Every booking is loaded, however many there are, so a date range far in the past is complete.
+- **Download balances**: each person's balance today, per leave type. After the first six columns come **Balance Hours**, **Leave Year Start** and **Leave Year End**, the year's **Allowance** in working days and hours, what has been **Used, Booked or Adjusted** since, in days and hours, and **Next Leave Year Start** with next year's balance once it is open. When a balance has no leave-year record those columns are blank, not 0.
+
+**Example.** Mary Murphy has 20 days for 2026 and has used 6. Her row shows Allowance 20.00, Used, Booked or Adjusted 6.00 and Balance 14.00 working days, with the same figures in hours beside them.
 
 Neither is the payroll file. For pay, use [Payroll]({{ site.baseurl }}/docs/app/payroll/).
 

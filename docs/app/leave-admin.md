@@ -20,6 +20,7 @@ One page with a link to everything you need to run leave. Nothing is set on this
 | Leave map | [Wallchart]({{ site.baseurl }}/docs/app/wallchart/) | See who is off and when, across the whole team |
 | TOIL | [Time in Lieu]({{ site.baseurl }}/docs/app/toil/) | Track and adjust time-in-lieu balances |
 | Hours staff | [Hours staff]({{ site.baseurl }}/docs/app/hours-staff/) | For people who earn leave from hours worked: confirm each week's hours from the rota, upload the payroll Hours Report, or type one person's hours with a reason. Admins add who earns leave this way |
+| Open next leave year | Open next leave year | Copy each person's confirmed allowance into next year as a draft, state next year's figure (with where it came from) for anyone on an hours allowance or who started part way through this year, then confirm. Carry-over is added at year end, after approvals. Only a confirmed allowance counts as a balance |
 | Settings | [Settings, Leave Setup]({{ site.baseurl }}/docs/app/settings/) | Change the default allowance, the leave year and the calculation rules |
 
 ## Setup checklist
