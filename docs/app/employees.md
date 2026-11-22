@@ -57,6 +57,7 @@ The link opens **Join your team on Timebreez**.
 | ... is already a member of this organisation | They are signed in with an account that is already in. **Open your dashboard**, or **Use a different account** and sign in with the invited email |
 | ... is already joined to this organisation as Mary Murphy, not as the person this invite is for | That login is on another person's staff record. The invite stays pending until the invited person joins with their own account. **Join** is hidden, because it would fail the same way |
 | This invite was sent to ..., but that login is already attached to ...'s staff record | One login can only be on one staff record, so a new invite gives the same message. An admin disconnects the login from the wrong record (see [The login on a record](#the-login-on-a-record)), then the person opens the link again |
+| ... has not been confirmed yet | They press **Use a different account**, sign in with the emailed sign-in link, then open the invite again |
 | The person this invite is for has already joined Timebreez with a different account | They sign in with that account, or you check the staff list |
 
 ## A person's page
@@ -80,9 +81,13 @@ To change it, an admin presses **Change from a date** (or **Record pay** if ther
 
 With no pay record yet, the payroll file uses the older rate on the staff profile, if there is one.
 
+**History (n)** lists every pay record, newest first, with who recorded it, when and why. The one in force today is marked **In force today**. A record that has not started yet can be taken back with **Withdraw (not started yet)** and a reason, for example "entered with the wrong date". A withdrawn record is crossed out, never deleted, and payroll ignores it. A record that has already started cannot be withdrawn: record a new one from a date instead.
+
 **Why pay is recorded from a date:** a past payroll must come out the same every time you look at it. A pay rise is a new record from the date it starts, never an edit of the old one, so October's figures still use October's rate after the rise. Your payroll system (for example Collsoft) stays the master for rates; this record is so Timebreez's file and its explanations agree with it.
 
-**PPS number** (or **Tax number** outside Ireland) is optional: payroll matches people by Works No. Only admins can see it. It shows masked. To see the full number, write why you need it and press **Show full number**; every full view is logged. Press **Record** or **Change** to enter it, with a reason.
+**PPS number** (or **Tax number** outside Ireland) is optional: payroll matches people by Works No. Only admins can see it. It shows masked. To see the full number, write why you need it and press **Show full number**; every full view is logged. Press **Record** or **Change** to enter it, with a reason. Press **Remove** and give a reason, for example "entered on the wrong person", to clear it.
+
+Under the number, a line says how often it was viewed in full, for example "Viewed in full once. Last: ...", with who and why. **Show log** lists every time it was recorded, viewed in full or removed, by whom and why.
 
 **Why PPS is kept, and why it is optional:** it gives the payroll person one place to find it. The payroll file never needs it, because the Works No. does the matching. It is a sensitive personal number, so managers cannot see it, it is masked even for admins, and each full view is logged with who looked and why.
 
