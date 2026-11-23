@@ -91,6 +91,8 @@ No. For someone whose Timetastic balance is in hours, each booking's Total Deduc
 
 Once next leave year is open, a booking that crosses it is split. The part in each year comes off that year's allowance. The later part is dated from the first day of the new year. If the person has no confirmed working week, the charge is shared by working days Monday to Friday, less public holidays.
 
+Each part shows in the person's balance history, with the minutes moved and the days they make, for example "960 minutes (2 days)" or "720 minutes (1.5 days)". Splits recorded before 23 November 2026 may show a whole number of days with a stray point, for example "(2. days)"; the minutes in those lines are right.
+
 ### Why does the rules sheet refuse a name?
 
 It only accepts people who are in the uploaded file, spelled as in Timetastic. Write the full Timetastic name, not a nickname.

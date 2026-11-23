@@ -10,6 +10,10 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 23 November 2026
+
+- **Timetastic import:** when a booking is split across leave years, the balance history now reads "(2 days)" or "(1.5 days)", not "(2. days)". [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
+
 ## 22 November 2026
 
 - **Leave Types:** a type can now come out of another type's balance (or none), and you choose who can book it. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/)
