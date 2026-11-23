@@ -12,6 +12,9 @@ Changes to the app that you will notice, newest first.
 
 ## 23 November 2026
 
+- **Employees:** a login can be marked **AI Agent** (robot or test login). It is never counted as staff, rostered, paid or notified. [Employees]({{ site.baseurl }}/docs/app/employees/#ai-agents-robot-and-test-logins)
+- **Employees:** admin-only **Notes** on each person, and the start date is read back in words. [Employees]({{ site.baseurl }}/docs/app/employees/#notes)
+- **Settings:** new **Payroll system**. The payroll number is named the way your payroll names it, not always "Works No.". [Settings]({{ site.baseurl }}/docs/app/settings/#payroll-system)
 - **Roster:** new **Close week**. Close the roster when it matches what happened; reopening needs a reason, and payroll sees both. An admin can have weeks close themselves when the new week starts. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
 - **Payroll:** the first box says whether the roster week is closed, and lists any shift changed after it closed. [Payroll]({{ site.baseurl }}/docs/app/payroll/#is-the-roster-week-closed)
 - **New page:** [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/).

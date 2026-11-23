@@ -63,6 +63,12 @@ There is no built-in rate for leave earned from hours. Until you set it, people 
 
 **Choose a template** for your kind of business and press **Apply template**. It only fills rules you have not decided yet. Anything you already set is kept.
 
+### Payroll system
+
+**Who:** admins and managers. Choose which payroll you use: Collsoft, BrightPay, Thesaurus, Sage, Xero, another or none. Staff records then name each person's payroll number the way your payroll does, for example "Works No." for Collsoft. To use your own name, type it in **Name for the payroll number**. The preview shows what staff records will say. Press **Save**.
+
+The payroll download is in Collsoft's layout today. Other layouts are on the way.
+
 ## Leave Types
 
 The kinds of leave your organisation uses (Annual Leave, Sick, Unpaid and so on), their colours and their rules. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).

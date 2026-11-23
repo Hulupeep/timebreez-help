@@ -20,7 +20,9 @@ The card's balance says which leave year it is for, for example "in 2026". Once 
 
 ### Works No.
 
-The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft. Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
+The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft.
+
+**The name follows your payroll system.** "Works No." is what Collsoft calls it. Choose your payroll in [Settings > Payroll system]({{ site.baseurl }}/docs/app/settings/#payroll-system), and the field, badge and filter use that system's name: "Works number" for BrightPay, "Payroll ID" for the others. You can also type your own name there. Until a system is chosen, the app says "Payroll ID". Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
 
 **Why it matters:** Collsoft matches each line of the [payroll file]({{ site.baseurl }}/docs/app/payroll/) to a person by Works No. If it is blank, that person's hours are not imported. If two people have the same one, one person's hours land on the other.
 
@@ -28,6 +30,26 @@ The **Works No.** is the person's employee number in your payroll system, for ex
 - Saving a Works No. that another active person already has is refused, naming them, for example "EMPID0000028 is already Mary Murphy's Works No.". Capitals and spaces do not make it different. A leaver's old number can be reused.
 - Clearing the field leaves the person with no Works No.
 - The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page lists anyone missing one before you download the file.
+
+### AI Agents (robot and test logins)
+
+Tick **AI Agent** on **Edit** for a login used by a robot or a test tool, not a real person. It keeps its access level, so it sees what an employee, manager or admin sees. It is never counted as staff:
+
+- not in the headcount or your plan's seat count (the list shows "+ 1 AI Agent (not counted)")
+- not offered on the roster, for cover, or on the wallchart
+- not in the leave check, the daily digest or "who's out"
+- not in the payroll file, and never flagged for a missing payroll number
+- sent no notifications
+
+Its card shows a purple **AI Agent** badge. Only an admin can tick or untick it.
+
+### Notes
+
+Admins can keep free-text **Notes** about a person on **Add** and **Edit**, for example "Prefers mornings; returning from leave in March". Only admins see them. Managers, the person and colleagues do not. Up to 4,000 characters.
+
+### Start date
+
+Under the start date the form reads it back in words, for example "Reads as Monday 1 December 2017". Check it, because your browser may show dates month first.
 
 ## Inviting someone
 
