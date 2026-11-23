@@ -66,3 +66,9 @@ There is no built-in rate for leave earned from hours. Until you set it, people 
 ## Leave Types
 
 The kinds of leave your organisation uses (Annual Leave, Sick, Unpaid and so on), their colours and their rules. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
+
+## Scheduler
+
+### Close week
+
+**Close the week automatically when the new week starts.** Off unless an admin turns it on. When on, at midnight on Monday last week's roster closes itself if nobody closed it, and payroll sees **Closed automatically**. A week someone reopened stays open until a person closes it. Set the time zone for "midnight on Monday" in the box below it (Europe/Dublin unless you change it), then press **Save**. Only admins can change it. See [Close the week]({{ site.baseurl }}/docs/app/roster/#close-the-week).

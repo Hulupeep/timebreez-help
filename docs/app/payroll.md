@@ -67,13 +67,30 @@ These stop **Certify & Export** and **Download draft CSV** until they are fixed.
 
 The export from the quick actions on Employees is stopped the same way.
 
+## Is the roster week closed?
+
+The first box on the page says whether the manager has closed the roster for that week:
+
+| Box | Means |
+|---|---|
+| Green, **Roster week: Closed by Mary Murphy, Fri 11 Dec 15:42** | The roster is final. Go ahead |
+| Green, **Closed automatically** | Nobody closed it, so it closed itself at midnight on Monday (only if your admin turned that on) |
+| Amber, **Open** | The manager has not closed it yet. The roster may still change. Wait before you download |
+| Amber, **Reopened by ... : reason** | The manager is changing it. Wait until it is closed again |
+| Red, **N shift changes made while the week was closed** | Something changed after it closed, for example a leave approval. Each change is listed with who, when, the person and the day. The hours below already include it; check those people before you download |
+
+Every earlier reopen is listed under a closed week too, with its reason. See [Close the week]({{ site.baseurl }}/docs/app/roster/#close-the-week).
+
 ## How to use it
 
 1. Pick the pay period with the arrows.
-2. Read the banner.
-3. Check the **Payroll Table** line by line: scheduled hours, actual hours and leave.
-4. Resolve anything listed under **Reconciliation Gate**.
-5. Press **Download draft CSV**.
+2. Check the roster week is **Closed** (the first box).
+3. Read the banner and clear any red box.
+4. Check the **Payroll Table** line by line: scheduled hours, actual hours and leave. Tick **Approved** for each person once their line is right.
+5. Resolve anything listed under **Reconciliation Gate**.
+6. Press **Download draft CSV**.
+
+See [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/).
 
 ## Works No. check before you download
 
