@@ -36,7 +36,7 @@ Move between weeks with the arrows, or press **This Week**. A one-line how-to si
 5. Click a shift to change it, drag it to another day to move it, or hover and press the red **x** to remove it.
 6. Press **Share** to send the week by WhatsApp, email or a link.
 
-There is no Publish button. A shift shows in the person's [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/) as soon as you create it.
+There is no Publish button. A shift shows in the person's [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/) as soon as you create it. When the week is over and the roster matches what really happened, [close the week](#close-the-week).
 
 **Autofill** shows how many gaps the week has. Pressing it opens a preview of proposed assignments for understaffed rooms; nothing changes until you apply them.
 
@@ -51,6 +51,37 @@ flowchart TD
     E --> F{More shifts?}
     F -->|Yes| C
     F -->|No| G[Share the week]
+```
+
+## Close the week
+
+**Close week** tells payroll the roster for that week is final. Do it on Friday, once the roster matches what really happened (sick days, swaps, early finishes).
+
+1. Pick the week. The chip next to the week says **Open**.
+2. Press **Close week**, then **Close week** again on the card.
+3. The chip now says, for example, **Closed by Mary Murphy, Fri 11 Dec 15:42**. Payroll sees the same words.
+
+A closed week is locked. Adding, changing, moving or removing a shift is refused with a message, and **Fill from Last Week** and **Autofill** are hidden for that week.
+
+### Changing a closed week
+
+1. Press **Reopen** next to the chip.
+2. Say why, for example "Mary was out sick Tuesday". You can't reopen without a reason.
+3. Make the changes, then press **Close week** again.
+
+Payroll sees the reopen, who did it, when and the reason. If a shift in a closed week changes any other way (for example a leave approval cancels it), it is not blocked, but payroll sees a red line saying what changed, who changed it and when.
+
+### Close the week automatically
+
+An admin can turn on **Close the week automatically when the new week starts** in **Settings, Scheduler**. At midnight on Monday (in the time zone set there, Europe/Dublin unless you change it) last week closes itself if nobody closed it. The chip then says **Closed automatically**. A week someone reopened is never closed automatically; a person has to close it. It is off until an admin turns it on.
+
+```mermaid
+flowchart LR
+    A[Open: build and edit] --> B[Close week, Friday]
+    B --> C[Closed: payroll can trust it]
+    C -->|Reopen with a reason| D[Reopened: payroll sees why]
+    D --> B
+    A -->|Monday midnight, if auto-close is on| C
 ```
 
 ## Fill from Last Week
@@ -79,6 +110,7 @@ If Timebreez cannot check the person's leave for that day, Add Shift, Edit Shift
 |---|---|
 | Grey with a lock | The day has passed. You can't add shifts to a day that's gone. |
 | HOLS, UNPAID or OFF | The person is on leave that day. Change or cancel the leave first if that's wrong. |
+| Any cell in a closed week | The week is closed. Press **Reopen** and give a reason first. |
 
 Hover any locked cell to see the reason.
 
@@ -96,6 +128,10 @@ If a room falls below the staff it needs, a warning shows on the roster. Fix it 
 
 Hover the cell to see why. Days before today are locked. A person on leave that day can't be dropped there; to give them a shift anyway, see [A shift on a leave day](#a-shift-on-a-leave-day). In By Staff, a person can only go on their own row. With no rooms set up, no shift can be saved. Help (the **?**) also tells you why.
 
+### Why can't I change a shift last week?
+
+The week is probably closed: the chip next to the week says who closed it. Press **Reopen**, say why, make the change and close it again. See [Changing a closed week](#changing-a-closed-week).
+
 ### Why does it ask me for a room?
 
 Every shift belongs to a room, because room ratios depend on it. Give each person a home room on their staff profile and it is chosen for you.
@@ -111,3 +147,5 @@ Confirmations and errors show as a message on the screen, not a browser pop-up.
 ## Help panel
 
 Open Help on the roster and it tells you what to do next for the week you are looking at, for example whether rooms or home rooms are missing, with links to fix them.
+
+See also [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/).

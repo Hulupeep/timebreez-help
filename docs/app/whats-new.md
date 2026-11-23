@@ -12,6 +12,9 @@ Changes to the app that you will notice, newest first.
 
 ## 23 November 2026
 
+- **Roster:** new **Close week**. Close the roster when it matches what happened; reopening needs a reason, and payroll sees both. An admin can have weeks close themselves when the new week starts. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
+- **Payroll:** the first box says whether the roster week is closed, and lists any shift changed after it closed. [Payroll]({{ site.baseurl }}/docs/app/payroll/#is-the-roster-week-closed)
+- **New page:** [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/).
 - **Timetastic import:** when a booking is split across leave years, the balance history now reads "(2 days)" or "(1.5 days)", not "(2. days)". [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/)
 
 ## 22 November 2026

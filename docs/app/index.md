@@ -18,6 +18,7 @@ These are the pages you use to go live. Each was written from the app as it is n
 
 | Page | Who | What you do there |
 |---|---|---|
+| [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/) | Everyone | Each person's weekly jobs: roster, close the week, payroll, leave |
 | [Timetastic import]({{ site.baseurl }}/docs/app/timetastic-import/) | Admin | Bring staff, allowances and leave across in batches you choose |
 | [Rule book]({{ site.baseurl }}/docs/app/rule-book/) | Admin | Read your rules and confirm, query or correct each one |
 | [Settings]({{ site.baseurl }}/docs/app/settings/) | Admin | Leave defaults and the calculation rules (full-time day, half days, holidays) |
