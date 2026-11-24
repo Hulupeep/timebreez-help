@@ -10,6 +10,18 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 24 November 2026
+
+- **Payroll:** new **Mark done: imported and paid** closes off a pay week. Any shift or leave change after that is listed on the week, and reopening needs a reason. An admin can have exported weeks close off by themselves. [Payroll]({{ site.baseurl }}/docs/app/payroll/#close-off-the-pay-week)
+- **Payroll:** a new table shows who qualifies for each public holiday's hours, and why, with its own download. [Payroll]({{ site.baseurl }}/docs/app/payroll/#who-qualifies-for-bank-holiday-hours)
+- **Settings:** the public holiday rule can now have a qualifying test, for example at least 40 hours in the 5 weeks before. [Settings]({{ site.baseurl }}/docs/app/settings/#leave-calculation-rules)
+- **Wallchart:** shows a month by default (or 2 weeks, or a week). Click or drag on empty days to book. Managers can lock dates for everyone, a room or one person. Click a name for that person's year. An admin can let staff see who is off, without the type or reason. [Wallchart]({{ site.baseurl }}/docs/app/wallchart/)
+- **Telegram:** admins and managers can approve or decline a request from the alert. The alert says how each room is left, and a morning message says who is off today. [My Settings]({{ site.baseurl }}/docs/app/my-settings/#approve-or-decline-in-telegram)
+- **Leave Requests:** each group shows 20 requests at a time, with **Show more**, and a link jumps to the ones waiting for you. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#finding-requests)
+- **Roster:** the main menu, Staff Availability and Cover Pool can fold away to give the week more room. [Roster]({{ site.baseurl }}/docs/app/roster/#make-the-week-wider)
+- **Settings, Features:** an admin can hide the live floor screens and the insights screens. Nothing is deleted. [Settings]({{ site.baseurl }}/docs/app/settings/#features)
+- **Notifications:** the WhatsApp column is now called **Messaging app**. [My Settings]({{ site.baseurl }}/docs/app/my-settings/)
+
 ## 23 November 2026
 
 - **Roster:** new **Close week**. Close the roster when it matches what happened; reopening needs a reason, and payroll sees both. An admin can have weeks close themselves when the new week starts. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
