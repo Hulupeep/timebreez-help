@@ -28,6 +28,27 @@ A box above the table says how breaks and public holidays are paid this period, 
 
 **Example.** The rule is weekly contracted hours divided by 5. Mary Murphy is contracted 30 hours a week, so a public holiday in the period puts 6 bank holiday hours on her line, paid.
 
+## Who qualifies for bank holiday hours
+
+If your rule for **Public holidays in the payroll file** has a qualifying test (set in [Settings]({{ site.baseurl }}/docs/app/settings/#leave-calculation-rules)), a table lists each person and each public holiday in the period: the hours counted, whether they qualify, their bank holiday hours, and the reason.
+
+| Qualifies column | Means |
+|---|---|
+| **qualifies** | They worked at least the hours your test needs in the weeks before the holiday |
+| **qualifies (full-time)** | Full-time staff skip the test, because you ticked that |
+| **does not qualify** | Every week is recorded and they worked fewer hours than needed. No bank holiday hours |
+| **payroll to confirm** | Timebreez can't be sure: some weeks have no rota or clock record yet, or some hours are on days that also have approved leave |
+| **not employed then** | They started after the holiday, or had no working week in force that day |
+| **no test set** | Your rule has no qualifying test, so everyone with a working week that day gets the hours |
+
+Hours come from the rota or clock records in Timebreez, after any unpaid break. They are never read from contracted hours.
+
+Anyone marked **payroll to confirm** is named above the table. No bank holiday hours go in the file for them until you decide. **Download bank holiday check** gives this table as its own file; the Collsoft file is not changed.
+
+The page also says the qualifying rule is your organisation's setting and has not yet been checked by a named payroll reviewer.
+
+**Example.** The test is 40 hours in the 5 weeks before the holiday. Mary Murphy worked 42 hours in those weeks, so the reason reads "42 h worked ..., at least 40 needed: qualifies".
+
 ## When a period is a draft
 
 An amber banner at the top says why the period is a draft. You will see one of these:
@@ -89,8 +110,30 @@ Every earlier reopen is listed under a closed week too, with its reason. See [Cl
 4. Check the **Payroll Table** line by line: scheduled hours, actual hours and leave. Tick **Approved** for each person once their line is right.
 5. Resolve anything listed under **Reconciliation Gate**.
 6. Press **Download draft CSV**.
+7. Once the file is imported into your payroll system and staff are paid, press **Mark done: imported and paid**. See [Close off the pay week](#close-off-the-pay-week).
 
 See [Who does what each week]({{ site.baseurl }}/docs/app/weekly-jobs/).
+
+## Close off the pay week
+
+Under the roster week box, **Pay week** says whether payroll for this week is finished:
+
+| Pay week | Means |
+|---|---|
+| **Open: not yet marked as imported and paid** | Payroll for this week is not done yet |
+| **Closed off by Mary Murphy** (with the date) | Someone marked it done |
+| **Closed off automatically** | It closed itself, because your admin set automatic close-off |
+| **Reopened by ...: reason** | It was closed, then opened again for that reason |
+
+**To close it off:** press **Mark done: imported and paid**. The page says when the file was certified, and by whom. If no certified file was downloaded for the week, it says so: close it off only if payroll was done another way. Add a note if you like, for example "Imported Thu, paid Fri", then press **Yes, it is imported and paid**.
+
+**Changes after close-off.** Nothing is blocked. Any shift or leave change in a closed-off week is listed on that week, with when, who, what and for whom, for example "2 changes since this week was closed off. Pay them as an adjustment, or reopen the week." Closing it off again clears the list. Just above the Pay week box, a red box lists any other closed-off week that has changed since, with a link to open it.
+
+**To reopen:** press **Reopen**, say why, and press **Reopen** again. The reason is kept.
+
+**Automatic close-off.** At the bottom of the box, set **Close an exported week this many days after it ends** (1 to 60, empty for off) and the time zone (Europe/Dublin unless you change it), then press **Save**. Only a week whose file was certified closes itself, and never one a person has closed or reopened.
+
+Only admins can close off, reopen or change the automatic setting.
 
 ## Works No. check before you download
 

@@ -14,7 +14,7 @@ This page has not been checked against the current app yet. The pages listed und
 
 ## What It Does
 
-Configure how and when you receive alerts - email, push notifications, and WhatsApp messages.
+Configure how and when you receive alerts: email, push notifications, and the messaging app you connect (for example Telegram). That column is called **Messaging app**.
 
 ## Why It Matters
 

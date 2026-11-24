@@ -30,7 +30,7 @@ Move between weeks with the arrows, or press **This Week**. A one-line how-to si
 ## Building the week
 
 1. Pick the week with the arrows at the top. **Fill from Last Week** starts you from last week's shifts. If this week already has shifts you choose **Add to existing shifts** or **Replace all existing shifts**. Copying never overwrites unless you choose Replace. See [Fill from Last Week](#fill-from-last-week) for what it copies and what it leaves out.
-2. In **By Staff**, drag a person from **Staff Availability** onto a day in their own row, or press **+** in that cell.
+2. In **By Staff**, press **+** in a person's cell for that day, or open **Staff Availability** on the left and drag them onto a day in their own row.
 3. A **Create Shift** card opens. Nothing is saved yet. The room is their home room if they have one; change it if they work elsewhere that day.
 4. The times start at 7:30am to 4:30pm. That is a suggestion only, not the person's own pattern. Set the shift they will actually work, then press **Create Shift**.
 5. Click a shift to change it, drag it to another day to move it, or hover and press the red **x** to remove it.
@@ -117,6 +117,14 @@ Hover any locked cell to see the reason.
 ## Availability
 
 The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**.
+
+## Make the week wider
+
+- **Hide menu** (the button at the top of the main menu, on a computer) folds the main menu away. **Show menu** brings it back.
+- **Staff Availability** folds to a narrow strip on the left. Press it to open the panel again. In **By Staff** it starts folded, because each row is already a person. In **By Room** it starts open.
+- **Cover Pool** folds the same way. It folds by itself when nobody is available, and the strip shows 0.
+
+Each choice is remembered in this browser. The roster also remembers whether you last used By Staff, By Room or Timeline.
 
 ## Coverage warnings
 
