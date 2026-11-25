@@ -57,13 +57,28 @@ There is no built-in rate for leave earned from hours. Until you set it, people 
 
 ## Pay Rules
 
-The payroll system you use, and the three rules only the payroll file reads. They used to sit under Leave Setup. They are set the same way: **Change**, pick the answer, **Applies from**, **Why**, save.
+The payroll system you use, the three rules only the payroll file reads, and your sick pay rule. They used to sit under Leave Setup. They are set the same way: **Change**, pick the answer, **Applies from**, **Why**, save.
 
 | Rule | The question it answers | Answers |
 |---|---|---|
 | Gross pay in the payroll file | Should the payroll file work out gross pay (paid hours x rate), or carry hours only so your payroll system applies its own rates? | No, hours only. Or yes, paid hours x rate, for hourly staff only |
 | Breaks in paid hours | How long is the break on a shift of a given length, and is it paid? | One or more bands, for example "worked longer than 360 minutes: 45 minute break", and a tick if the break is paid |
 | Public holidays in the payroll file | When a public holiday falls in a pay period, how many hours go in the file's bank holiday column? | None, your payroll system works it out. Or each person's weekly contracted hours divided by a number you choose, for example 5. With that choice, also pick who qualifies: everyone with a working week on the day, or only people who worked enough hours in the weeks before the holiday |
+
+### Sick pay
+
+**Which leave types are sick leave, and how many sick days a year are paid?** Press **Change** next to **Sick pay** and fill in:
+
+| Field | What it means |
+|---|---|
+| Leave types that are sick leave | Usually just **Sick Leave**. Leave a type such as **Unpaid Sick Leave** unticked if it is always unpaid |
+| Statutory sick days paid each leave year | For example 5 |
+| Weeks of service before sick pay starts | For example 13 |
+| Days at full pay (company sick pay) | 0 if you pay statutory sick pay only. Otherwise at least the statutory days, because company pay replaces statutory pay |
+
+Then each sick day is marked **statutory day N of M**, **company day N of M**, **unpaid** (the paid days are used, or the person has not worked the weeks yet) or **pending** (no start date recorded). The person sees it when they book sick leave, and so does their manager on the request. It also goes in the payroll file.
+
+There is no built-in number. Your country's statutory rule is kept as a rule pack in Timebreez. Once a reviewer has confirmed that pack, Timebreez checks your setting against it. If the law gives more days or a shorter wait than your setting, Timebreez uses the law and says so on each day. The Ireland pack is not confirmed yet.
 
 Until you set them, the payroll file has hours only (no gross pay), takes no break off, and has no bank holiday hours. The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page says so, with a link here.
 
