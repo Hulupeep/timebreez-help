@@ -14,7 +14,7 @@ Press the **?** at the top of the screen to open help for the page you are on.
 
 ## Home (Today)
 
-Shows your shift today, or "No shift scheduled today", your leave balance, and quick actions: **View Schedule**, **Request Leave** and **View Team**.
+Shows your shift today, or "No shift scheduled today", your leave balance, and quick actions: **View Schedule**, **Book time off** and **View Team**. **Book time off** (under your balance, or in the quick actions) opens the leave form straight away.
 
 ## Schedule
 
@@ -24,7 +24,7 @@ Your shifts for the week. Use the arrows to go to the previous or next week, or 
 
 Your leave balance, a form to request time off, and your requests.
 
-1. Press **Request Time Off**.
+1. Press **Book time off**.
 2. Pick the **Start Date** and **End Date**, then the **Leave Type**.
 3. Add a note if you like, and press **Submit Request**. You see "Request submitted for approval".
 

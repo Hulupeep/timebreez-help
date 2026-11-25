@@ -60,7 +60,7 @@ An amber banner at the top says why the period is a draft. You will see one of t
 | Draft, not for payroll: these are rostered hours, not hours anyone measured. | Pay follows the roster. Check every line |
 | Draft, not for payroll: N leave days are priced from the working week, not a recorded calculation. | Hours are measured, but some leave days have no recorded calculation. Check those leave lines |
 
-While a period is a draft, **Certify & Export** is switched off. Use **Download draft CSV** to get the figures and check them against your payroll system. A clock-based period where every leave day has a recorded calculation is not a draft.
+While a period is a draft, **Certify & Export** is switched off and says why underneath. **Download draft CSV** is then the filled blue button: use it to get the figures and check them against your payroll system. A clock-based period where every leave day has a recorded calculation is not a draft.
 
 ## Leave lines
 
@@ -96,7 +96,7 @@ The first box on the page says whether the manager has closed the roster for tha
 |---|---|
 | Green, **Roster week: Closed by Mary Murphy, Fri 11 Dec 15:42** | The roster is final. Go ahead |
 | Green, **Closed automatically** | Nobody closed it, so it closed itself at midnight on Monday (only if your admin turned that on) |
-| Amber, **Open** | The manager has not closed it yet. The roster may still change. Wait before you download |
+| Amber, **Not closed yet** | The manager has not closed it yet. The roster may still change. Wait before you download |
 | Amber, **Reopened by ... : reason** | The manager is changing it. Wait until it is closed again |
 | Red, **N shift changes made while the week was closed** | Something changed after it closed, for example a leave approval. Each change is listed with who, when, the person and the day. The hours below already include it; check those people before you download |
 
@@ -106,9 +106,9 @@ Every earlier reopen is listed under a closed week too, with its reason. See [Cl
 
 1. Pick the pay period with the arrows.
 2. Check the roster week is **Closed** (the first box).
-3. Read the banner and clear any red box.
+3. Work down the **Before you export** box: read the amber draft line at its foot and clear any red box.
 4. Check the **Payroll Table** line by line: scheduled hours, actual hours and leave. Tick **Approved** for each person once their line is right.
-5. Resolve anything listed under **Reconciliation Gate**.
+5. Resolve anything listed under the **Checks** tab (it used to be called Reconciliation Gate).
 6. Press **Download draft CSV**.
 7. Once the file is imported into your payroll system and staff are paid, press **Mark done: imported and paid**. See [Close off the pay week](#close-off-the-pay-week).
 

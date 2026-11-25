@@ -20,7 +20,7 @@ Build the week: put each person in a room, on a day, at set times. Rooms need th
 | **By Room** | One row per room, so you can see each room's cover |
 | **Timeline** | One room on one day, hour by hour. Pick the room and the date |
 
-Move between weeks with the arrows, or press **This Week**. A one-line how-to sits above **By Staff**.
+Move between weeks with the arrows. On any other week, **Back to this week** takes you to the current one. A one-line how-to sits above **By Staff**.
 
 ## Before the first week
 
@@ -57,15 +57,15 @@ flowchart TD
 
 **Close week** tells payroll the roster for that week is final. Do it on Friday, once the roster matches what really happened (sick days, swaps, early finishes).
 
-1. Pick the week. The chip next to the week says **Open**.
+1. Pick the week. Next to the week it says **Not closed yet**. **Close week** is the one filled button on the page; **Share** and **Export** are outline buttons.
 2. Press **Close week**, then **Close week** again on the card.
-3. The chip now says, for example, **Closed by Mary Murphy, Fri 11 Dec 15:42**. Payroll sees the same words.
+3. It now says, for example, **Closed by Mary Murphy, Fri 11 Dec 15:42**. Payroll sees the same words.
 
 A closed week is locked. Adding, changing, moving or removing a shift is refused with a message, and **Fill from Last Week** and **Autofill** are hidden for that week.
 
 ### Changing a closed week
 
-1. Press **Reopen** next to the chip.
+1. Press **Reopen** next to it.
 2. Say why, for example "Mary was out sick Tuesday". You can't reopen without a reason.
 3. Make the changes, then press **Close week** again.
 
