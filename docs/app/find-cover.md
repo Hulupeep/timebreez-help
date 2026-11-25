@@ -12,6 +12,11 @@ permalink: /docs/app/find-cover/
 This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
 
 
+{: .tip }
+On the roster you can also ask for cover on Telegram when someone leaves early or doesn't turn up: the first yes gets the shift. See [Someone leaves early or doesn't turn up]({{ site.baseurl }}/docs/app/roster/#someone-leaves-early-or-doesnt-turn-up).
+
+Requests go out only through the apps your organisation switched on in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging). A phone number is only needed when nothing else can reach the person. The button names the apps, for example **Send request via Telegram or Email (2)**.
+
 ## What It Does
 
 When someone can't work their shift, quickly find an available replacement from your team.

@@ -20,7 +20,7 @@ The card's balance says which leave year it is for, for example "in 2026". Once 
 
 ### Works No.
 
-The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft. Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
+The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft. The field is named after the payroll system chosen in [Settings]({{ site.baseurl }}/docs/app/settings/#payroll-system): **Works No.** for Collsoft, **Works number** for BrightPay, **Payroll ID** otherwise. Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
 
 **Why it matters:** Collsoft matches each line of the [payroll file]({{ site.baseurl }}/docs/app/payroll/) to a person by Works No. If it is blank, that person's hours are not imported. If two people have the same one, one person's hours land on the other.
 
@@ -28,6 +28,19 @@ The **Works No.** is the person's employee number in your payroll system, for ex
 - Saving a Works No. that another active person already has is refused, naming them, for example "EMPID0000028 is already Mary Murphy's Works No.". Capitals and spaces do not make it different. A leaver's old number can be reused.
 - Clearing the field leaves the person with no Works No.
 - The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page lists anyone missing one before you download the file.
+
+### AI Agents
+
+An admin can tick **AI Agent (robot or test login)** on a person's record. They use the app at their access level, but are never counted, put on the rota, paid, shown on the leave wall or sent notifications. The list shows them with a badge and a line such as **+ 2 AI Agents (not counted)**. They do not count towards your plan's seats.
+
+### Notes
+
+Admins see a **Notes (admins only)** box on Create and Edit Employee. Notes are never shown to the person or to colleagues.
+
+### Other fields
+
+- **Start Date** reads back in words under the box, for example "Reads as Tuesday 1 December 2026", so 01/12 can't be misread.
+- **Mobile phone** (it used to say WhatsApp Phone) is in international format, for example +353851234567. It is used for WhatsApp only if your organisation turns WhatsApp on in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging).
 
 ## Inviting someone
 
