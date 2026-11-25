@@ -37,7 +37,7 @@ flowchart LR
 **During the week**
 
 1. Approve or deny leave in [Leave requests]({{ site.baseurl }}/docs/app/leave-requests/). Approving leave takes the person's shifts off the roster for those days.
-2. Keep the roster true to what happened: sick days, swaps, early finishes. Click a shift to change it, or remove it. Days that have passed can't get new shifts, but existing shifts on them can still be changed.
+2. Keep the roster true to what happened: sick days, swaps, early finishes. Click a shift to change it, or remove it. Until you close the week you can also add a shift to a day that has passed, for example a cover person who came in at short notice.
 
 **Friday**
 
