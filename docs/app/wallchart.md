@@ -16,7 +16,9 @@ A calendar of who is off, one row per person. Managers and admins see everyone's
 
 The wall shows a **month** by default. Press **2 weeks** or **Week** to see less. Your choice is remembered next time. Move with the arrows, or pick a month to open it from its 1st.
 
-Bank holidays show on the wall and in each person's year.
+**Compact** gives thinner rows and narrower days, so a whole month fits on a laptop screen. **Expanded** shows each person's name, role and picture.
+
+Bank holidays show on the wall and in each person's year. The wall has no Share button; to send the rota, use **Share** on the [Roster]({{ site.baseurl }}/docs/app/roster/#share-the-week).
 
 ## Book leave from the wall
 

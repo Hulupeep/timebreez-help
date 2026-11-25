@@ -60,6 +60,10 @@ There is no built-in rate for leave earned from hours. Until you set it, people 
 
 **Before a Timetastic import:** set the full-time day and the half-day rule with an **Applies from** date on or before the start of the leave year you are importing. Otherwise the balances step will not use them.
 
+### Payroll system
+
+Under **Leave Setup**, choose **Payroll system**: Collsoft, BrightPay, Thesaurus Payroll Manager, Sage 50 Payroll, Xero Payroll, another system, or none. Staff records then name each person's payroll number the way your payroll does: **Works No.** for Collsoft, **Works number** for BrightPay, and **Payroll ID** otherwise. To use your own wording, fill in **Name for the payroll number**. Press **Save**.
+
 ### Templates
 
 **Choose a template** for your kind of business and press **Apply template**. It only fills rules you have not decided yet. Anything you already set is kept.
@@ -67,6 +71,20 @@ There is no built-in rate for leave earned from hours. Until you set it, people 
 ## Leave Types
 
 The kinds of leave your organisation uses (Annual Leave, Sick, Unpaid and so on), their colours and their rules. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
+
+## Messaging
+
+Choose which messaging apps your team uses. Sharing the rota, cover requests and other sends only offer the apps you switch on here. Only an admin can change these; managers can see them.
+
+| App | What it needs |
+|---|---|
+| **Telegram** | Each person links their own Telegram once, in [My Settings]({{ site.baseurl }}/docs/app/my-settings/#link-telegram). Managers can send the rota to the staff group |
+| **Slack** | Paste the incoming-webhook link for your staff channel (Slack: Apps, Incoming Webhooks) |
+| **Microsoft Teams** | Paste the webhook link for your staff channel (Teams: channel, Workflows, "Post to a channel when a webhook request is received") |
+| **WhatsApp** | Needs a WhatsApp Business account. Contact Timebreez support to set it up |
+| **Email** | Uses each person's email address on their profile |
+
+Slack and Teams show **Needs webhook link** until a link is saved, then **Ready**. Saved links are never shown to staff.
 
 ## Scheduler
 

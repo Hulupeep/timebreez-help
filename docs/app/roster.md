@@ -34,7 +34,7 @@ Move between weeks with the arrows, or press **This Week**. A one-line how-to si
 3. A **Create Shift** card opens. Nothing is saved yet. The room is their home room if they have one; change it if they work elsewhere that day.
 4. The times start at 7:30am to 4:30pm. That is a suggestion only, not the person's own pattern. Set the shift they will actually work, then press **Create Shift**.
 5. Click a shift to change it, drag it to another day to move it, or hover and press the red **x** to remove it.
-6. Press **Share** to send the week by WhatsApp, email or a link.
+6. Press **Share** to send the week. You can copy the picture or a link, download it, or send it with the messaging apps your organisation switched on in **Settings, Messaging** (Telegram, Slack or Teams). See [Share the week](#share-the-week).
 
 There is no Publish button. A shift shows in the person's [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/) as soon as you create it. When the week is over and the roster matches what really happened, [close the week](#close-the-week).
 
@@ -104,6 +104,31 @@ If you create, edit or add a cover shift for someone with approved leave that da
 
 If Timebreez cannot check the person's leave for that day, Add Shift, Edit Shift and Add Cover say "Couldn't check this person's leave for this day. Check the leave calendar before saving." It does not mean they have no leave.
 
+## Share the week
+
+**Share** opens a picture of the week. Choose **Full roster (all rooms)** or **Room-by-room**.
+
+- **Copy image**, **Copy link** and **Download** work for everyone.
+- **Send to Telegram group** opens Telegram so you can pick the staff group. **Send to Slack** and **Send to Teams** post to the staff channel set up in Settings. These buttons work as soon as Share opens; you do not need to press Copy link first.
+- You only see the apps an admin switched on in **Settings, Messaging**. If none is on, Share says **Choose your messaging app in Settings → Messaging**.
+
+## Rooms in By Room
+
+Each room's name shows its ratio and how many children it holds, for example **up to 9**. Hover it to see why: "Room holds up to 9 children. At 1:3 that needs 3 staff." Click the room name to open that room's settings.
+
+Each day cell reads, for example, **4 on / 3 needed**. Hover it for the reason, for example "9 children at 1:3 needs 3 staff. 4 rostered: 1 spare." Cancelled and no-show shifts are not counted, and nobody is counted twice. People who have left are not shown.
+
+| Status | Means |
+|---|---|
+| OK | Enough staff for the ratio and the number of children |
+| Min | Exactly the staff the ratio needs, with no spare person for breaks or sickness |
+| Under | Fewer staff than the ratio needs. Add staff to this room |
+| Not set (grey) | The room has no number of children, so cover can't be checked. Click the room name to set it |
+
+A room that is **Not set** is not counted as compliant, and the banner says how many rooms can't be checked.
+
+To take someone off a day, press the **×** on their chip, or drag the chip onto the **Drop here to take Mary Murphy off** strip that shows while you drag. A person can't be moved onto a day they already work.
+
 ## Locked cells
 
 | Cell | Why it is locked |
@@ -116,7 +141,11 @@ Hover any locked cell to see the reason.
 
 ## Availability
 
-The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**.
+The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**. Click a name to see that person's week.
+
+Each card shows **FT** or **PT**, worked out from the person's contracted hours against your full-time day in [Settings]({{ site.baseurl }}/docs/app/settings/#leave-calculation-rules) times 5. If Timebreez doesn't know, it shows **?**, never a guess. A QQI badge shows only when a qualification is recorded.
+
+The **Cover Pool** shows today when today is in the week you are looking at. Drag a person from Staff Availability onto the Cover Pool to add them as cover for that day.
 
 ## Make the week wider
 
@@ -128,7 +157,18 @@ Each choice is remembered in this browser. The roster also remembers whether you
 
 ## Coverage warnings
 
-If a room falls below the staff it needs, a warning shows on the roster. Fix it before the day, or the same warning appears when someone's leave is approved.
+If a room falls below the staff it needs, a warning shows on the roster. The warnings and the count start from today; days already gone are left out. Fix it before the day, or the same warning appears when someone's leave is approved.
+
+## Someone leaves early or doesn't turn up
+
+Click their shift to open **Edit Shift**. Under **Need cover?**:
+
+- **Leaving early:** move the end time earlier. Press **Save and find cover 15:00-18:00** (the times are the part they won't work). The shift is shortened and cover is asked for the rest.
+- **Didn't turn up:** press **Mary Murphy didn't turn up: find cover**. The shift is marked as a no-show and cover is asked for the whole shift.
+
+Timebreez asks up to 3 free people on Telegram. Free means they are active, have no approved or pending leave that day, and have no shift at the same time. Cover staff are asked first, then people who worked in that room in the last 4 weeks. Only people who have [linked Telegram]({{ site.baseurl }}/docs/app/my-settings/#link-telegram) can be asked.
+
+Each person gets **Yes, I'll cover** and **Can't** buttons. The first Yes gets a cover shift in that room. The others are told it's covered, and you are told who is coming, on Telegram and in the inbox. If everyone says Can't, you are told that too.
 
 ## Common questions
 

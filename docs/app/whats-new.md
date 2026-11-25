@@ -10,6 +10,20 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 25 November 2026
+
+- **Roster:** when someone leaves early or doesn't turn up, **Edit Shift** can ask up to 3 free people on Telegram. The first yes gets the shift. [Roster]({{ site.baseurl }}/docs/app/roster/#someone-leaves-early-or-doesnt-turn-up)
+- **Settings, Messaging (new):** an admin chooses the team's apps (Telegram, Slack, Teams, Email; WhatsApp on request). Share and Find Cover only offer those. [Settings]({{ site.baseurl }}/docs/app/settings/#messaging)
+- **Roster, Share:** the Telegram, Slack and Teams buttons work as soon as Share opens, without pressing Copy link first. [Roster]({{ site.baseurl }}/docs/app/roster/#share-the-week)
+- **Roster, By Room:** each day reads like "4 on / 3 needed", with the reason on hover. A room with no number of children shows **Not set**, not OK. Click a room name for its settings. Every chip has a **×** to take the person off that day. [Roster]({{ site.baseurl }}/docs/app/roster/#rooms-in-by-room)
+- **Roster:** Staff Availability shows FT or PT from contracted hours (or **?** if unknown). Drag someone onto the Cover Pool to add them as cover. Warnings start from today. [Roster]({{ site.baseurl }}/docs/app/roster/#availability)
+- **Wallchart:** **Compact** now fits a whole month on a laptop screen. The wall no longer has a Share button; share from the Roster. [Wallchart]({{ site.baseurl }}/docs/app/wallchart/)
+- **Employees:** an admin can mark a robot or test login as an **AI Agent**, so it is never counted, rostered, paid or messaged. Admins also get a private **Notes** box. [Employees]({{ site.baseurl }}/docs/app/employees/#ai-agents)
+- **Settings, Leave Setup:** choose your **Payroll system**, and the payroll number is named the way it names it (Works No., Works number or Payroll ID). [Settings]({{ site.baseurl }}/docs/app/settings/#payroll-system)
+- **Employees:** "WhatsApp Phone" is now **Mobile phone**, and Start Date reads back in words. [Employees]({{ site.baseurl }}/docs/app/employees/#other-fields)
+- **My Settings:** the WhatsApp tab is now **Messaging** and lists your organisation's apps. [My Settings]({{ site.baseurl }}/docs/app/my-settings/)
+- **Staff app:** a leave type that comes out of Annual Leave is checked against your Annual Leave balance, not an empty one of its own. [Staff app]({{ site.baseurl }}/docs/app/staff-app/#leave)
+
 ## 24 November 2026
 
 - **Payroll:** new **Mark done: imported and paid** closes off a pay week. Any shift or leave change after that is listed on the week, and reopening needs a reason. An admin can have exported weeks close off by themselves. [Payroll]({{ site.baseurl }}/docs/app/payroll/#close-off-the-pay-week)

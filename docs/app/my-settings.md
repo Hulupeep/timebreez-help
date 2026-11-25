@@ -10,7 +10,7 @@ permalink: /docs/app/my-settings/
 
 **Who uses it:** everyone. In the menu: **My Settings**.
 
-My Settings has three tabs: **Notifications**, **Calendar** and **WhatsApp**. WhatsApp is not available yet. On **Notifications**, the column for Telegram is called **Messaging app**.
+My Settings has three tabs: **Notifications**, **Calendar** and **Messaging**. **Messaging** lists the messaging apps your organisation uses (an admin chooses them in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging)). On **Notifications**, the column for Telegram is called **Messaging app**.
 
 ## Link Telegram
 
