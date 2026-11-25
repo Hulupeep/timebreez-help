@@ -133,7 +133,7 @@ To take someone off a day, press the **×** on their chip, or drag the chip onto
 
 | Cell | Why it is locked |
 |---|---|
-| Grey with a lock | The day has passed. You can't add shifts to a day that's gone. |
+| Shaded grey | The day has passed. You can still add or change shifts there until the week is closed, so the roster matches what really happened. Once the week is closed, press Reopen and say why. |
 | HOLS, UNPAID or OFF | The person is on leave that day. Change or cancel the leave first if that's wrong. |
 | Any cell in a closed week | The week is closed. Press **Reopen** and give a reason first. |
 
