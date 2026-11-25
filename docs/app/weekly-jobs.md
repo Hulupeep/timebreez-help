@@ -52,7 +52,7 @@ If your admin turned on automatic close, a week you forget closes itself at midn
 **When the week is closed (Friday afternoon or Monday)**
 
 1. Open [Payroll]({{ site.baseurl }}/docs/app/payroll/) and pick the week with the arrows.
-2. Check the first box says **Closed**. If it says **Open** or **Reopened**, ask the manager to close it first.
+2. Check the first box says **Closed**. If it says **Not closed yet** or **Reopened**, ask the manager to close it first.
 3. If the box is red (shift changes made after it closed), check each person it lists.
 4. Clear every red box on the page: leave types not confirmed as paid, leave days with no hours, imported bookings that disagree with Timetastic. Each one says what to do.
 5. Fix the amber **Works No.** box: anyone with hours and no Works No. won't import into Collsoft.
@@ -60,11 +60,11 @@ If your admin turned on automatic close, a week you forget closes itself at midn
 7. Press **Download draft CSV**.
 8. In Collsoft, import the file with the wage data import wizard. Map each column once (for example **Annual Leave hours** to annual leave); Collsoft only imports the columns you map. See [What is in the CSV]({{ site.baseurl }}/docs/app/payroll/#what-is-in-the-csv).
 
-While your organisation pays from the roster, every period is a draft: **Certify & Export** stays off and **Download draft CSV** is the file you use. The page says why in its banner.
+While your organisation pays from the roster, every period is a draft: **Certify & Export** stays off and **Download draft CSV** (the filled blue button) is the file you use. The reason is written under **Certify & Export** and at the foot of **Before you export**.
 
 ## Staff
 
-1. Book leave in the [Staff app]({{ site.baseurl }}/docs/app/staff-app/) (**Request Time Off** on the Leave tab), or on Telegram with `/off`, for example `/off 2026-12-01`. See [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/).
+1. Book leave in the [Staff app]({{ site.baseurl }}/docs/app/staff-app/) (**Book time off** on Today or the Leave tab), or on Telegram with `/off`, for example `/off 2026-12-01`. See [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/).
 2. Check `/status` on Telegram, or the Leave tab in the app, to see whether it was approved.
 3. Check **My Schedule** for your shifts. If a shift is wrong, tell your manager before Friday, when the week is closed.
 4. To cancel leave, use `/cancel` on Telegram or **Cancel Request** on the Leave tab in the app.
@@ -73,7 +73,7 @@ While your organisation pays from the roster, every period is a draft: **Certify
 
 ### What if the manager forgets to close the week?
 
-Payroll sees **Open** and should wait. If your admin turned on **Close the week automatically when the new week starts** (Settings, Scheduler), the week closes itself at midnight on Monday.
+Payroll sees **Not closed yet** and should wait. If your admin turned on **Close the week automatically when the new week starts** (Settings, Scheduler), the week closes itself at midnight on Monday.
 
 ### What if someone was sick on a day of a closed week?
 

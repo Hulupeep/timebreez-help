@@ -14,6 +14,8 @@ permalink: /docs/app/employees/
 
 Filter by **Active**, **Inactive**, **Historical imports** or **All**. Historical imports are people brought across from Timetastic who have already left: they are kept so past leave adds up, and they never get a login. Use **Invite Employee** or **+ Add Employee** to add someone.
 
+To find someone, type their name or email in **Find a person** at the top. Press a name to open their record.
+
 Open a person's card to see their **Employment Terms**: status, hours per week, and their working pattern. Choose the **Allowance unit** (days, hours or minutes), enter the scheduled minutes for each weekday, and press **Confirm working pattern**. Leave costs are worked out from this pattern, so confirm it before approving their leave.
 
 The card's balance says which leave year it is for, for example "in 2026". Once next leave year is open, a second line shows it on its own, for example "Annual Leave 2027: 20 days left". Leave booked in next year comes off next year's allowance, never this year's. Carry-over is added at year end.
@@ -43,6 +45,14 @@ Admins see a **Notes (admins only)** box on Create and Edit Employee. Notes are 
 - **Mobile phone** (it used to say WhatsApp Phone) is in international format, for example +353851234567. It is used for WhatsApp only if your organisation turns WhatsApp on in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging).
 
 ## Inviting someone
+
+### Staff imported from Timetastic
+
+The amber **Timetastic imported staff** box says how many imported people still need an invite. It starts folded.
+
+- **Create invites for everyone (N)...** lists every name and email first. Press **Create N invite links** to make them all. Nothing is emailed: each link appears under **Pending Invitations** for you to copy and send, and can be revoked there.
+- **Show list** opens the people one by one. Press a name to open their record, or **Create invite** for just that person.
+
 
 Timebreez does not email invites yet. You send the link yourself.
 

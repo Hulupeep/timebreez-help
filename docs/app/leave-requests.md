@@ -20,7 +20,7 @@ The filters under **Show leave for** narrow the list (and the downloads below) t
 
 The requests are grouped as **Pending**, **Approved**, **Denied** and **Canceled**. Each group shows 20 at a time. At the bottom of a group it says, for example, "Showing 20 of 85". Press **Show 20 more (65 left)** to see the next ones.
 
-For managers and admins, when requests are waiting, a yellow link at the top says **Waiting for your decision:** and how many. Press it to jump to them.
+For managers and admins, the requests waiting for a decision come first, at the top of the page under **Waiting for you (N)**, above the filters, downloads and carry-over. When nothing is waiting it says so. **Request Leave** (top right) is an outline button for managers, because the page's main job for them is deciding.
 
 ## Approving a request
 

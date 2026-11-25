@@ -12,6 +12,12 @@ Changes to the app that you will notice, newest first.
 
 ## 25 November 2026
 
+- **Leave Requests:** for managers, requests waiting for a decision now come first, under **Waiting for you**. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
+- **Payroll:** **Certify & Export** says why it is off, right under it. While a period is a draft, **Download draft CSV** is the filled button. The notes sit in one **Before you export** box, the Reconciliation Gate tab is now **Checks**, and Total Gross Pay shows your currency. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Roster:** **Close week** is the one filled button; Share is an outline button. **This Week** is now **Back to this week** and only shows on other weeks, and the week's status reads **Not closed yet** instead of Open. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
+- **Employees:** search with **Find a person** at the top, and press a name to open the record. The Timetastic invite list starts folded, with one **Create invites for everyone** that shows every name first. [Employees]({{ site.baseurl }}/docs/app/employees/#staff-imported-from-timetastic)
+- **Leave check:** the tick button now says **Mark as checked**. A booking with no calculation says "Can't calculate: no working pattern on that date" with a link to the person.
+- **Staff app:** booking leave is called **Book time off** everywhere, and it opens the form straight away. [Staff app]({{ site.baseurl }}/docs/app/staff-app/)
 - **Roster:** when someone leaves early or doesn't turn up, **Edit Shift** can ask up to 3 free people on Telegram. The first yes gets the shift. [Roster]({{ site.baseurl }}/docs/app/roster/#someone-leaves-early-or-doesnt-turn-up)
 - **Settings, Messaging (new):** an admin chooses the team's apps (Telegram, Slack, Teams, Email; WhatsApp on request). Share and Find Cover only offer those. [Settings]({{ site.baseurl }}/docs/app/settings/#messaging)
 - **Roster, Share:** the Telegram, Slack and Teams buttons work as soon as Share opens, without pressing Copy link first. [Roster]({{ site.baseurl }}/docs/app/roster/#share-the-week)
