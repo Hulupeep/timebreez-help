@@ -24,27 +24,40 @@ For managers and admins, the requests waiting for a decision come first, at the 
 
 ## Approving a request
 
-Each request is a card. Approval is two steps on purpose: first you look at the calculation, then you approve.
+Each request is a card. The card shows what the leave takes from the person's allowance, right above the buttons. Press **Approve** once: that records the figure you were shown and approves the request in one go.
 
-1. Press **Open the calculation to review**. The card shows how the cost was worked out: the days, the hours the person was scheduled, and any public holidays or closure days inside the booking.
-2. Read it, then press **Review calculation**. The button changes to **Calculation reviewed**.
-3. Press **Approve**.
+**How was this worked out?** opens the full calculation: the days, the hours the person was scheduled, and any public holidays or closure days in the booking. Use it when you want to check a figure. It is never a required step.
 
-If approving would leave a room short of staff, the button reads **Review & Approve** and is amber or red. You are shown which days are short. To go ahead you press **Approve Anyway** and give a reason. The reason is kept in the audit log.
+If approving would leave a room short of staff, the Approve button is amber or red. You are shown which days are short. To go ahead you press **Approve Anyway** and give a reason. The reason is kept in the audit log.
 
-**Example.** Mary Murphy books Monday to Wednesday. She is rostered 8h 15m (495 minutes) each day. The calculation shows 3 days, 1,485 minutes. You review it, approve it, and her balance drops by 1,485 minutes.
+If the figure changes between the card loading and your press (someone edited the person's terms or the rota), nothing is approved. The card shows the new figure and you press Approve again.
 
-## Someone with no working week: enter the hours
+**Example.** Mary Murphy books Monday to Wednesday. She is rostered 8h 15m (495 minutes) each day. The card says the leave takes 3 days, 24h 45m. You press Approve and her balance drops by 1,485 minutes.
 
-If the person has no confirmed working week for the dates, Timebreez cannot work out what the leave costs. The card says so and shows **Enter hours**.
+## Leave for someone with no employment terms
 
-1. Press **Enter hours**.
-2. Type the hours for each day from their rota, for example `7.5` or `7:30`.
-3. Under **Where these hours come from**, say where you got them, for example "Rota for week of 7 Dec" (at least 10 characters).
-4. Press **Save hours**. The typed hours become the calculation.
-5. Review the calculation again, then approve as usual.
+**Employment terms** are a person's contract details in Timebreez: the date they start from, their employment status, how many days a week they work and how many hours a day. You set them on the person's card on the **Staff** page. Timebreez uses them to work out exactly what each day of leave costs.
 
-**Example.** Mary Murphy has no working week yet and asks for Thursday off. Her rota has her on 6 hours. You enter `6`, write "Rota for week of 7 Dec", save, review, and approve. 360 minutes come off her balance.
+When someone has no employment terms (or no confirmed working week) for the dates, the card shows an amber box labelled **Estimated** instead of an exact figure. The estimate is worked out like this, day by day:
+
+| Day | Counts as |
+|---|---|
+| They are on the rota that day | Their shift, less any unpaid break your break rule gives |
+| There is a rota that day but they are not on it | 0 |
+| No rota has been made that far ahead | Your organisation's full-time day (set in [Settings]({{ site.baseurl }}/docs/app/settings/)) |
+| Saturday, Sunday or a public holiday | 0 |
+
+**What to do, in order of preference:**
+
+1. **Best: set their employment terms.** Press **Set Mary Murphy's employment terms** in the box. It opens their Staff card. After that every leave for them is worked out exactly and the box goes away.
+2. **For this request, Approve is fine.** The estimate is saved with your name and how it was worked out, so anyone can see later where the figure came from.
+3. **Only if you know their real hours differ on these days,** press the small **Change the hours** link under the card. Type the hours for each day (`7.5`, `7,5` or `7:30`; a blank day counts as 0), keep or edit the reason, and press **Save hours**. Then approve.
+
+Press **Why an estimate, and what should I do?** in the box for the same advice on the card itself.
+
+**Example.** Mary Murphy has no employment terms and books Wednesday 30 December to Monday 4 January. She is on the rota Wednesday (8:00 to 17:00, with an unpaid 45-minute break, so 8h 15m) and not on it Thursday. Friday 1 January is a public holiday. The rota stops at Sunday, so Monday uses your full-time day of 8h 15m. The card says **Takes about 16h 30m**. You approve, and then set her employment terms so her next leave is exact.
+
+If your organisation has no full-time day set and there is no rota for some of the dates, Timebreez cannot estimate those days. The hours box opens on its own, and Approve waits until you type the hours or set the full-time day.
 
 ## Denying a request
 
@@ -54,12 +67,10 @@ Press **Deny** and type the reason. The person sees it with the request.
 
 | Message | What it means | What to do |
 |---|---|---|
-| Calculation reviewed. You can now approve this request. | Your review is recorded | Press Approve |
-| A refusal saying the calculation changed since you reviewed it | Something the cost depends on changed (dates, roster, a rule) | The review button resets. Open the new calculation and review it again |
+| The figure changed since this card loaded | Something the cost depends on changed (dates, terms, rota, a rule) | Check the new figure on the card and press Approve again |
 | Your account is not linked to an employee record | Your login has no staff record, so the approval cannot be put in your name | Ask an admin to link your login to your staff record |
-| No calculation to review | The cost could not be worked out yet | Check the person's work pattern and the calculation rules in [Settings]({{ site.baseurl }}/docs/app/settings/) |
-
-| Days not calculated | Timebreez could not work out what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
+| Estimated: no employment terms | The person has no employment terms for these dates, so the figure is an estimate | See [Leave for someone with no employment terms](#leave-for-someone-with-no-employment-terms) |
+| Days not calculated | Timebreez could not work out or estimate what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
 | Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
 
 A refusal stays on screen until you close it, so you can read it.

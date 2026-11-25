@@ -12,6 +12,7 @@ Changes to the app that you will notice, newest first.
 
 ## 25 November 2026
 
+- **Leave Requests:** **Approve** is one press; **How was this worked out?** explains the figure but is never a step. Someone with no employment terms is no longer stuck: the card shows an **Estimated** figure from their rota (your full-time day where there is no rota yet), says what to do, and links to set their terms. **Change the hours** is a small optional link. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#leave-for-someone-with-no-employment-terms)
 - **Leave Requests:** for managers, requests waiting for a decision now come first, under **Waiting for you**. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
 - **Payroll:** **Certify & Export** says why it is off, right under it. While a period is a draft, **Download draft CSV** is the filled button. The notes sit in one **Before you export** box, the Reconciliation Gate tab is now **Checks**, and Total Gross Pay shows your currency. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
 - **Roster:** **Close week** is the one filled button; Share is an outline button. **This Week** is now **Back to this week** and only shows on other weeks, and the week's status reads **Not closed yet** instead of Open. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
