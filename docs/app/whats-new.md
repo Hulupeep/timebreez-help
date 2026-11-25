@@ -12,6 +12,7 @@ Changes to the app that you will notice, newest first.
 
 ## 25 November 2026
 
+- **Sick pay:** set your sick pay rule once in Settings, Pay Rules: which types are sick leave, how many days are paid, and the service wait. When someone books a sick day, they see "This is your 4th of 5 statutory sick days this year", or that the day is unpaid once the paid days are used. Their manager sees the same line, and the payroll file has the hours split into statutory, company, unpaid and pending, with a note per day. [Settings]({{ site.baseurl }}/docs/app/settings/#sick-pay)
 - **Leave Requests:** **Approve** is one press; **How was this worked out?** explains the figure but is never a step. Someone with no employment terms is no longer stuck: the card shows an **Estimated** figure from their rota (your full-time day where there is no rota yet), says what to do, and links to set their terms. **Change the hours** is a small optional link. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#leave-for-someone-with-no-employment-terms)
 - **Leave Requests:** for managers, requests waiting for a decision now come first, under **Waiting for you**. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
 - **Payroll:** **Certify & Export** says why it is off, right under it. While a period is a draft, **Download draft CSV** is the filled button. The notes sit in one **Before you export** box, the Reconciliation Gate tab is now **Checks**, and Total Gross Pay shows your currency. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
