@@ -26,7 +26,8 @@ These are the pages you use to go live. Each was written from the app as it is n
 | [Leave admin]({{ site.baseurl }}/docs/app/leave-admin/) | Admin | One place for everything leave |
 | [Leave requests]({{ site.baseurl }}/docs/app/leave-requests/) | Admin, manager | Review the calculation, then approve or deny |
 | [Roster]({{ site.baseurl }}/docs/app/roster/) | Admin, manager | Build the week, copy last week, check cover |
-| [Payroll]({{ site.baseurl }}/docs/app/payroll/) | Admin | Check the draft figures for a pay period |
+| [Wallchart]({{ site.baseurl }}/docs/app/wallchart/) | Everyone | See who is off, book from the wall, lock dates |
+| [Payroll]({{ site.baseurl }}/docs/app/payroll/) | Admin | Check the figures for a pay period, then close it off |
 | [My settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/) | Everyone | Link Telegram, request leave with /off |
 | [Staff app]({{ site.baseurl }}/docs/app/staff-app/) | Staff | Today, your schedule, your leave, your team |
 

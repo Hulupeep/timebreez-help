@@ -10,6 +10,38 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 25 November 2026
+
+- **Leave Requests:** for managers, requests waiting for a decision now come first, under **Waiting for you**. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/)
+- **Payroll:** **Certify & Export** says why it is off, right under it. While a period is a draft, **Download draft CSV** is the filled button. The notes sit in one **Before you export** box, the Reconciliation Gate tab is now **Checks**, and Total Gross Pay shows your currency. [Payroll]({{ site.baseurl }}/docs/app/payroll/)
+- **Roster:** **Close week** is the one filled button; Share is an outline button. **This Week** is now **Back to this week** and only shows on other weeks, and the week's status reads **Not closed yet** instead of Open. [Roster]({{ site.baseurl }}/docs/app/roster/#close-the-week)
+- **Employees:** search with **Find a person** at the top, and press a name to open the record. The Timetastic invite list starts folded, with one **Create invites for everyone** that shows every name first. [Employees]({{ site.baseurl }}/docs/app/employees/#staff-imported-from-timetastic)
+- **Leave check:** the tick button now says **Mark as checked**. A booking with no calculation says "Can't calculate: no working pattern on that date" with a link to the person.
+- **Staff app:** booking leave is called **Book time off** everywhere, and it opens the form straight away. [Staff app]({{ site.baseurl }}/docs/app/staff-app/)
+- **Roster:** when someone leaves early or doesn't turn up, **Edit Shift** can ask up to 3 free people on Telegram. The first yes gets the shift. [Roster]({{ site.baseurl }}/docs/app/roster/#someone-leaves-early-or-doesnt-turn-up)
+- **Settings, Messaging (new):** an admin chooses the team's apps (Telegram, Slack, Teams, Email; WhatsApp on request). Share and Find Cover only offer those. [Settings]({{ site.baseurl }}/docs/app/settings/#messaging)
+- **Roster, Share:** the Telegram, Slack and Teams buttons work as soon as Share opens, without pressing Copy link first. [Roster]({{ site.baseurl }}/docs/app/roster/#share-the-week)
+- **Roster, By Room:** each day reads like "4 on / 3 needed", with the reason on hover. A room with no number of children shows **Not set**, not OK. Click a room name for its settings. Every chip has a **×** to take the person off that day. [Roster]({{ site.baseurl }}/docs/app/roster/#rooms-in-by-room)
+- **Roster:** Staff Availability shows FT or PT from contracted hours (or **?** if unknown). Drag someone onto the Cover Pool to add them as cover. Warnings start from today. [Roster]({{ site.baseurl }}/docs/app/roster/#availability)
+- **Wallchart:** **Compact** now fits a whole month on a laptop screen. The wall no longer has a Share button; share from the Roster. [Wallchart]({{ site.baseurl }}/docs/app/wallchart/)
+- **Employees:** an admin can mark a robot or test login as an **AI Agent**, so it is never counted, rostered, paid or messaged. Admins also get a private **Notes** box. [Employees]({{ site.baseurl }}/docs/app/employees/#ai-agents)
+- **Settings, Leave Setup:** choose your **Payroll system**, and the payroll number is named the way it names it (Works No., Works number or Payroll ID). [Settings]({{ site.baseurl }}/docs/app/settings/#payroll-system)
+- **Employees:** "WhatsApp Phone" is now **Mobile phone**, and Start Date reads back in words. [Employees]({{ site.baseurl }}/docs/app/employees/#other-fields)
+- **My Settings:** the WhatsApp tab is now **Messaging** and lists your organisation's apps. [My Settings]({{ site.baseurl }}/docs/app/my-settings/)
+- **Staff app:** a leave type that comes out of Annual Leave is checked against your Annual Leave balance, not an empty one of its own. [Staff app]({{ site.baseurl }}/docs/app/staff-app/#leave)
+
+## 24 November 2026
+
+- **Payroll:** new **Mark done: imported and paid** closes off a pay week. Any shift or leave change after that is listed on the week, and reopening needs a reason. An admin can have exported weeks close off by themselves. [Payroll]({{ site.baseurl }}/docs/app/payroll/#close-off-the-pay-week)
+- **Payroll:** a new table shows who qualifies for each public holiday's hours, and why, with its own download. [Payroll]({{ site.baseurl }}/docs/app/payroll/#who-qualifies-for-bank-holiday-hours)
+- **Settings:** the public holiday rule can now have a qualifying test, for example at least 40 hours in the 5 weeks before. [Settings]({{ site.baseurl }}/docs/app/settings/#leave-calculation-rules)
+- **Wallchart:** shows a month by default (or 2 weeks, or a week). Click or drag on empty days to book. Managers can lock dates for everyone, a room or one person. Click a name for that person's year. An admin can let staff see who is off, without the type or reason. [Wallchart]({{ site.baseurl }}/docs/app/wallchart/)
+- **Telegram:** admins and managers can approve or decline a request from the alert. The alert says how each room is left, and a morning message says who is off today. [My Settings]({{ site.baseurl }}/docs/app/my-settings/#approve-or-decline-in-telegram)
+- **Leave Requests:** each group shows 20 requests at a time, with **Show more**, and a link jumps to the ones waiting for you. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#finding-requests)
+- **Roster:** the main menu, Staff Availability and Cover Pool can fold away to give the week more room. [Roster]({{ site.baseurl }}/docs/app/roster/#make-the-week-wider)
+- **Settings, Features:** an admin can hide the live floor screens and the insights screens. Nothing is deleted. [Settings]({{ site.baseurl }}/docs/app/settings/#features)
+- **Notifications:** the WhatsApp column is now called **Messaging app**. [My Settings]({{ site.baseurl }}/docs/app/my-settings/)
+
 ## 23 November 2026
 
 - **Employees:** a login can be marked **AI Agent** (robot or test login). It is never counted as staff, rostered, paid or notified. [Employees]({{ site.baseurl }}/docs/app/employees/#ai-agents-robot-and-test-logins)

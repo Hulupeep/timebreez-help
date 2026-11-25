@@ -18,6 +18,10 @@ Lists every time-off request for your organisation. You check what each request 
 
 The filters under **Show leave for** narrow the list (and the downloads below) to the people, dates and status you pick.
 
+The requests are grouped as **Pending**, **Approved**, **Denied** and **Canceled**. Each group shows 20 at a time. At the bottom of a group it says, for example, "Showing 20 of 85". Press **Show 20 more (65 left)** to see the next ones.
+
+For managers and admins, the requests waiting for a decision come first, at the top of the page under **Waiting for you (N)**, above the filters, downloads and carry-over. When nothing is waiting it says so. **Request Leave** (top right) is an outline button for managers, because the page's main job for them is deciding.
+
 ## Approving a request
 
 Each request is a card. Approval is two steps on purpose: first you look at the calculation, then you approve.

@@ -14,15 +14,15 @@ permalink: /docs/app/employees/
 
 Filter by **Active**, **Inactive**, **Historical imports** or **All**. Historical imports are people brought across from Timetastic who have already left: they are kept so past leave adds up, and they never get a login. Use **Invite Employee** or **+ Add Employee** to add someone.
 
+To find someone, type their name or email in **Find a person** at the top. Press a name to open their record.
+
 Open a person's card to see their **Employment Terms**: status, hours per week, and their working pattern. Choose the **Allowance unit** (days, hours or minutes), enter the scheduled minutes for each weekday, and press **Confirm working pattern**. Leave costs are worked out from this pattern, so confirm it before approving their leave.
 
 The card's balance says which leave year it is for, for example "in 2026". Once next leave year is open, a second line shows it on its own, for example "Annual Leave 2027: 20 days left". Leave booked in next year comes off next year's allowance, never this year's. Carry-over is added at year end.
 
 ### Works No.
 
-The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft.
-
-**The name follows your payroll system.** "Works No." is what Collsoft calls it. Choose your payroll in [Settings > Payroll system]({{ site.baseurl }}/docs/app/settings/#payroll-system), and the field, badge and filter use that system's name: "Works number" for BrightPay, "Payroll ID" for the others. You can also type your own name there. Until a system is chosen, the app says "Payroll ID". Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
+The **Works No.** is the person's employee number in your payroll system, for example **EMPID0000028** in Collsoft. The field is named after the payroll system chosen in [Settings]({{ site.baseurl }}/docs/app/settings/#payroll-system): **Works No.** for Collsoft, **Works number** for BrightPay, **Payroll ID** otherwise. Enter it with **Edit** on the person's card, in the **Works No.** field (older screens called it **Payroll ID**).
 
 **Why it matters:** Collsoft matches each line of the [payroll file]({{ site.baseurl }}/docs/app/payroll/) to a person by Works No. If it is blank, that person's hours are not imported. If two people have the same one, one person's hours land on the other.
 
@@ -31,27 +31,28 @@ The **Works No.** is the person's employee number in your payroll system, for ex
 - Clearing the field leaves the person with no Works No.
 - The [Payroll]({{ site.baseurl }}/docs/app/payroll/) page lists anyone missing one before you download the file.
 
-### AI Agents (robot and test logins)
+### AI Agents
 
-Tick **AI Agent** on **Edit** for a login used by a robot or a test tool, not a real person. It keeps its access level, so it sees what an employee, manager or admin sees. It is never counted as staff:
-
-- not in the headcount or your plan's seat count (the list shows "+ 1 AI Agent (not counted)")
-- not offered on the roster, for cover, or on the wallchart
-- not in the leave check, the daily digest or "who's out"
-- not in the payroll file, and never flagged for a missing payroll number
-- sent no notifications
-
-Its card shows a purple **AI Agent** badge. Only an admin can tick or untick it.
+An admin can tick **AI Agent (robot or test login)** on a person's record. They use the app at their access level, but are never counted, put on the rota, paid, shown on the leave wall or sent notifications. The list shows them with a badge and a line such as **+ 2 AI Agents (not counted)**. They do not count towards your plan's seats.
 
 ### Notes
 
-Admins can keep free-text **Notes** about a person on **Add** and **Edit**, for example "Prefers mornings; returning from leave in March". Only admins see them. Managers, the person and colleagues do not. Up to 4,000 characters.
+Admins see a **Notes (admins only)** box on Create and Edit Employee. Notes are never shown to the person or to colleagues.
 
-### Start date
+### Other fields
 
-Under the start date the form reads it back in words, for example "Reads as Monday 1 December 2017". Check it, because your browser may show dates month first.
+- **Start Date** reads back in words under the box, for example "Reads as Tuesday 1 December 2026", so 01/12 can't be misread.
+- **Mobile phone** (it used to say WhatsApp Phone) is in international format, for example +353851234567. It is used for WhatsApp only if your organisation turns WhatsApp on in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging).
 
 ## Inviting someone
+
+### Staff imported from Timetastic
+
+The amber **Timetastic imported staff** box says how many imported people still need an invite. It starts folded.
+
+- **Create invites for everyone (N)...** lists every name and email first. Press **Create N invite links** to make them all. Nothing is emailed: each link appears under **Pending Invitations** for you to copy and send, and can be revoked there.
+- **Show list** opens the people one by one. Press a name to open their record, or **Create invite** for just that person.
+
 
 Timebreez does not email invites yet. You send the link yourself.
 

@@ -10,7 +10,7 @@ permalink: /docs/app/my-settings/
 
 **Who uses it:** everyone. In the menu: **My Settings**.
 
-My Settings has three tabs: **Notifications**, **Calendar** and **WhatsApp**. WhatsApp is not available yet.
+My Settings has three tabs: **Notifications**, **Calendar** and **Messaging**. **Messaging** lists the messaging apps your organisation uses (an admin chooses them in [Settings, Messaging]({{ site.baseurl }}/docs/app/settings/#messaging)). On **Notifications**, the column for Telegram is called **Messaging app**.
 
 ## Link Telegram
 
@@ -50,7 +50,23 @@ If you are an admin with Telegram linked, the bot tells you when:
 - someone asks for leave: who, which type, the dates, what it costs, and their balance now and after. If it is more than they have left, it says it needs your decision. **Review requests** opens Leave Requests;
 - someone withdraws a request or cancels approved leave: how much went back to them. For approved leave it also says any shifts cancelled for it are back on the roster.
 
-Bookings brought in by the Timetastic import do not send alerts.
+The new-request alert also says, for each day the person is rostered, how their room is left: for example "Mon 7 Dec, Toddlers: 2 left, 3 needed (15 children enrolled, 1:5). Short 1. Free floater: Mary Murphy." If a room has no child numbers or ratio set, it says it can't check. If the person isn't rostered on those dates, it says no room is affected.
+
+### Approve or decline in Telegram
+
+Admins and managers get **Approve** and **Decline** buttons on the new-request alert.
+
+- **Approve** shows what will come off the balance, for example "Comes off: 2 days". Press **Yes, approve** to confirm you've checked that figure. If the figure changed since the alert, the bot shows the new one and asks again. If it can't work out the figure yet, it asks you to decide in Timebreez.
+- **Decline** asks "Decline ...?". Press **Yes, decline**.
+- **Back** changes nothing.
+
+The same rules apply as in the app: you can't decide your own request, and only a request still waiting can be decided. When it's done the bot says "Approved" or "Declined" and the person is told.
+
+### Morning message: who's off today
+
+Each morning every admin and manager gets one message by email, and on Telegram if linked: who is off today, each room's adults against its ratio, who could cover (floaters first, then a room with an adult to spare), and the requests waiting, with Approve and Decline buttons on Telegram. An admin sets the time, the time zone, **Weekdays only**, and whether to send it at all, on the **Leave check** page.
+
+Admins and managers also get an email for each new request, unless they switched that email off. Bookings brought in by the Timetastic import do not send alerts.
 
 ## Calendar
 

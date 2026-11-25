@@ -20,7 +20,7 @@ Build the week: put each person in a room, on a day, at set times. Rooms need th
 | **By Room** | One row per room, so you can see each room's cover |
 | **Timeline** | One room on one day, hour by hour. Pick the room and the date |
 
-Move between weeks with the arrows, or press **This Week**. A one-line how-to sits above **By Staff**.
+Move between weeks with the arrows. On any other week, **Back to this week** takes you to the current one. A one-line how-to sits above **By Staff**.
 
 ## Before the first week
 
@@ -30,11 +30,11 @@ Move between weeks with the arrows, or press **This Week**. A one-line how-to si
 ## Building the week
 
 1. Pick the week with the arrows at the top. **Fill from Last Week** starts you from last week's shifts. If this week already has shifts you choose **Add to existing shifts** or **Replace all existing shifts**. Copying never overwrites unless you choose Replace. See [Fill from Last Week](#fill-from-last-week) for what it copies and what it leaves out.
-2. In **By Staff**, drag a person from **Staff Availability** onto a day in their own row, or press **+** in that cell.
+2. In **By Staff**, press **+** in a person's cell for that day, or open **Staff Availability** on the left and drag them onto a day in their own row.
 3. A **Create Shift** card opens. Nothing is saved yet. The room is their home room if they have one; change it if they work elsewhere that day.
 4. The times start at 7:30am to 4:30pm. That is a suggestion only, not the person's own pattern. Set the shift they will actually work, then press **Create Shift**.
 5. Click a shift to change it, drag it to another day to move it, or hover and press the red **x** to remove it.
-6. Press **Share** to send the week by WhatsApp, email or a link.
+6. Press **Share** to send the week. You can copy the picture or a link, download it, or send it with the messaging apps your organisation switched on in **Settings, Messaging** (Telegram, Slack or Teams). See [Share the week](#share-the-week).
 
 There is no Publish button. A shift shows in the person's [My Schedule]({{ site.baseurl }}/docs/app/my-schedule/) as soon as you create it. When the week is over and the roster matches what really happened, [close the week](#close-the-week).
 
@@ -57,15 +57,15 @@ flowchart TD
 
 **Close week** tells payroll the roster for that week is final. Do it on Friday, once the roster matches what really happened (sick days, swaps, early finishes).
 
-1. Pick the week. The chip next to the week says **Open**.
+1. Pick the week. Next to the week it says **Not closed yet**. **Close week** is the one filled button on the page; **Share** and **Export** are outline buttons.
 2. Press **Close week**, then **Close week** again on the card.
-3. The chip now says, for example, **Closed by Mary Murphy, Fri 11 Dec 15:42**. Payroll sees the same words.
+3. It now says, for example, **Closed by Mary Murphy, Fri 11 Dec 15:42**. Payroll sees the same words.
 
 A closed week is locked. Adding, changing, moving or removing a shift is refused with a message, and **Fill from Last Week** and **Autofill** are hidden for that week.
 
 ### Changing a closed week
 
-1. Press **Reopen** next to the chip.
+1. Press **Reopen** next to it.
 2. Say why, for example "Mary was out sick Tuesday". You can't reopen without a reason.
 3. Make the changes, then press **Close week** again.
 
@@ -104,6 +104,31 @@ If you create, edit or add a cover shift for someone with approved leave that da
 
 If Timebreez cannot check the person's leave for that day, Add Shift, Edit Shift and Add Cover say "Couldn't check this person's leave for this day. Check the leave calendar before saving." It does not mean they have no leave.
 
+## Share the week
+
+**Share** opens a picture of the week. Choose **Full roster (all rooms)** or **Room-by-room**.
+
+- **Copy image**, **Copy link** and **Download** work for everyone.
+- **Send to Telegram group** opens Telegram so you can pick the staff group. **Send to Slack** and **Send to Teams** post to the staff channel set up in Settings. These buttons work as soon as Share opens; you do not need to press Copy link first.
+- You only see the apps an admin switched on in **Settings, Messaging**. If none is on, Share says **Choose your messaging app in Settings → Messaging**.
+
+## Rooms in By Room
+
+Each room's name shows its ratio and how many children it holds, for example **up to 9**. Hover it to see why: "Room holds up to 9 children. At 1:3 that needs 3 staff." Click the room name to open that room's settings.
+
+Each day cell reads, for example, **4 on / 3 needed**. Hover it for the reason, for example "9 children at 1:3 needs 3 staff. 4 rostered: 1 spare." Cancelled and no-show shifts are not counted, and nobody is counted twice. People who have left are not shown.
+
+| Status | Means |
+|---|---|
+| OK | Enough staff for the ratio and the number of children |
+| Min | Exactly the staff the ratio needs, with no spare person for breaks or sickness |
+| Under | Fewer staff than the ratio needs. Add staff to this room |
+| Not set (grey) | The room has no number of children, so cover can't be checked. Click the room name to set it |
+
+A room that is **Not set** is not counted as compliant, and the banner says how many rooms can't be checked.
+
+To take someone off a day, press the **×** on their chip, or drag the chip onto the **Drop here to take Mary Murphy off** strip that shows while you drag. A person can't be moved onto a day they already work.
+
 ## Locked cells
 
 | Cell | Why it is locked |
@@ -116,11 +141,34 @@ Hover any locked cell to see the reason.
 
 ## Availability
 
-The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**.
+The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**. Click a name to see that person's week.
+
+Each card shows **FT** or **PT**, worked out from the person's contracted hours against your full-time day in [Settings]({{ site.baseurl }}/docs/app/settings/#leave-calculation-rules) times 5. If Timebreez doesn't know, it shows **?**, never a guess. A QQI badge shows only when a qualification is recorded.
+
+The **Cover Pool** shows today when today is in the week you are looking at. Drag a person from Staff Availability onto the Cover Pool to add them as cover for that day.
+
+## Make the week wider
+
+- **Hide menu** (the button at the top of the main menu, on a computer) folds the main menu away. **Show menu** brings it back.
+- **Staff Availability** folds to a narrow strip on the left. Press it to open the panel again. In **By Staff** it starts folded, because each row is already a person. In **By Room** it starts open.
+- **Cover Pool** folds the same way. It folds by itself when nobody is available, and the strip shows 0.
+
+Each choice is remembered in this browser. The roster also remembers whether you last used By Staff, By Room or Timeline.
 
 ## Coverage warnings
 
-If a room falls below the staff it needs, a warning shows on the roster. Fix it before the day, or the same warning appears when someone's leave is approved.
+If a room falls below the staff it needs, a warning shows on the roster. The warnings and the count start from today; days already gone are left out. Fix it before the day, or the same warning appears when someone's leave is approved.
+
+## Someone leaves early or doesn't turn up
+
+Click their shift to open **Edit Shift**. Under **Need cover?**:
+
+- **Leaving early:** move the end time earlier. Press **Save and find cover 15:00-18:00** (the times are the part they won't work). The shift is shortened and cover is asked for the rest.
+- **Didn't turn up:** press **Mary Murphy didn't turn up: find cover**. The shift is marked as a no-show and cover is asked for the whole shift.
+
+Timebreez asks up to 3 free people on Telegram. Free means they are active, have no approved or pending leave that day, and have no shift at the same time. Cover staff are asked first, then people who worked in that room in the last 4 weeks. Only people who have [linked Telegram]({{ site.baseurl }}/docs/app/my-settings/#link-telegram) can be asked.
+
+Each person gets **Yes, I'll cover** and **Can't** buttons. The first Yes gets a cover shift in that room. The others are told it's covered, and you are told who is coming, on Telegram and in the inbox. If everyone says Can't, you are told that too.
 
 ## Common questions
 

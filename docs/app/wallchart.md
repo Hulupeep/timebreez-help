@@ -6,68 +6,47 @@ nav_order: 11
 permalink: /docs/app/wallchart/
 ---
 
-# Wallchart Help
+# Wallchart
 
-{: .note }
-This page has not been checked against the current app yet. The pages listed under [Page by page]({{ site.baseurl }}/docs/app/) as checked are up to date.
+**Who uses it:** everyone. In the menu: **Wallchart** or **Leave Map**.
 
+A calendar of who is off, one row per person. Managers and admins see everyone's leave in full. What staff see depends on a setting (see [What staff see](#what-staff-see)).
 
-## What It Does
+## Month, 2 weeks or week
 
-A visual calendar showing who's working, who's off, and when - across your whole team.
+The wall shows a **month** by default. Press **2 weeks** or **Week** to see less. Your choice is remembered next time. Move with the arrows, or pick a month to open it from its 1st.
 
-## Why It Matters
+**Compact** gives thinner rows and narrower days, so a whole month fits on a laptop screen. **Expanded** shows each person's name, role and picture.
 
-See the big picture at a glance. Spot coverage gaps before they become problems and plan around team absences.
+Bank holidays show on the wall and in each person's year. The wall has no Share button; to send the rota, use **Share** on the [Roster]({{ site.baseurl }}/docs/app/roster/#share-the-week).
 
-## How To Use It
+## Book leave from the wall
 
-1. Use the **date picker** to navigate to different weeks or months. Picking a month or year opens that month from its 1st.
-2. Each **row** shows one team member
-3. **Colored blocks** show leave or shifts
-4. **Click on any block** to see details
-5. Use **filters** to show specific rooms or leave types
+Click an empty day, or drag across several days, to book leave for those dates. The booking form opens with the dates filled in.
+
+- Managers and admins can book on any row. The booking is for that person.
+- Staff can book only on their own row, when **Staff can see who is off** is on.
+
+## Lock dates
+
+Managers and admins can stop staff asking for leave on certain days, for example an inspection week.
+
+1. Press **Lock dates**.
+2. Choose the dates, and who the lock is for: **Everyone**, **One room** or **One person**.
+3. Say why. Staff see the reason.
+4. Press **Lock these dates**.
+
+Locked days show a padlock. Hover it to see the reason. Staff can't request leave on a locked day. Managers and admins can still book. Leave already booked stays as it is. To remove a lock, open **Lock dates** and press **Unlock** next to it.
+
+## One person's year
+
+Click a person's name to see their whole year, month by month. Each leave day shows its type when you hover it. A dashed outline means the leave is waiting for approval. Green is a bank holiday. Staff can open their own year.
 
 ## What staff see
 
-Staff do not see everyone's leave. They see **Team Coverage** for two weeks at a time (use the arrows to move two weeks back or forward) and a **My Leave** list with their own leave in those two weeks. If they have none, it says "No leave booked for this period".
+This depends on **Staff can see who is off** in [Settings]({{ site.baseurl }}/docs/app/settings/), tab **Wallchart**. It is off unless an admin turns it on.
 
-## Visual Diagram
+- **Off:** staff see **Team Coverage** (how busy each week is) and a **My Leave** list with their own leave. If they have none, it says "No leave booked for this period".
+- **On:** staff see everyone's row, with a grey **Off** block on the days a colleague is away. They never see the type of leave or the reason. Their own row is in full colour, and they can click or drag on it to book.
 
-```mermaid
-gantt
-    title Example Week View
-    dateFormat  YYYY-MM-DD
-    section Sarah
-    Working     :2026-01-27, 5d
-    section Mike
-    Working     :2026-01-27, 3d
-    Holiday     :crit, 2026-01-30, 2d
-    section Emma
-    Sick        :crit, 2026-01-27, 1d
-    Working     :2026-01-28, 4d
-```
-
-## Color Coding
-
-- **Green**: Working/Scheduled
-- **Blue**: Annual Leave
-- **Yellow**: Sick Leave
-- **Purple**: Training/Other
-- **Red**: Understaffed Warning
-
-## Common Questions
-
-### What do the different colors mean?
-
-Blue = Annual Leave, Yellow = Sick Leave, Green = Working/Scheduled, Purple = Training, and room-specific colors for shifts.
-
-### Can I print the wallchart?
-
-Yes! Use the print option from your browser menu, or export to share with the team.
-
-## Tips
-
-- Check the wallchart before approving leave to see coverage
-- Use filters to focus on specific rooms when planning
-- The wallchart updates in real-time as requests are approved
+With **Anonymous Mode** also on, staff see "Someone - Time Off" instead of names.
