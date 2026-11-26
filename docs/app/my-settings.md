@@ -16,7 +16,7 @@ My Settings has three tabs: **Notifications**, **Calendar** and **Messaging**. *
 
 Once Telegram is linked you get leave approvals and updates there, and you can request time off without opening Timebreez.
 
-1. Open **My Settings**, tab **Notifications**, and press **Connect Telegram**.
+1. Open **My Settings**, tab **Notifications**, and press **Connect Telegram**. In the [staff app]({{ site.baseurl }}/docs/app/staff-app/#settings), it is first on the **Settings** tab.
 2. Your personal link is ready. Press **Open Telegram**. If your browser asks to open the Telegram app, say yes.
 3. Press the **Start** button at the bottom of the chat. On the Telegram web page it says **Start Bot**. Pressing Start sends your personal code, so the bot knows it is you. Typing the word "start" does not work.
 4. The bot replies **"You're linked"**. You can close the page. The card now shows **Connected**.
@@ -27,12 +27,14 @@ To unlink, press **Disconnect**, or send `/stop` to the bot.
 
 ## What you can send the bot
 
-Message the bot directly, not in a group.
+Message the bot directly, not in a group. Type **/** in the chat to see the list of commands, so you don't have to remember them.
 
 | Send | What happens |
 |---|---|
-| `/off 2026-12-01` | Requests one day off. The bot asks which leave type, then asks you to confirm |
-| `/off 2026-12-01 2026-12-03` | Requests a range. Day/month/year works too: `/off 1/12/2026` |
+| `/shifts` | Your shifts and leave for the next 7 days, one line a day, with the room. `/shifts next week`, `/shifts fri` or `/shifts 1-5 dec` work too. **Earlier** and **Next 7 days** move along a week |
+| `/off` | Asks which day, with **Today**, **Tomorrow** and **Another day…** buttons, then which leave type |
+| `/off today sick`, `/off fri am`, `/off 1-3 dec annual` | Type the day in plain words, and the leave type if you like. `am` or `pm` asks for a morning or afternoon. Dates like `2026-12-01` or `1/12/2026` work too |
+| `/sick` | Off sick today, one tap to confirm. `/sick tomorrow` or `/sick am` work too |
 | `/bal` | Your balances. Shown in hours if your allowance is in hours, otherwise in days |
 | `/status` | Your requests and whether they are waiting for a decision, approved, declined or cancelled. A declined request shows the reason |
 | `/cancel` | Lists leave you can cancel. Pick one, then **Yes, cancel it** or **Keep it**. The bot says how much went back and what you now have left |
@@ -40,6 +42,10 @@ Message the bot directly, not in a group.
 | `/whosout` | Managers only: who is off today. `/whosout week` shows the next 7 days |
 | `/help` | Lists what you can send |
 | `/stop` | Unlinks Telegram |
+
+Before anything is booked, the bot shows a card: the leave type and day, what it uses (for example "Uses: 1 day"), and your balance now and after. Press **Confirm** to send it to your manager. For a single day you can switch between **Full day**, **Morning only** and **Afternoon only**. **Different type** and **Cancel** are there too. If the dates are locked for that leave type, the card says so and has no Confirm.
+
+You can also just write, for example "sick today", "off tomorrow", "how many days have I got" or "am I working fri", and the bot treats it like the command.
 
 If the bot says "Link your Telegram first", do the steps above again.
 

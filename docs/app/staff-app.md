@@ -8,7 +8,7 @@ permalink: /docs/app/staff-app/
 
 # Staff App
 
-**Who uses it:** staff, on their phone. Address: `/staff`. The bar at the bottom has **Home**, **Schedule**, **Leave** and **Team**.
+**Who uses it:** staff, on their phone. Address: `/staff`. The bar at the bottom has **Home**, **Schedule**, **Leave**, **Team** and **Settings**.
 
 Press the **?** at the top of the screen to open help for the page you are on.
 
@@ -26,9 +26,12 @@ Your leave balance, a form to request time off, and your requests.
 
 1. Press **Book time off**.
 2. Pick the **Start Date** and **End Date**, then the **Leave Type**.
-3. Add a note if you like, and press **Submit Request**. You see "Request submitted for approval".
+3. For one day only, you can tick **Half day** and choose **Morning** or **Afternoon**. It is charged as half a day, and **My Requests** shows, for example, "Half day (morning)".
+4. Add a note if you like, and press **Submit Request**. You see "Request submitted for approval".
 
-A leave type that comes out of another type's balance (for example a type set to come out of Annual Leave) is checked against that balance, so you see the Annual Leave you have left. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
+If you are already off on those dates, the form says nothing comes out of your balance and tells you what to do: to book the days as another type, cancel the leave you have first, then book again.
+
+A leave type that comes out of another type's balance (for example a type set to come out of Annual Leave) is checked against that balance, so you see the Annual Leave you have left. Requests of that type still waiting for a decision count in **awaiting approval** on the Annual Leave card. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
 
 Each balance card says which leave year it is for, for example "for 2026". Once next year is open, a line under it shows next year's balance, for example "2027: 20 days left (carry-over added at year end)". Leave you book in next year comes off that, not this year's balance. Each balance card shows how much is **awaiting approval**. You can cancel a pending request with **Cancel Request**, and its hours come off "awaiting approval" on the card straight away. Cancelling leave that is already approved puts the time back on your balance: "Approved leave cancelled — balance credited back".
 
@@ -37,3 +40,7 @@ Prefer your phone's chat app? [Link Telegram]({{ site.baseurl }}/docs/app/my-set
 ## Team
 
 Who is on each day, room by room. Use the arrows or pick a date.
+
+## Settings
+
+**Connect Telegram** comes first, so you can link the bot from your phone (see [Link Telegram]({{ site.baseurl }}/docs/app/my-settings/#link-telegram)). Under it are your own notification choices.

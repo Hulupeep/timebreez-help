@@ -51,7 +51,7 @@ When someone has no employment terms (or no confirmed working week) for the date
 
 1. **Best: set their employment terms.** Press **Set Mary Murphy's employment terms** in the box. It opens their Staff card. After that every leave for them is worked out exactly and the box goes away.
 2. **For this request, Approve is fine.** The estimate is saved with your name and how it was worked out, so anyone can see later where the figure came from.
-3. **Only if you know their real hours differ on these days,** press the small **Change the hours** link under the card. Type the hours for each day (`7.5`, `7,5` or `7:30`; a blank day counts as 0), keep or edit the reason, and press **Save hours**. Then approve.
+3. **Only if you know their real hours differ on these days,** press the small **Change the hours** link under the card. Type the hours for each day (`7.5`, `7,5`, `7.333` or `7:30`; a blank day counts as 0). If a day can't be read, the box names that day and what you typed, keep or edit the reason, and press **Save hours**. Then approve.
 
 Press **Why an estimate, and what should I do?** in the box for the same advice on the card itself.
 
@@ -71,6 +71,8 @@ Press **Deny** and type the reason. The person sees it with the request.
 | Your account is not linked to an employee record | Your login has no staff record, so the approval cannot be put in your name | Ask an admin to link your login to your staff record |
 | Estimated: no employment terms | The person has no employment terms for these dates, so the figure is an estimate | See [Leave for someone with no employment terms](#leave-for-someone-with-no-employment-terms) |
 | Days not calculated | Timebreez could not work out or estimate what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
+| No figure yet for someone whose allowance is in hours | The person has no employment terms, so the cost can't be worked out when booking | Submit it anyway, then open it here and type what each day costs: the hours box opens on its own when there is no estimate, otherwise press **Change the hours**. The form calls this **Enter hours**. Approval waits for those hours. Staff are told their manager types the hours |
+| They are already off on these dates | The dates overlap leave that is already approved, so nothing is booked and nothing comes out of the balance | To record the days as a different type, cancel that leave on Leave Requests first, then book again |
 | Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
 
 A refusal stays on screen until you close it, so you can read it.

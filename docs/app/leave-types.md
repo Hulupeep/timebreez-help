@@ -62,6 +62,10 @@ A type that other types come out of keeps its own balance. When someone books it
 
 **Who can book it** is **Everyone**, **Managers and admins** or **Admins only**. Others can't pick it in the app, in the staff app or on Telegram. An admin can still book it for anyone.
 
+## Can be booked on locked dates
+
+When managers lock dates on the [Wallchart]({{ site.baseurl }}/docs/app/wallchart/#lock-dates), staff can't book leave on them. Tick **Can be booked on locked dates** on a type for leave nobody can plan, like sick leave: staff can still book that type on locked days. Every other check still applies. It is off for every type until you tick it.
+
 ## Common Questions
 
 ### What's the difference between paid and unpaid leave?

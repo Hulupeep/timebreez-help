@@ -36,7 +36,7 @@ Managers and admins can stop staff asking for leave on certain days, for example
 3. Say why. Staff see the reason.
 4. Press **Lock these dates**.
 
-Locked days show a padlock. Hover it to see the reason. Staff can't request leave on a locked day. Managers and admins can still book. Leave already booked stays as it is. To remove a lock, open **Lock dates** and press **Unlock** next to it.
+Locked days show a padlock. Hover it to see the reason. Staff can't request leave on a locked day, except a leave type set to **Can be booked on locked dates** (for example sick leave, see [Leave Types]({{ site.baseurl }}/docs/app/leave-types/#can-be-booked-on-locked-dates)). Managers and admins can still book. Leave already booked stays as it is. To remove a lock, open **Lock dates** and press **Unlock** next to it.
 
 ## One person's year
 

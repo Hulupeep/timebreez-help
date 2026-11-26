@@ -139,6 +139,22 @@ To take someone off a day, press the **×** on their chip, or drag the chip onto
 
 Hover any locked cell to see the reason.
 
+## Who's actually in today
+
+If an admin has switched on **Show who's actually in** (on the Paxton door setup page), today's shifts on the roster carry a small mark from the door and clock swipes:
+
+| Mark | Means |
+|---|---|
+| **in 08:02** (green) | Clocked in at that time |
+| **gone 16:35** (grey) | Clocked out |
+| **on site 07:55, not clocked in** | Swiped the door but has not clocked in |
+| **not in · 12 min late** (orange) | Shift has started and there is no swipe |
+| **due 09:00** | Shift has not started yet |
+
+Hover a mark to read it in full. The marks only show information: the rota, no-show marking and pay are not changed. Past and future days show no marks.
+
+Approving or cancelling leave now shows on the roster straight away, without reloading the page.
+
 ## Availability
 
 The **Staff Availability** panel lists who is free. Search by name, or press **Show Available Only**. Click a name to see that person's week.
