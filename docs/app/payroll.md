@@ -88,6 +88,16 @@ These stop **Certify & Export** and **Download draft CSV** until they are fixed.
 
 The export from the quick actions on Employees is stopped the same way.
 
+## When pay follows the roster: three steps
+
+If your organisation is paid from the roster, the page reads "Send this week's hours to your payroll system" and opens with **This week's pay, in three steps**. Each step turns green with a tick when it is done.
+
+1. **Roster week closed.** Says whether the manager has closed the week. If not, it says the manager presses **Close week** on the Roster, with **Open the Roster**. If shifts changed after it closed, it lists them.
+2. **Download the pay file and import it.** Press **Download pay file (CSV)** and import it into your payroll system. Until the roster week is closed, the note says hours may still change. If something stops the file, it says "Not yet:" and why.
+3. **Mark the week done once it is imported and paid.** The same [close-off](#close-off-the-pay-week) as below.
+
+There is no certify step for roster pay, and roster-paid weeks are always closed off by hand: the automatic close-off setting is not shown. Below the steps, **Check before you import** holds the other checks.
+
 ## Is the roster week closed?
 
 The first box on the page says whether the manager has closed the roster for that week:
@@ -108,7 +118,7 @@ Every earlier reopen is listed under a closed week too, with its reason. See [Cl
 2. Check the roster week is **Closed** (the first box).
 3. Work down the **Before you export** box: read the amber draft line at its foot and clear any red box.
 4. Check the **Payroll Table** line by line: scheduled hours, actual hours and leave. Tick **Approved** for each person once their line is right.
-5. Resolve anything listed under the **Checks** tab (it used to be called Reconciliation Gate).
+5. Resolve anything listed under the **Checks** tab (it used to be called Reconciliation Gate). Its badge reads **All clear**, **N to resolve**, or **Days with no data**.
 6. Press **Download draft CSV**.
 7. Once the file is imported into your payroll system and staff are paid, press **Mark done: imported and paid**. See [Close off the pay week](#close-off-the-pay-week).
 

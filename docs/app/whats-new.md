@@ -10,6 +10,17 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 26 November 2026
+
+- **Telegram:** type **/** to see every command. New `/shifts` shows your shifts and leave for the next 7 days. `/sick` books today off sick in one tap, and `/off` offers **Today**, **Tomorrow** and **Another day…** buttons or reads plain words like `/off fri am`. A card shows the cost and your balance before you **Confirm**, with Full day, Morning only or Afternoon only. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#what-you-can-send-the-bot)
+- **Leave Types:** new **Can be booked on locked dates**, for leave nobody can plan such as sick leave. Staff can book that type even on dates a manager locked. [Leave Types]({{ site.baseurl }}/docs/app/leave-types/#can-be-booked-on-locked-dates)
+- **Payroll:** when pay follows the roster, the page opens with **This week's pay, in three steps**: roster week closed, download the pay file, mark the week done. Roster-paid weeks are closed off by hand. The **Checks** badge never shows a bare 0. [Payroll]({{ site.baseurl }}/docs/app/payroll/#when-pay-follows-the-roster-three-steps)
+- **Staff app:** **Book time off** has **Half day** (morning or afternoon) for a single day. A new **Settings** tab links Telegram from your phone. Requests still waiting of a type that comes out of Annual Leave now show under **awaiting approval** on the Annual Leave card. [Staff app]({{ site.baseurl }}/docs/app/staff-app/#leave)
+- **Booking leave:** if the person is already off on those dates, the form no longer shows a balance coming off. It says nothing comes out and to cancel the existing leave first to book another type. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)
+- **Leave Requests:** for someone whose allowance is in hours and who has no employment terms, the form says to submit, then type the hours on the card. The hours box reads any number of decimals and names any day it can't read. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#leave-for-someone-with-no-employment-terms)
+- **Roster:** approved or cancelled leave shows without a reload. If an admin turns on **Show who's actually in**, today's shifts show check-in marks from the door. [Roster]({{ site.baseurl }}/docs/app/roster/#whos-actually-in-today)
+- **My Leave:** Leave History, upcoming leave and balances now show for every signed-in person, not only in the demo. Booking your own leave from **Request Leave** works for signed-in staff. [My Leave]({{ site.baseurl }}/docs/app/my-leave/)
+
 ## 25 November 2026
 
 - **Sick pay:** set your sick pay rule once in Settings, Pay Rules: which types are sick leave, how many days are paid, and the service wait. When someone books a sick day, they see "This is your 4th of 5 statutory sick days this year", or that the day is unpaid once the paid days are used. Their manager sees the same line, and the payroll file has the hours split into statutory, company, unpaid and pending, with a note per day. [Settings]({{ site.baseurl }}/docs/app/settings/#sick-pay)
