@@ -10,6 +10,17 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 27 November 2026
+
+- **Booking leave:** if only some of the dates clash with leave already booked, the form no longer says "nothing more to book". It names the days still free and says to change the dates to leave out the clash. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)
+- **Booking leave:** leave in next year is checked against next year's balance, and the form names the year, for example **Annual Leave 2027**. Dates in a leave year that isn't set up yet are refused with what to do. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)
+- **Booking leave:** a type that comes out of a balance the person doesn't have now says so, and names the Leave Types setting to change, instead of "0 minutes available". [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)
+- **Leave Requests:** if an estimate is refused for being more than the person has left, the message says it is an estimate and the hours box opens so you can type their real hours. **Change the hours** stays while the request waits. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#leave-for-someone-with-no-employment-terms)
+- **Roster:** a leave day shows the leave type's name in its own colour, so sick leave no longer looks like a green holiday. [Roster]({{ site.baseurl }}/docs/app/roster/#locked-cells)
+- **Telegram:** new `/demo` lets anyone practise the bot on the real screens without booking anything, even before linking. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#what-you-can-send-the-bot)
+- **Telegram:** the booking card's "after this" balance and any warning now come from Timebreez itself, the same figures as the app. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#what-you-can-send-the-bot)
+- **Connect Telegram:** if your browser says "invalid response" or "not secure", the card explains your network is blocking the link and points to the two other ways to link. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#link-telegram)
+
 ## 26 November 2026
 
 - **Telegram:** type **/** to see every command. New `/shifts` shows your shifts and leave for the next 7 days. `/sick` books today off sick in one tap, and `/off` offers **Today**, **Tomorrow** and **Another day…** buttons or reads plain words like `/off fri am`. A card shows the cost and your balance before you **Confirm**, with Full day, Morning only or Afternoon only. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#what-you-can-send-the-bot)

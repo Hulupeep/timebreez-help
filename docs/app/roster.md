@@ -134,7 +134,7 @@ To take someone off a day, press the **×** on their chip, or drag the chip onto
 | Cell | Why it is locked |
 |---|---|
 | Shaded grey | The day has passed. You can still add or change shifts there until the week is closed, so the roster matches what really happened. Once the week is closed, press Reopen and say why. |
-| HOLS, UNPAID or OFF | The person is on leave that day. Change or cancel the leave first if that's wrong. |
+| A leave type's name, such as Annual Leave or Sick Leave | The person is on leave that day. The cell uses that leave type's colour from Settings, the same as the wallchart. A type with no colour shows green for paid and light green for unpaid. Change or cancel the leave first if that's wrong. |
 | Any cell in a closed week | The week is closed. Press **Reopen** and give a reason first. |
 
 Hover any locked cell to see the reason.
@@ -190,7 +190,7 @@ Each person gets **Yes, I'll cover** and **Can't** buttons. The first Yes gets a
 
 ### Why can't I drop someone on a day?
 
-Hover the cell to see why. Days before today are locked. A person on leave that day can't be dropped there; to give them a shift anyway, see [A shift on a leave day](#a-shift-on-a-leave-day). In By Staff, a person can only go on their own row. With no rooms set up, no shift can be saved. Help (the **?**) also tells you why.
+Hover the cell to see why. Days before today are locked. A person on leave that day shows their leave type and can't be dropped there; to give them a shift anyway, see [A shift on a leave day](#a-shift-on-a-leave-day). In By Staff, a person can only go on their own row. With no rooms set up, no shift can be saved. Help (the **?**) also tells you why.
 
 ### Why can't I change a shift last week?
 
