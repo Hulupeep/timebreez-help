@@ -3,7 +3,7 @@
 Read first each night. Body of truth for specs is GitHub; this file tracks grooming state and artifacts.
 
 ## Artifacts
-- Pitch deck (Slides, private until Colm shares): https://claude.ai/artifact/VxYydcbQJaxs4hoBt6PPGD (rev 2, 26 Nov 2026, 14 slides)
+- Pitch deck (Slides, private until Colm shares): https://claude.ai/artifact/VxYydcbQJaxs4hoBt6PPGD (rev 3, 27 Nov 2026, 14 slides)
 - Mockup: Toddlers check-in tablet (#1455, #1461): https://claude.ai/artifact/Gf2ekv1LwxHTpc216WPj19
 - Mockup: Ratio proof report (#1471, #1502): https://claude.ai/artifact/3dWemvAYRM8YDEpwuF7VWB
 - Mockup: Pickup collector check (#1457): https://claude.ai/artifact/7wCVAAWt2Sq64y6vwfdmkq
@@ -16,22 +16,30 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 - Mockup: Allergen badges + kitchen view (#1587, #1588): https://claude.ai/artifact/4XjvvcTGQTgBw3j9YXHDMT
 - Mockup: Medication administration record (#1590): https://claude.ai/artifact/D6tvstcbqtSDXzxur2KeR6
 - Mockup: Toddlers room tablet, my room now + step-out (#1594, #1595): https://claude.ai/artifact/6twbYHGmAPPAijbv7xuEBm
-- Living docs: CHILD-REG #1496, CHILD-REG funding #1497, CHILD-REG part 3 #1601, CHILD-ARCH #1498, CHILD-ARCH part 2 #1499, CHILD-ARCH part 3 #1602
+- Mockup: Monday funder return (#1673): https://claude.ai/artifact/NtnD5Nh5mRAnmgEgLutLKY
+- Mockup: Billing preview, netted lines (#1677): https://claude.ai/artifact/GYQccBfVV4eS2K7vBEdxee
+- Mockup: Wobblers care log (#1680): https://claude.ai/artifact/XCjP5XC314tKi2CdiLaGfD
+- Mockup: Toddlers incident record (#1681, #1682): https://claude.ai/artifact/APSnMwcygu5TSJHJiHxswu
+- Mockup: Parent portal (#1686): https://claude.ai/artifact/YTg1yAeTvNG9hoCVqZEjGu
+- Mockup: Family messages, read receipts (#1690): https://claude.ai/artifact/5Tia2pq339ut6jknSkPUFp
+- Mockup: Extra session request (#1693): https://claude.ai/artifact/Ph2yhZaAQ6NbqVxBvuojGp
+- Living docs: CHILD-REG #1496, CHILD-REG funding #1497, CHILD-REG part 3 #1601, CHILD-ARCH #1498, CHILD-ARCH part 2 #1499, CHILD-ARCH part 3 #1602, CHILD-REG part 4 #1668, CHILD-ARCH part 4 #1669
 
 ## Night log
+- 2026-11-27 (night 3): 10 agents. 52 rules sourced in #1668 (FUND-057..065, GDPR-006..021, PAR-001..011, LOG-001..005, SAFEG-001..006, GB-ENG sketch); decisions D-40..D-86 in #1669. 25 stories spec:contracted: funding #1670 #1671 #1673 #1674 #1675 #1676 #1677 #1679; care log #1680-#1685; parent comms #1686-#1693 #1694, plus #1578 and #1581 re-groomed. 27 new issues (#1668-#1694) + security #1697 (staff whatsapp-webhook fails open without secret, static reading). 7 mockups. Deck rev 3 (parent comms slide, edge join table; step-out slide removed). Still thin: #1672 (Q-F2 Hive sample), #1678 (Q-B5 VAT), #1474 (Timebreez vs Hubduck). Epic bodies #1447 #1448 #1450 #1451 #1453 #1454 updated; #1450 headline corrected per D-55. Next nights: CHILD-FUND-006 payments (Q-B1) + FUND-009, CHILD-PAR-004..006 and PAR-012 complaints, #1466, #1468, #1449 leftovers (#1591), #1595/#1470 once D-09 is answered.
 - 2026-11-26 (night 2): 10 agents. 47 IE rules sourced (now 163 IE), incl. school-age 1:12 (S.I. 575/2018), Tusla medication guidance (two-person check, parent signs on collection), sleep. 31 stories spec:contracted (#1458 #1459 #1462 #1463 #1464 #1503 #1577 #1504 #1507 #1510 #1512 #1579 #1580 #1582 #1583-#1590 #1592 #1593 #1594 #1596-#1600 #1469). 24 new issues (#1577-#1602). 8 mockups. Deck rev 2. Living docs split: #1601, #1602. Still thin: #1470 #1578 #1581 #1591 #1595. Next nights: #1451 (funding stories CHILD-FUND-001..009 from #1497 netting rules), #1450 (care log, incidents: LOG-001..007; rules now in #1601 INC), #1453 (parent comms, CHILD-PAR-010 first), #1466, #1468; also CHILD-ENR-001 enrolments (D-39), CHILD-GDPR rights rules for #1581.
 - 2026-11-25 (night 1): 10 agents. 116 IE rules sourced (60 care + 56 funding), GB-ENG sketch. 15 stories spec:contracted, 14 new issues, 4 mockups, deck rev 1. Next epics in order: #1449 (no stories yet), #1452, #1451 (stories from netting rules), #1450, #1453, #1466, #1468; also finish #1448 (#1458 #1459 #1462 #1463 #1464 #1469 #1470 #1472-1474 still thin).
 
 ## Issues
 | Issue | Title | Label | Last groomed | Mockup | Open questions |
 |---|---|---|---|---|---|
-| #1448 | EPIC: Child-side A: Staff-confirmed offline child check-in/out + Hive-grade roll book (Pha | spec:thin | 2026-11-26 | - | - |
+| #1448 | EPIC: Child-side A: Staff-confirmed offline child check-in/out + Hive-grade roll book (Pha | spec:thin | 2026-11-27 | - | - |
 | #1449 | EPIC: Child-side B: Child profile, dietary needs, allergens and medication | spec:thin | 2026-11-26 | - | - |
-| #1450 | EPIC: Child-side C: Teacher notes, daily care log and incidents | spec:thin | - | - | - |
-| #1451 | EPIC: Child-side D: ECCE/NCS funding, Hive week worklist and family invoicing | spec:thin | - | - | - |
+| #1450 | EPIC: Child-side C: Teacher notes, daily care log and incidents | spec:thin | 2026-11-27 | - | - |
+| #1451 | EPIC: Child-side D: ECCE/NCS funding, Hive week worklist and family invoicing | spec:thin | 2026-11-27 | - | - |
 | #1452 | EPIC: Child-side E: Teacher tools (room tablet: my room now, step-out guard, handover, hea | spec:thin | 2026-11-26 | - | - |
-| #1453 | EPIC: Child-side F: Parent communications (portal, messages with read receipts, absences,  | spec:thin | - | - | - |
-| #1454 | EPIC: Child-side G: Country policy layer (child policy packs: IE first; GB-ENG, US-state a | spec:thin | 2026-11-26 | - | - |
+| #1453 | EPIC: Child-side F: Parent communications (portal, messages with read receipts, absences,  | spec:thin | 2026-11-27 | - | - |
+| #1454 | EPIC: Child-side G: Country policy layer (child policy packs: IE first; GB-ENG, US-state a | spec:thin | 2026-11-27 | - | - |
 | #1455 | CHILD-ATT-001: Staff-confirmed child check-in/out that parents can start (pack-driven; IE  | spec:contracted | 2026-11-25 | https://claude.ai/artifact/Gf2ekv1LwxHTpc216WPj19 | build after #1504 online path |
 | #1456 | CHILD-ATT-002: Offline kiosk/tablet: queue signed check-in events and sync later | spec:contracted | 2026-11-25 | - | build after #1504 online path |
 | #1457 | CHILD-ATT-003: Collector checks at pickup: photos, authorised list, one-time codes | spec:contracted | 2026-11-25 | https://claude.ai/artifact/7wCVAAWt2Sq64y6vwfdmkq | - |
@@ -49,7 +57,7 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 | #1471 | CHILD-ATT-011: Ratio proof report for any room and time window | spec:contracted | 2026-11-25 | https://claude.ai/artifact/3dWemvAYRM8YDEpwuF7VWB | - |
 | #1472 | CHILD-MIG-001: Import children from TeachKloud and cut over safely | spec:thin | - | - | - |
 | #1473 | CHILD-P0: TeachKloud exit test with Sandra (discovery, no code) | spec:thin | - | - | - |
-| #1474 | CHILD-LOG-006: Safety checklists and policy acknowledgement | spec:thin | 2026-11-26 | - | - |
+| #1474 | CHILD-LOG-006: Safety checklists and policy acknowledgement | spec:thin | 2026-11-27 | - | Colm: build in Timebreez or via Hubduck |
 | #1500 | CHILD-ATT-000: Append-only `child_attendance_events`, legacy `child_attendance` backfill a | spec:contracted | 2026-11-25 | - | - |
 | #1501 | CHILD-ATT-002b: Manager review queue for held attendance events (clock drift, conflicts, g | spec:contracted | 2026-11-25 | - | - |
 | #1502 | CHILD-ATT-007b: Persisted 15-minute ratio slots and the room ratio timeline (with revision | spec:contracted | 2026-11-25 | https://claude.ai/artifact/3dWemvAYRM8YDEpwuF7VWB | - |
@@ -65,10 +73,10 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 | #1512 | CHILD-POL-004: GB-ENG skeleton child pack as a schema test (proves a new country needs no  | spec:contracted | 2026-11-26 | - | - |
 | #1513 | CHILD-SEC-001: No-anon contract and per-table RLS test harness for child data | spec:contracted | 2026-11-25 | - | - |
 | #1577 | CHILD-SAFE-001: Fire drill and fire equipment records (pack-driven; IE S.I. 221/2016 Reg 2 | spec:contracted | 2026-11-26 | https://claude.ai/artifact/3RFSn75y9a6ZwyzBtd5cs9 | - |
-| #1578 | CHILD-ATT-004b: Absences from parent chat messages, and the no-show prompt to the guardian | spec:thin | 2026-11-26 | - | Q-P3: chat absence on staff tap or portal tap (Sandra); CHILD-PAR-010 not filed |
+| #1578 | CHILD-ATT-004b: Absences from parent chat messages, and the no-show prompt to the guardian | spec:contracted | 2026-11-27 | - | - |
 | #1579 | CHILD-SEC-002b: Offline quick-PIN check on enrolled devices (device-bound same-day verifie | spec:contracted | 2026-11-26 | https://claude.ai/artifact/2wYQgngUYeSBQ8BFmowo5z | - |
 | #1580 | CHILD-GDPR-003: DPIA template and controller pack, pre-filled from live data | spec:contracted | 2026-11-26 | - | - |
-| #1581 | CHILD-GDPR-004: Data subject requests for child records (access with welfare withhold, era | spec:thin | 2026-11-26 | - | no CHILD-REG ids for GDPR subject rights |
+| #1581 | CHILD-GDPR-004: Data subject requests for child records (access with welfare withhold, era | spec:contracted | 2026-11-27 | - | - |
 | #1582 | CHILD-SEC-005: Inspector time-boxed read-only links to the pack's inspection exports | spec:contracted | 2026-11-26 | https://claude.ai/artifact/2czJ3dXgben2nzH8EbnvGD | - |
 | #1583 | CHILD-DIET-001a: Art 9 health tables, H0/H1/H2 read tiers and locked legacy medical_notes  | spec:contracted | 2026-11-26 | - | - |
 | #1584 | CHILD-DIET-001b: Structured allergens from the pack taxonomy, portal change requests and s | spec:contracted | 2026-11-26 | - | - |
@@ -90,6 +98,34 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 | #1600 | CHILD-TT-006b: Room balance cost effect and morning notice to the person in charge | spec:contracted | 2026-11-26 | https://claude.ai/artifact/383wzXDGzHno5tqLdA8oGr | - |
 | #1601 | CHILD-REG (part 3): IE allergens, medication, incidents, sleep and school-age rules (night | doc | 2026-11-26 | - | - |
 | #1602 | CHILD-ARCH (part 3): health data, room tablet tools, devices and night-2 decisions | doc | 2026-11-26 | - | - |
+| #1668 | CHILD-REG (part 4): IE funding 2026/27 updates, GDPR rights, parent comms and care log rul | doc | 2026-11-27 | - | - |
+| #1669 | CHILD-ARCH (part 4): funding ledger, care log, parent comms data model and security (night | doc | 2026-11-27 | - | - |
+| #1670 | CHILD-ENR-001: Enrolments, weekly booking patterns and exceptions, checked against the liv | spec:contracted | 2026-11-27 | - | - |
+| #1671 | CHILD-FUND-001: Funding registrations copied from the funder award, with overlap and award | spec:contracted | 2026-11-27 | - | - |
+| #1672 | CHILD-FUND-002: Funder export import and reconcile (read-only towards the funder; IE Hive  | spec:thin | 2026-11-27 | - | Q-F2: sample Hive export (Sandra) |
+| #1673 | CHILD-FUND-003: Monday funder worklist from the roll book, with the days and recorders beh | spec:contracted | 2026-11-27 | https://claude.ai/artifact/NtnD5Nh5mRAnmgEgLutLKY | - |
+| #1674 | CHILD-FUND-004: Programme year, service calendar, readiness checklist and AIM supports (ro | spec:contracted | 2026-11-27 | - | - |
+| #1675 | CHILD-FUND-005a: Fee schedules with sourced cap, fee-freeze and notice checks before publi | spec:contracted | 2026-11-27 | - | - |
+| #1676 | CHILD-FUND-008: Universal payer model: family and agency payers, guardian members and per- | spec:contracted | 2026-11-27 | - | - |
+| #1677 | CHILD-FUND-005b: Billing preview with ECCE and NCS netted per line and the rule shown on e | spec:contracted | 2026-11-27 | https://claude.ai/artifact/GYQccBfVV4eS2K7vBEdxee | - |
+| #1678 | CHILD-FUND-005c: Hash-checked invoice run, gap-free numbering and self-explaining invoice  | spec:thin | 2026-11-27 | - | Q-B5: is a childcare invoice a VAT/tax document |
+| #1679 | CHILD-FUND-007: Expected vs received subsidy with each variance explained from recorded ev | spec:contracted | 2026-11-27 | - | - |
+| #1680 | CHILD-LOG-001: Quick-entry care log per child or whole room on the room tablet (meals, bot | spec:contracted | 2026-11-27 | https://claude.ai/artifact/XCjP5XC314tKi2CdiLaGfD | - |
+| #1681 | CHILD-LOG-002a: Accident and incident record with coded body map, witnesses and first-aide | spec:contracted | 2026-11-27 | https://claude.ai/artifact/APSnMwcygu5TSJHJiHxswu | - |
+| #1682 | CHILD-LOG-002b: Incident shared with parents and acknowledged at pickup (never blocks chec | spec:contracted | 2026-11-27 | https://claude.ai/artifact/APSnMwcygu5TSJHJiHxswu | - |
+| #1683 | CHILD-LOG-003: Handover notes addressed to a room and time window, reaching whoever the ro | spec:contracted | 2026-11-27 | - | - |
+| #1684 | CHILD-LOG-004: Parent daily summary generated by template from each child's own care log,  | spec:contracted | 2026-11-27 | - | - |
+| #1685 | CHILD-LOG-005: Restricted safeguarding notes and mandated report tracking (DLP only, never | spec:contracted | 2026-11-27 | - | - |
+| #1686 | CHILD-PAR-001: Passwordless parent portal with multiple guardians and separated-parent vis | spec:contracted | 2026-11-27 | https://claude.ai/artifact/YTg1yAeTvNG9hoCVqZEjGu | - |
+| #1687 | CHILD-PAR-001b: Pre-enrolment information pack and About this centre, generated from live  | spec:contracted | 2026-11-27 | - | - |
+| #1688 | CHILD-PAR-010: Parent-only WhatsApp and Telegram channels: fail-closed webhooks, store-fir | spec:contracted | 2026-11-27 | - | Q-S4/Q-S5: WhatsApp transfer basis, Telegram for IE controller |
+| #1689 | CHILD-PAR-007: Parent channel preference with opt-in proved from the phone, one-tap switch | spec:contracted | 2026-11-27 | - | - |
+| #1690 | CHILD-PAR-002: Per-child threads and room/centre broadcasts with per-guardian read receipt | spec:contracted | 2026-11-27 | https://claude.ai/artifact/5Tia2pq339ut6jknSkPUFp | - |
+| #1691 | CHILD-PAR-008: Sensitive actions portal-only via single-use action links that never sign i | spec:contracted | 2026-11-27 | - | - |
+| #1692 | CHILD-PAR-009: Chat safeguards: data-classed templates, sensitive messages portal-only, mi | spec:contracted | 2026-11-27 | - | Q-S10: free text off until DPIA owner accepts |
+| #1693 | CHILD-PAR-003: Parent actions hub and requests (extra session, change a day, add a collect | spec:contracted | 2026-11-27 | https://claude.ai/artifact/Ph2yhZaAQ6NbqVxBvuojGp | - |
+| #1694 | CHILD-GDPR-004b: Rectification with parent statements, erasure checked against retention,  | spec:contracted | 2026-11-27 | - | - |
+| #1697 | Security: whatsapp-webhook accepts unsigned requests when WHATSAPP_APP_SECRET is unset (fa | security | 2026-11-27 | - | is WHATSAPP_APP_SECRET set on staging/live (unchecked) |
 
 ## Cross-night open questions
 - Pam's day-to-day role (not on record; ask Colm).
@@ -98,4 +134,10 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 - Who does the Hive return and payroll at SSST day to day (Mella per memory, #1447 says Sandra's Hive week).
 - Q-A2: Colm to confirm D-09 (staff room taps written to staff_room_presence_events). Blocks #1595, #1470.
 - Q-P1: who owns the DPIA / is DPO at Timebreez and at each centre (blocks DPIA sign-off #1580 and any pilot with real children, not the build).
+- Q-B1: whose merchant account takes family money (blocks CHILD-FUND-006 payments).
+- Q-F2: a sample Hive export from Sandra (blocks #1672).
+- Q-B5: is a childcare invoice a VAT/tax document (blocks #1678). Named reviewer.
+- Q-S4 / Q-S5: lawful transfer basis for WhatsApp (Meta); is Telegram acceptable for an IE controller (#1688). Named data-protection reviewer.
+- #1474: build checklists and policy sign-off in Timebreez, or deliver through Hubduck (Colm).
+- Pack key name for netting order (#1510) and ECCE expected-subsidy model (D-51 vs #1679).
 - Q-H1: does a portal typed-name signature meet "signed parental consent" (MED-001, MED-007)? Named reviewer.
