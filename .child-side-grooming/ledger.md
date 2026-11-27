@@ -2,6 +2,11 @@
 
 Read first each night. Body of truth for specs is GitHub; this file tracks grooming state and artifacts.
 
+## Standing rules for the nightly run (read before writing anything)
+- **PLAIN WORDS (Colm, 27 Nov 2026):** every question, decision or blocker put to Colm (summary, open questions in issues, this ledger) is explained in plain words with 1-3 short scenarios: an invented staff member or child, a time, a room, what happens if he says yes, what happens if he says no. Then the recommendation. Ids go after the explanation, in brackets, never instead of it.
+- **Living docs are split** (65k body limit); later parts win: CHILD-REG #1496, #1497, **#1601**; CHILD-ARCH #1498, #1499, **#1602** (decisions D-24 to D-39; next free decision id D-40). Start a new part when a body nears 60k.
+- **D-09 confirmed by Colm, 27 Nov 2026:** staff room taps, step-outs and breaks are their own workforce record, separate from Paxton clock-ins.
+
 ## Artifacts
 - Pitch deck (Slides, private until Colm shares): https://claude.ai/artifact/VxYydcbQJaxs4hoBt6PPGD (rev 3, 27 Nov 2026, 14 slides)
 - Mockup: Toddlers check-in tablet (#1455, #1461): https://claude.ai/artifact/Gf2ekv1LwxHTpc216WPj19
@@ -53,7 +58,7 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 | #1466 | EPIC: Child-side H: Hermes chief-of-staff agent for crèche admins (optional, MCP-connected | spec:thin | - | - | - |
 | #1468 | EPIC: Multi-location and multi-organisation tenancy (shared staff, site isolation, group r | spec:thin | - | - | - |
 | #1469 | CHILD-TT-006a: Morning room balance: suggested child moves, merges, splits and staff moves | spec:contracted | 2026-11-26 | https://claude.ai/artifact/383wzXDGzHno5tqLdA8oGr | - |
-| #1470 | CHILD-TT-007: Staff tap into a room with their Paxton fob on the room tablet | spec:thin | 2026-11-26 | - | Q-A2 (D-09); Paxton fob Web NFC hardware test |
+| #1470 | CHILD-TT-007: Staff tap into a room with their Paxton fob on the room tablet | spec:contracted | 2026-11-27 | - | Paxton fob Web NFC test result to record (not blocking) |
 | #1471 | CHILD-ATT-011: Ratio proof report for any room and time window | spec:contracted | 2026-11-25 | https://claude.ai/artifact/3dWemvAYRM8YDEpwuF7VWB | - |
 | #1472 | CHILD-MIG-001: Import children from TeachKloud and cut over safely | spec:thin | - | - | - |
 | #1473 | CHILD-P0: TeachKloud exit test with Sandra (discovery, no code) | spec:thin | - | - | - |
@@ -90,7 +95,7 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 | #1592 | CHILD-DIET-006: Child record completeness check from the pack's required fields | spec:contracted | 2026-11-26 | - | - |
 | #1593 | CHILD-STAFF-001: Ratio-countable staff facts: category, qualification, first aid, person-i | spec:contracted | 2026-11-26 | - | - |
 | #1594 | CHILD-TT-001: "My room now" on the room tablet: children in/expected/absent, staff in the  | spec:contracted | 2026-11-26 | https://claude.ai/artifact/6twbYHGmAPPAijbv7xuEBm | - |
-| #1595 | CHILD-TT-002: Step-out and break guard on the room tablet: ratio effect, pack checks, cove | spec:thin | 2026-11-26 | https://claude.ai/artifact/6twbYHGmAPPAijbv7xuEBm | Q-A2: Colm to confirm D-09 (where room taps are written) |
+| #1595 | CHILD-TT-002: Step-out and break guard on the room tablet: ratio effect, pack checks, cove | spec:contracted | 2026-11-27 | https://claude.ai/artifact/6twbYHGmAPPAijbv7xuEBm | - |
 | #1596 | CHILD-TT-003: Room handover checklist and end-of-day room close (everyone accounted for) | spec:contracted | 2026-11-26 | - | - |
 | #1597 | CHILD-TT-004: Scheduled room headcount checks with drift alerts and recorded missed checks | spec:contracted | 2026-11-26 | - | - |
 | #1598 | CHILD-TT-005a: Shared room tablet operator mode: staff PIN/fob unlock, switch, auto-lock,  | spec:contracted | 2026-11-26 | - | - |
@@ -132,7 +137,6 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 - Named competent reviewer for IE rule content (care, and separately funding) (Q-R2).
 - Attendance retention: 2 years after leaving (care) vs 6 years (funding) (Q-R1).
 - Who does the Hive return and payroll at SSST day to day (Mella per memory, #1447 says Sandra's Hive week).
-- Q-A2: Colm to confirm D-09 (staff room taps written to staff_room_presence_events). Blocks #1595, #1470.
 - Q-P1: who owns the DPIA / is DPO at Timebreez and at each centre (blocks DPIA sign-off #1580 and any pilot with real children, not the build).
 - Q-B1: whose merchant account takes family money (blocks CHILD-FUND-006 payments).
 - Q-F2: a sample Hive export from Sandra (blocks #1672).
