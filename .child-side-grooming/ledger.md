@@ -4,7 +4,7 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 
 ## Standing rules for the nightly run (read before writing anything)
 - **PLAIN WORDS (Colm, 27 Nov 2026):** every question, decision or blocker put to Colm (summary, open questions in issues, this ledger) is explained in plain words with 1-3 short scenarios: an invented staff member or child, a time, a room, what happens if he says yes, what happens if he says no. Then the recommendation. Ids go after the explanation, in brackets, never instead of it.
-- **Living docs are split** (65k body limit); later parts win: CHILD-REG #1496, #1497, **#1601**; CHILD-ARCH #1498, #1499, **#1602** (decisions D-24 to D-39; next free decision id D-40). Start a new part when a body nears 60k.
+- **Living docs are split** (65k body limit); later parts win: CHILD-REG #1496, #1497, **#1601**, **#1668**; CHILD-ARCH #1498, #1499, **#1602**, **#1669** (decisions up to D-86; next free decision id D-87). Start a new part when a body nears 60k.
 - **D-09 confirmed by Colm, 27 Nov 2026:** staff room taps, step-outs and breaks are their own workforce record, separate from Paxton clock-ins.
 
 ## Artifacts
