@@ -146,3 +146,5 @@ Read first each night. Body of truth for specs is GitHub; this file tracks groom
 - #1474: build checklists and policy sign-off in Timebreez, or deliver through Hubduck (Colm).
 - Pack key name for netting order (#1510) and ECCE expected-subsidy model (D-51 vs #1679).
 - Q-H1: does a portal typed-name signature meet "signed parental consent" (MED-001, MED-007)? Named reviewer.
+
+- ADRs (27 Nov, Colm "adrs now"): child-side ADR-021..026 live in timebreez docs/architecture/child/ with static CI ratchets (scripts/adr/childChecks.ts), PR #1745 (#1742). New child decisions that are load-bearing go in an ADR, not only a D-row. Next free ADR: 027.
