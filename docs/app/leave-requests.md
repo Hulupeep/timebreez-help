@@ -57,6 +57,8 @@ Press **Why an estimate, and what should I do?** in the box for the same advice 
 
 **Example.** Mary Murphy has no employment terms and books Wednesday 30 December to Monday 4 January. She is on the rota Wednesday (8:00 to 17:00, with an unpaid 45-minute break, so 8h 15m) and not on it Thursday. Friday 1 January is a public holiday. The rota stops at Sunday, so Monday uses your full-time day of 8h 15m. The card says **Takes about 16h 30m**. You approve, and then set her employment terms so her next leave is exact.
 
+If you press Approve on an estimate and it would take more than the person has left, the refusal says the figure is an estimate. The hours box opens: if their real hours on those days are fewer, type them in **Hours this leave costs** and press Approve again. **Change the hours** stays on the card while the request is waiting, even after hours were typed once.
+
 If your organisation has no full-time day set and there is no rota for some of the dates, Timebreez cannot estimate those days. The hours box opens on its own, and Approve waits until you type the hours or set the full-time day.
 
 ## Denying a request
@@ -73,9 +75,14 @@ Press **Deny** and type the reason. The person sees it with the request.
 | Days not calculated | Timebreez could not work out or estimate what this request costs. The **Why** line says what is missing | Do what the **Fix** line says |
 | No figure yet for someone whose allowance is in hours | The person has no employment terms, so the cost can't be worked out when booking | Submit it anyway, then open it here and type what each day costs: the hours box opens on its own when there is no estimate, otherwise press **Change the hours**. The form calls this **Enter hours**. Approval waits for those hours. Staff are told their manager types the hours |
 | They are already off on these dates | The dates overlap leave that is already approved, so nothing is booked and nothing comes out of the balance | To record the days as a different type, cancel that leave on Leave Requests first, then book again |
+| This request also has days outside that leave | Only some of the dates overlap leave already booked or requested, so the request was not submitted. The message names the days still free and the days that clash | To book the free days, change the dates to leave out the clash. To book all the dates as a different type, cancel the existing leave first, then book again |
+| They have no Annual Leave balance, so the … this asks for cannot come out of it | The leave type comes out of another type's balance (for example Annual Leave) and the person has no balance of that type | If the type should not come out of a balance, an admin sets **Settings > Leave Types >** the type **> Comes out of: No balance**. Otherwise an admin gives the person that balance |
+| The leave year that 4 Jan 2028 falls in is not open yet | No allowance has been set up yet for the leave year those dates fall in, so leave from that date can't be booked | An admin opens that leave year on **Leave Years** first |
 | Cover check is off: Mary Murphy has no home room | The person has no home room, so Timebreez cannot check room cover for this request | Give them a home room so cover is checked |
 
 A refusal stays on screen until you close it, so you can read it.
+
+When you book leave, the form names the leave year its balance is for, for example **Annual Leave 2027**. Leave in next year is checked against next year's balance, not this year's. A booking that runs across two leave years shows one year's part, labelled for example **This request, 2026 part:**.
 
 ## Downloads
 

@@ -21,6 +21,8 @@ Once Telegram is linked you get leave approvals and updates there, and you can r
 3. Press the **Start** button at the bottom of the chat. On the Telegram web page it says **Start Bot**. Pressing Start sends your personal code, so the bot knows it is you. Typing the word "start" does not work.
 4. The bot replies **"You're linked"**. You can close the page. The card now shows **Connected**.
 
+**Browser says "invalid response" or "not secure"?** Your network is blocking the Telegram web link. Nothing is wrong with your link: use one of the two ways below.
+
 **No Start button, or Telegram didn't open?** Press **Open straight in the Telegram app**, or press **Copy** and send the copied message to the bot. It does the same as pressing Start. If the link has expired, press **Get a new link** and start again.
 
 To unlink, press **Disconnect**, or send `/stop` to the bot.
@@ -40,10 +42,11 @@ Message the bot directly, not in a group. Type **/** in the chat to see the list
 | `/cancel` | Lists leave you can cancel. Pick one, then **Yes, cancel it** or **Keep it**. The bot says how much went back and what you now have left |
 | `/carry` | Your unused days, the carry-over limit and any request. `/carry 2` asks to carry 2, `/carry withdraw` takes back a waiting request. [Carry-over]({{ site.baseurl }}/docs/app/carry-over/) |
 | `/whosout` | Managers only: who is off today. `/whosout week` shows the next 7 days |
+| `/demo` | A practice run before you use the bot for real, with **My shifts**, **Time off**, **Off sick** and **My balance** buttons. Every screen is the real one, but nothing reaches your manager, the rota or payroll. Each reply starts with "DEMO, nothing is booked." After a practice booking, **Skip ahead: your manager approves** shows the approval message. Works before you link Telegram (with made-up data). To type in the demo, put `/demo` first, for example `/demo off fri`. `/practice` and `/tour` do the same |
 | `/help` | Lists what you can send |
 | `/stop` | Unlinks Telegram |
 
-Before anything is booked, the bot shows a card: the leave type and day, what it uses (for example "Uses: 1 day"), and your balance now and after. Press **Confirm** to send it to your manager. For a single day you can switch between **Full day**, **Morning only** and **Afternoon only**. **Different type** and **Cancel** are there too. If the dates are locked for that leave type, the card says so and has no Confirm.
+Before anything is booked, the bot shows a card: the leave type and day, what it uses (for example "Uses: 1 day"), and your balance now and after. Both balance figures come from Timebreez itself, the same as the app. If the request would take more than you have, or the leave year isn't open yet, the card says so with a ⚠️ line and what to do. Press **Confirm** to send it to your manager. For a single day you can switch between **Full day**, **Morning only** and **Afternoon only**. **Different type** and **Cancel** are there too. If the dates are locked for that leave type, the card says so and has no Confirm.
 
 You can also just write, for example "sick today", "off tomorrow", "how many days have I got" or "am I working fri", and the bot treats it like the command.
 

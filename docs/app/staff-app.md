@@ -31,6 +31,10 @@ Your leave balance, a form to request time off, and your requests.
 
 If you are already off on those dates, the form says nothing comes out of your balance and tells you what to do: to book the days as another type, cancel the leave you have first, then book again.
 
+If only some of the dates clash with leave you already have, the request is not sent. The message names the days that are still free, so you can change the dates to leave out the clash.
+
+Booking in a leave year that isn't set up yet is refused with "The leave year that … falls in is not open yet". Ask an admin to open it.
+
 A leave type that comes out of another type's balance (for example a type set to come out of Annual Leave) is checked against that balance, so you see the Annual Leave you have left. Requests of that type still waiting for a decision count in **awaiting approval** on the Annual Leave card. See [Leave Types]({{ site.baseurl }}/docs/app/leave-types/).
 
 Each balance card says which leave year it is for, for example "for 2026". Once next year is open, a line under it shows next year's balance, for example "2027: 20 days left (carry-over added at year end)". Leave you book in next year comes off that, not this year's balance. Each balance card shows how much is **awaiting approval**. You can cancel a pending request with **Cancel Request**, and its hours come off "awaiting approval" on the card straight away. Cancelling leave that is already approved puts the time back on your balance: "Approved leave cancelled — balance credited back".
