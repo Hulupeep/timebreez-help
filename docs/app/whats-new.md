@@ -10,6 +10,18 @@ permalink: /docs/app/whats-new/
 
 Changes to the app that you will notice, newest first.
 
+## 28 November 2026
+
+- **Light or dark:** a **Theme** switch at the bottom of the sidebar (and under **Appearance** on the staff app's Settings tab) picks **Light**, **Dark** or **System**. It is saved on that device. The Dashboard, Roster, Leave Requests, Leave check and the staff app's Home are done in dark so far. [Light or dark]({{ site.baseurl }}/docs/app/general/#light-or-dark)
+- **Settings:** the long row of tabs is gone. On a computer the settings sit in a left column grouped by job: Leave, Pay, Rota and rooms, Staff and messages, How Timebreez looks, and My settings. On a phone you pick one from a single list. The unused Room Types name editor was removed. [Settings]({{ site.baseurl }}/docs/app/settings/)
+- **Staff app, Leave:** one card per allowance says what you have left in days at your working day, for example **18 days left** of 22, what is awaiting approval, and what is left if it is approved, with a line saying how it is worked out. Types with no allowance, such as Sick Leave, are listed once under **Other leave you can book**. [Staff app]({{ site.baseurl }}/docs/app/staff-app/#leave)
+- **Booking leave:** the not-enough-leave message is now in days with the hours (or hours for hours staff), for example "this needs 3 days (24h) and the balance is 2 days (16h), so it is 1 day (8h) short", not bare minutes. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)
+- **Leave Requests:** when a request with typed hours is refused for not enough leave, the message no longer calls those hours an estimate. It says they are the hours on record and what to do either way. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#leave-for-someone-with-no-employment-terms)
+- **Employees:** the card button that said **Delete** now says **Make inactive**, and an inactive person has **Make active again**. **Edit Employee** has a **Status** box too. History is kept, and managers as well as admins can do it. [Employees]({{ site.baseurl }}/docs/app/employees/#the-list)
+- **Telegram:** the booking card says what the leave uses in words, for example "Uses: 2 days (16h)", or "days to be confirmed by your manager" instead of 0. A clash names the other request and offers **Cancel that leave** or **Keep it**. **Public Holiday** is no longer offered to staff. [My Settings and Telegram]({{ site.baseurl }}/docs/app/my-settings/#what-you-can-send-the-bot)
+- **My Notifications:** if your login is not linked to a staff record, the page now says so instead of showing nothing. [Notifications]({{ site.baseurl }}/docs/app/notifications/#messages-you-may-see)
+- **Settings, Rooms:** a room whose type the app doesn't know no longer empties the room list. If rooms can't load, the message says to reload and tell support.
+
 ## 27 November 2026
 
 - **Booking leave:** if only some of the dates clash with leave already booked, the form no longer says "nothing more to book". It names the days still free and says to change the dates to leave out the clash. [Leave Requests]({{ site.baseurl }}/docs/app/leave-requests/#messages-you-may-see)

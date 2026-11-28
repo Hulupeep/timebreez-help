@@ -8,7 +8,20 @@ permalink: /docs/app/settings/
 
 # Settings
 
-**Who uses it:** admins. In the menu: **Settings**. Settings opens on **Leave Setup**. The first tabs are the ones that change money: **Leave Setup**, **Leave Types** and **Pay Rules**.
+**Who uses it:** admins. In the menu: **Settings**. Settings opens on **Leave Setup**.
+
+On a computer, the settings are listed in a column on the left, grouped by the job you came to do. On a phone, pick one from the **Setting** list at the top.
+
+| Group | Settings |
+|---|---|
+| **Leave** | Leave Setup, Leave Types, Country Rules, Wallchart |
+| **Pay** | Pay Rules |
+| **Rota and rooms** | Rooms, Operating Hours, Scheduler, Staffing Rules, Programs (only when you have more than one), Attendance |
+| **Staff and messages** | Credentials, Messaging, Org Notifications |
+| **How Timebreez looks** | Vocabulary, Navigation, Features, Simple Mode |
+| **My settings** | My Notifications, Calendar |
+
+Managers and admins see every group. Staff see only **My settings**. Rooms is named the way your organisation calls them, for example **Rooms**.
 
 ## Decisions still open
 
