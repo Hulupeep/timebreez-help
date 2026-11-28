@@ -38,6 +38,12 @@ Timebreez is **not** primarily a leave tool, a rota or calendar app, an HR syste
 4. Use the **sidebar** to navigate, or click the **help icon (?)** on any page for guidance
 5. **Contact support** if you need additional assistance
 
+## Light or dark
+
+At the bottom of the sidebar, above your name, **Theme** has three choices: **Light**, **Dark** and **System**. **System** follows your computer's or phone's own setting, and says which one it is following. The choice is saved on that device only. In the staff app it is on the **Settings** tab, under **Appearance**.
+
+So far the Dashboard, Roster, Leave Requests, Leave check and the staff app's Home are made for dark. Other pages may still look light in places.
+
 ## Key Features
 
 ### For Staff

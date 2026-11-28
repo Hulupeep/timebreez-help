@@ -14,6 +14,8 @@ permalink: /docs/app/employees/
 
 Filter by **Active**, **Inactive**, **Historical imports** or **All**. Historical imports are people brought across from Timetastic who have already left: they are kept so past leave adds up, and they never get a login. Use **Invite Employee** or **+ Add Employee** to add someone.
 
+**Someone leaves.** Press **Make inactive** on their card and confirm. Their leave and pay history is kept, they move to the **Inactive** list, and their Telegram link is removed. Nothing is deleted. To bring them back, open the **Inactive** list and press **Make active again**. You can also change it in **Edit Employee**, under **Status**: **Active: works here now** or **Inactive: left, or not working here now**. Managers can do this as well as admins. Historical imports have no button: they stay as they are.
+
 To find someone, type their name or email in **Find a person** at the top. Press a name to open their record.
 
 Open a person's card to see their **Employment Terms**: status, hours per week, and their working pattern. Choose the **Allowance unit** (days, hours or minutes), enter the scheduled minutes for each weekday, and press **Confirm working pattern**. Leave costs are worked out from this pattern, so confirm it before approving their leave.

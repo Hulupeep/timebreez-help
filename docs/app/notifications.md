@@ -26,6 +26,13 @@ Get the right information at the right time. Stay informed without being overwhe
 2. Choose which **events trigger alerts**
 3. Set **quiet hours** if needed
 
+## Messages you may see
+
+| Message | What to do |
+|---|---|
+| Your login is not linked to a staff record in this organisation, so there is no personal channel or quiet hours to set here | An admin links your login to your staff record on Employees |
+| Your notification settings could not be loaded | Reload the page. If it still fails, tell support which page you were on |
+
 ## Tips
 
 - Enable push notifications for time-sensitive alerts

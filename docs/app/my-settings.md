@@ -46,7 +46,9 @@ Message the bot directly, not in a group. Type **/** in the chat to see the list
 | `/help` | Lists what you can send |
 | `/stop` | Unlinks Telegram |
 
-Before anything is booked, the bot shows a card: the leave type and day, what it uses (for example "Uses: 1 day"), and your balance now and after. Both balance figures come from Timebreez itself, the same as the app. If the request would take more than you have, or the leave year isn't open yet, the card says so with a ⚠️ line and what to do. Press **Confirm** to send it to your manager. For a single day you can switch between **Full day**, **Morning only** and **Afternoon only**. **Different type** and **Cancel** are there too. If the dates are locked for that leave type, the card says so and has no Confirm.
+Before anything is booked, the bot shows a card: the leave type and day, what it uses in words (for example "Uses: 2 days (16h)", "doesn't come off your allowance", or "days to be confirmed by your manager" when it can't be worked out yet, never 0), and your balance now and after. Both balance figures come from Timebreez itself, the same as the app. If the request would take more than you have, or the leave year isn't open yet, the card says so with a ⚠️ line and what to do. Press **Confirm** to send it to your manager. For a single day you can switch between **Full day**, **Morning only** and **Afternoon only**. **Different type** and **Cancel** are there too. If the dates are locked for that leave type, the card says so and has no Confirm.
+
+If the dates clash with leave you already asked for or have, the bot names that request and offers **Cancel that leave** or **Keep it**. Nothing new is booked either way: once the other leave is cancelled, send `/off` again. **Public Holiday** is not offered as a leave type: public holidays come from your organisation's holiday calendar.
 
 You can also just write, for example "sick today", "off tomorrow", "how many days have I got" or "am I working fri", and the bot treats it like the command.
 
